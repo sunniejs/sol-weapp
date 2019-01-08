@@ -1,5 +1,5 @@
 # soul-weapp 简介
-小程序常用组件
+小程序常用案例及营销组件
 
 # 运行例子
 git clone https://github.com/sunnie1992/soul-weapp.git
@@ -16,9 +16,15 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 
 # 其他
 
-后续添加营销组件
+正在整理小程序营销组件，后续添加营销组件
+<p>
 大转盘
+</p>
+<p>
 九宫格翻牌
+</p>
+
+
 
 # 关于我
 
