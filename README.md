@@ -10,8 +10,9 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 "pages/filter/index"  功能筛选
 
 # 预览
-
-![](./page5.gif)
+<p>
+  <img src="./page5.gif" width="500"  style="display:inline;">
+</p>
 
 # 其他
 
@@ -22,7 +23,8 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 # 关于我
 
 您可以扫描添加下方的微信并备注 Soul Weapp 进交流群。
-
-![](./mine.jpg)
-<img src="./mine.jpg" style="display:inline;width:100px;height:auto">
+<p>
+  <img src="./mine.jpg" width="256" style="display:inline;">
+</p>
+ 
 如果对你有帮助送我一颗小星星吧
