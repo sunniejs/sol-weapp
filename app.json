@@ -1,9 +1,6 @@
 {
   "pages": [
-    "pages/filter/index",
-    "pages/market/gridcard/index",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/filter/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

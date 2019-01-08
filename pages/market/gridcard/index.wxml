@@ -1,5 +1,0 @@
-<!--pages/market/gridcard/index.wxml-->
-<view>
-  <s-card id="card" card="{{card}}" bindgetcard="emitGetCard"></s-card>
-</view>
-<view wx:if="{{!isOpen}}"> <button bindtap="onStart">开始抽奖</button></view>
