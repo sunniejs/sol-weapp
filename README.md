@@ -11,7 +11,7 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 
 # 预览
 <p>
-  <img src="./page5.gif" width="500"  style="display:inline;">
+  <img src="./page5.gif" width="800"  style="display:inline;">
 </p>
 
 # 其他
@@ -27,4 +27,4 @@ git clone https://github.com/sunnie1992/soul-weapp.git
   <img src="./mine.jpg" width="256" style="display:inline;">
 </p>
  
-如果对你有帮助送我一颗小星星吧
+如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
