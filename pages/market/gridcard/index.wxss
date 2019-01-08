@@ -1,0 +1,13 @@
+/* pages/market/gridcard/index.wxss */
+.swiper_container {
+ height: 150rpx;
+ width: 80vw;
+}
+ 
+.swiper_item {
+ font-size: 25rpx;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ letter-spacing: 2px;
+}
