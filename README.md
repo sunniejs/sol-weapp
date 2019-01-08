@@ -24,5 +24,5 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 您可以扫描添加下方的微信并备注 Soul Weapp 进交流群。
 
 ![](./mine.jpg)
-
+<img src="./mine.jpg" style="display:inline;width:100px;height:auto">
 如果对你有帮助送我一颗小星星吧
