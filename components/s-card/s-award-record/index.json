@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "s-popup": "/components/wux/popup/index"
+  }
+}

@@ -1,0 +1,165 @@
+.help-done-bg {
+    background: url('https://tweapp.top1buyer.com/s-card-help-success@2x.png') no-repeat;
+    background-size: cover;
+}
+
+.help-done {
+    margin-top: 170px;
+    font-size: 16px;
+    line-height: 22px;
+}
+.no-users{
+    margin-top: 200px!important;
+}
+.help-users-done {
+    top: 235px!important;
+}
+.help-users-ongoing{
+   top: 202px!important;
+}
+
+.coupon-warper {
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    color: #c01500;
+    .coupon-top {
+        .rmb {
+            font-size: 16px;
+        }
+        .coupon-amount {
+            font-size: 39px;
+        }
+        .coupon-text {
+            margin-top: 17px;
+            color: #c01500;
+            font-size: 16px;
+        }
+    }
+}
+
+.award-text {
+    position: absolute;
+    top: 190px;
+    font-size: 17px;
+    color: #ffe9c4;
+}
+
+.award-btn {
+    position: absolute;
+    bottom: 50px;
+    width: 175px;
+    height: 30px;
+    line-height: 30px;
+    background: #ffcc74;
+    color: #c01500;
+    border-radius: 18px;
+    font-size: 16px;
+    &.done {
+        bottom: 30px!important;
+    }
+}
+
+.have-users {
+    .award-text {
+        position: absolute;
+        top: 158px;
+    }
+    .thanks-text {
+        position: absolute;
+        top: 180px;
+        font-size: 17px;
+        color: #ffe9c4;
+    }
+    .award-btn {
+        bottom: 30px!important;
+    }
+    
+}
+
+.warper {
+    position: relative;
+    margin: 53px 0 100px 0;
+    .close {
+        position: absolute;
+        right: 20rpx;
+        top: -50px;
+        width: 30px;
+        height: 51px;
+    }
+}
+
+.shareing-warper {
+    position: relative;
+    width: 259px;
+    height: 349px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    color: #ffe9c4;
+    font-size: 12px;
+    &.ongoing {
+        background: url('https://tweapp.top1buyer.com/s-share-award.png') no-repeat;
+        background-size: cover;
+    }
+    .help-num {
+        margin-top: 130px;
+    }
+    .big-prize {
+        margin-top: 4px;
+        font-size: 17px;
+    }
+    .help-tip {
+        position: absolute;
+        bottom: 27px;
+    }
+}
+
+.award-warper {
+    position: relative;
+    width: 260px;
+    height: 330px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    &.type1 {
+        background: url('https://tweapp.top1buyer.com/s-coupon-award.png') no-repeat;
+        background-size: cover;
+    }
+    &.type2 {
+        background: url('https://tweapp.top1buyer.com/s-glod-award.png') no-repeat;
+        background-size: cover;
+    }
+    &.type3 {
+        background: url("https://tweapp.top1buyer.com/s-share-award.png") no-repeat;
+        background-size: cover;
+    }
+}
+
+.help-users {
+    position: absolute;
+    top: 215px;
+    box-sizing: border-box;
+    width: 259px;
+    padding: 0 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    .avator {
+        width: 30px;
+        height: 30px;
+        background: url('https://tweapp.top1buyer.com/s-empty-avator@2x.png') no-repeat;
+        background-size: cover;
+        margin-right: 9px;
+        display: inline-block;
+    }
+    .user-img {
+        width:30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    &.done {
+        padding: 18px 21px!important;
+    }
+}

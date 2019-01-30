@@ -1,0 +1,21 @@
+<!--components/s-card/index.wxml-->
+<view class="gridcard  {{isMove ? 'move' : ''}}">
+  <block wx:for="{{card}}" wx:for-item="item" wx:key="index">
+    <view class="gridcard_item {{item.isBack ? 'back' : ''}}" bindtap="openCard" data-item="{{item}}" data-index="{{index}}">
+     <view class="gridcard_back">
+        <image src="{{item.img}}" />
+      </view>
+      <view class="gridcard_front status{{item.status}}">
+        <view class="status-warper">
+          <view wx:if="{{item.status==1}}" class="shareing">
+            <view>分享中</view>
+            <view>{{item.helpedNum}}/{{item.helpNum}}</view>
+          </view>
+          <view wx:if="{{item.status==2}}" class="share-btn">领取</view>
+          <view wx:if="{{item.status==3}}" class="done">已领取</view>
+        </view>
+      </view>
+      
+    </view>
+  </block>
+</view>

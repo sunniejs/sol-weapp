@@ -1,0 +1,2 @@
+<!--pages/wheel/index.wxml-->
+ <s-wheel award-numer="{{award}}" disabled="{{disabled}}" bind:success="wheelSuccess" ></s-wheel>

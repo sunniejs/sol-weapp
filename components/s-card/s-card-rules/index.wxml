@@ -1,0 +1,13 @@
+<s-popup visible="{{ visible }}" position="center">
+  <view class="warper">
+    <image class="close" bindtap="closePopup" src="https://tweapp.top1buyer.com/s-top_close@2x.png?v=1"></image>
+    <view class="content">
+      <view> 1. 活动时间：2月1日-2月10日</view>
+      <view> 2. 活动期间每位用户都可参与该活动，没有抽奖的次数限制 </view>
+      <view> 3. 用户通过页面指示，邀请好友帮忙助力即可获得相应的优惠券或金币奖励 </view>
+      <view> 4. 每位用户每天可帮三位不同好友助力，活动期间只能帮同一位好友助力一次 </view>
+      <view> 5. 所获得的优惠券会有使用期限，请勿错过可使用时间，逾期作废 </view>
+      <view> 6. 活动的解释权归头号买手平台所有 </view>
+    </view>
+  </view>
+</s-popup>

@@ -1,0 +1,313 @@
+/* pages/game/game.wxss */
+/* pages/redBacketRain/redBacketRain.wxss */
+page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.bgView {
+  height: 100%;
+  width: 100%;
+  background: lightblue;
+  position: fixed;
+}
+
+.bgView2 {
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  position: fixed;
+}
+
+.caxClass {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background: url(https://tweapp.top1buyer.com/redBacketBG.jpg);
+  background-size: 100% 100%;
+}
+
+.caxClass text:nth-child(1) {
+  position: absolute;
+  text-align: center;
+  font-size: 45rpx;
+  color: white;
+  padding-left: 50rpx;
+  top: 150rpx;
+  font-weight: bold;
+  left: 20rpx;
+  z-index: 1010;
+}
+
+.rain-score {
+  position: absolute;
+  font-size: 45rpx;
+  color: white;
+  padding-left: 50rpx;
+  top: 150rpx;
+  font-weight: bold;
+  left: 20rpx;
+  z-index: 1010;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.continuationClass {
+  position: absolute;
+  text-align: center;
+  font-size: 45rpx;
+  color: white;
+  padding-left: 50rpx;
+  top: 90rpx;
+  font-weight: bold;
+  left: 20rpx;
+  z-index: 1010;
+}
+
+.scoreChangeClass {
+  margin-left: 10rpx;
+  font-size: 40rpx;
+  color: #fffdc5;
+  opacity: 0;
+}
+
+.scoreChangeClass2_color {
+  color: red;
+}
+
+/* .caxClass text:nth-child(2){
+   position: absolute;
+  text-align: center;
+  font-size: 40rpx;
+  color: #E6781E;
+  padding-left: 50rpx;
+  top: 250rpx;
+}
+
+.caxClass text:nth-child(3){
+    position: absolute;
+  text-align: center;
+  font-size: 40rpx;
+  color: #E6781E;
+  padding-left: 50rpx;
+  top: 300rpx;
+} */
+.countDownView {
+  position: absolute;
+  left: 50rpx;
+  top: 220rpx;
+  background-size: 100% 100%;
+  width: 120rpx;
+  height: 266rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeout {
+  font-size: 35rpx;
+  color: white;
+  text-align: center;
+  width: 40rpx;
+}
+
+.sec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec .numOfTime {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+}
+
+.sec .miao {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+}
+
+.lifeView {
+  position: absolute;
+  right: 20rpx;
+  top: 150rpx;
+  height: 400rpx;
+  width: 180rpx;
+}
+
+.lifeView text:nth-child(1) {
+  position: absolute;
+  font-size: 30rpx;
+  text-align: center;
+  top: 10rpx;
+  left: 10rpx;
+}
+
+.lifeView image {
+  position: absolute;
+  width: 40rpx;
+  height: 240rpx;
+  top: 80rpx;
+  left: 80rpx;
+}
+
+.bg {
+  display: flex;
+  margin: 40rpx auto;
+  text-align: center;
+  background: url("https://tweapp.top1buyer.com/l-rain-bg@2x.png") no-repeat;
+  background-size: cover;
+  width: 750rpx;
+  height: 1000rpx;
+}
+
+.shadeView {
+  margin: 176rpx auto;
+  text-align: center;
+  background: url("https://tweapp.top1buyer.com/l-rain-gold@2x.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 550rpx;
+  height: 700rpx;
+  align-items: center;
+  z-index: 9999;
+}
+
+.shadeView-top {
+  margin-top: 30rpx;
+  font-size: 40rpx;
+  color: #ffffff;
+}
+
+.shadeView_scoreView {
+  width: 360rpx;
+  height: 220rpx;
+  line-height: 220rpx;
+  background-size: 100% 100%;
+  margin-top: 70rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  /* box-sizing:border-box; */
+}
+
+.shadeView_scoreView text:nth-child(1) {
+  font-size: 100rpx;
+  color: #ffffff;
+  line-height: 76rpx;
+}
+
+.shadeView_scoreView text:nth-child(2) {
+  font-size: 30rpx;
+  color: #ffffff;
+  margin-left: 12rpx;
+}
+
+.shadeView_gameOverBtn {
+  width: 550rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadeView_gameOverBtn .explain {
+  font-size: 30rpx;
+  color: #ffffff;
+}
+
+.shadeView_gameOverBtn .btn {
+  margin-top: 58rpx;
+  width: 300rpx;
+  height: 70rpx;
+  background-color: #fff9e8;
+  text-align: center;
+  line-height: 70rpx;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #b10000;
+}
+
+.shadeView_gameOverBtn .rule {
+  margin-top: 28rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.btn-group {
+  position: absolute;
+  z-index: 1010;
+  /* margin-bottom: 50px; */
+}
+
+.coverView {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background: lightblue;
+  background-size: 100% 100%;
+}
+
+.coverView cover-view:nth-child(1) {
+  position: absolute;
+  text-align: center;
+  font-size: 45rpx;
+  color: white;
+  padding-left: 50rpx;
+  top: 150rpx;
+  font-weight: bold;
+  z-index: 1010;
+}
+
+.warper {
+  width: 580rpx;
+  height: 668rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-rules.png?v=3") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  margin: 106rpx 0 200rpx 0;
+}
+
+.warper .close {
+  position: absolute;
+  right: 20rpx;
+  top: -100rpx;
+  width: 60rpx;
+  height: 102rpx;
+}
+
+.content {
+  margin-top: 170rpx;
+  padding-left: 10rpx;
+  width: 424rpx;
+  height: 396rpx;
+  color: #411F16;
+  font-size: 22rpx;
+  text-align: left;
+}
+
+.content view {
+  line-height: 32rpx;
+  margin-top: 16rpx;
+}

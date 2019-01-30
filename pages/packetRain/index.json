@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "红包雨",
+  "usingComponents": {
+    "cax": "/components/cax/cax"
+  }
+}

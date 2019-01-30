@@ -1,0 +1,3 @@
+<view>
+  <s-card id="card" card="{{card}}" bindgetcards="emitGetCards"></s-card>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "翻盘",
+  "usingComponents": {
+    "s-card": "/components/s-card/index"
+  }
+}

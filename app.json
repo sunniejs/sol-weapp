@@ -1,6 +1,10 @@
 {
   "pages": [
-    "pages/filter/index"
+    "pages/index/index",
+    "pages/filter/index",
+    "pages/wheel/index",
+    "pages/packetRain/index",
+    "pages/gridCard/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
