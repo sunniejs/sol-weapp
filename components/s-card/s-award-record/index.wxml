@@ -1,5 +1,5 @@
 <s-popup visible="{{ visible }}" position="center">
-  <view class="warper">
+  <view class="warpper">
     <image class="close" bindtap="closePopup" src="https://tweapp.top1buyer.com/s-top_close@2x.png?v=1"></image>
     <view class="top-bg"></view>
     <view class="content">

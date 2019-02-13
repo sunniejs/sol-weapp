@@ -1,28 +1,26 @@
-page{
-  background:#f8f8f8;
+page {
+  background: #f8f8f8;
 }
 
 .index-hd {
   padding: 80rpx;
   text-align: center;
 }
+
 .index-bd {
   padding: 0 30rpx 40rpx;
 }
+
 .index-ft {
   padding-bottom: 20rpx;
   text-align: center;
 }
-.index-logo {
-  width: 86rpx;
-  height: 86rpx;
-}
+
 .index-desc {
   margin-top: 20rpx;
-  color: #888888;
+  color: #888;
   font-size: 28rpx;
 }
-
 
 .navigator {
   position: relative;
@@ -34,34 +32,56 @@ page{
 
 .kind-list-item {
   margin: 20rpx 0;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-radius: 4rpx;
   overflow: hidden;
 }
+
 .kind-list-item:first-child {
   margin-top: 0;
 }
-.kind-list-text{
+
+.kind-list-text {
   flex: 1;
   font-size: 32rpx;
 }
+
 .kind-list-arraw {
-  
 }
+
 .kind-list-item-hd {
   padding: 20rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
+
 .kind-list-item-hd-show {
-  opacity: .2;
+  opacity: 0.2;
 }
+
 .kind-list-item-bd {
   height: 0;
   overflow: hidden;
 }
+
 .kind-list-item-bd-show {
   height: auto;
+}
+
+.index-logo {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+ .title-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  margin-left: 12px;
+  font-weight: 400;
+  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }

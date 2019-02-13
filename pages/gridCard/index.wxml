@@ -1,3 +1,23 @@
-<view>
-  <s-card id="card" card="{{card}}" bindgetcards="emitGetCards"></s-card>
+<wxs src="../../utils/filter.wxs" module="util" />
+<view class="grid-card" wx:if="{{!loading}}">
+  <view class="top-warpper">
+    <view class="grid" >
+      <view class="top-bg"></view>
+      <s-card id="card" card="{{card}}" sign="{{sign}}" bind:getcards="emitGetCards"></s-card>
+      <view class="award-record" bindtap="getRecords">我的领取记录></view>
+      <view class="bottom-bg"></view>
+    </view>
+    <view class="swiper_warpper">
+      <swiper class="swiper_container" display-multiple-items="3" vertical="true" autoplay="true" circular="true" interval="2000">
+        <block wx:for="{{msgList}}" wx:key="index">
+          <swiper-item>
+            <view class="swiper_item">
+              <view class="item-icon"></view>
+              <view class="item-text">恭喜 {{util.hideName(item.nickName)}}** 获得{{num}}{{item.prizeName}}</view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
 </view>

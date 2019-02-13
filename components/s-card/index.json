@@ -1,6 +1,5 @@
 {
   "component": true,
   "usingComponents": {
-    "s-card-award": "/components/s-card/s-card-award/index"
   }
 }

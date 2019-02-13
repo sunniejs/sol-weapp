@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -48,7 +48,13 @@
 				{
 					"id": -1,
 					"name": "红包雨",
-					"pathName": "pages/packetRain/index"
+					"pathName": "pages/packetRain/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "九宫格",
+					"pathName": "pages/gridCard/index"
 				}
 			]
 		}

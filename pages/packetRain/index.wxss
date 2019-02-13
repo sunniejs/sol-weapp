@@ -277,7 +277,7 @@ page {
   z-index: 1010;
 }
 
-.warper {
+.warpper {
   width: 580rpx;
   height: 668rpx;
   background: url("https://tweapp.top1buyer.com/s-card-rules.png?v=3") no-repeat;
@@ -289,7 +289,7 @@ page {
   margin: 106rpx 0 200rpx 0;
 }
 
-.warper .close {
+.warpper .close {
   position: absolute;
   right: 20rpx;
   top: -100rpx;

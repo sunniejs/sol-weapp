@@ -1,27 +1,37 @@
 Page({
   data: {
-    list: [
+    components: [
       {
-        id: 'filter',
-        path: '/pages/filter/index',
-        name: '筛选'
+        title: '营销组件',
+        children: [
+          {
+            id: 'wheel',
+            url: '/pages/wheel/index',
+            name: '大转盘'
+          },
+          {
+            id: 'gridCard',
+            url: '/pages/gridCard/index',
+            name: '九宫格翻盘'
+          },
+          {
+            id: 'picketRain',
+            url: '/pages/packetRain/index',
+            name: '红包雨'
+          },
+        ],
       },
       {
-        id: 'wheel',
-        path: '/pages/wheel/index',
-        name: '大转盘'
+        title: '页面demo',
+        children: [
+          {
+            id: 'filter',
+            url: '/pages/filter/index',
+            name: '筛选'
+          },
+        ]
       },
-      {
-        id: 'gridCard',
-        path: '/pages/gridCard/index',
-        name: '九宫格翻盘'
-      },
-      {
-        id: 'picketRain',
-        path: '/pages/packetRain/index',
-        name: '红包雨'
-      },
-     
+      
     ]
   }
 })

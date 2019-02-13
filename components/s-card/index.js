@@ -1,30 +1,23 @@
 // components/s-card/index.js
-
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
+    // 九宫格卡片
     card: {
       type: Array,
       value: []
-    }
+    },
+    // 是否已开启九宫格抽奖
+    sign:Boolean
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
   },
-  /**
-   * 组件的方法列表
-   */
   methods: {
-    start() {
+    onStart() {
       // 开始动画
       const { card } = this.properties
       runAsync(100)
         .then(() => {
+          // 延迟100毫秒翻转第一排牌面
           for (let i = 0; i < 3; i++) {
             card[i].isBack = true
           }
@@ -34,6 +27,7 @@ Component({
           return runAsync(200)
         })
         .then(() => {
+           // 延迟200毫秒翻转第二排牌面
           for (let i = 3; i < 6; i++) {
             card[i].isBack = true
           }
@@ -43,6 +37,7 @@ Component({
           return runAsync(200)
         })
         .then(() => {
+           // 延迟200毫秒翻转第三排牌面
           for (let i = 6; i <= 8; i++) {
             card[i].isBack = true
           }
@@ -52,6 +47,7 @@ Component({
           return runAsync(800)
         })
         .then(() => {
+            // 将所有背面朝上
           for (let i = 0; i < 9; i++) {
             card[i].isBack = false
           }
@@ -61,6 +57,7 @@ Component({
           return runAsync(1000)
         })
         .then(() => {
+            // 洗牌动画
           this.setData({
             isMove: true
           })
@@ -68,32 +65,18 @@ Component({
         })
         .then(() => {
           this.setData({
-            isMove: false
+            isMove: false,
+            sign:true // 已开启九宫格抽奖
           })
         })
     },
-    reset() {
-      const { card } = this
-      for (let i = 0; i < 9; i++) {
-        card[i] = {
-          isBack: false,
-          isMove: false,
-          award: card[i].award
-        }
-      }
-      this.setData({
-        card
-      })
-      runAsync(800).then(() => {
-        this.start()
-      })
-    },
-
-    // 点击开卡片
+    // 点击打开单个卡片，开奖
     openCard(event) {
       const { item, index } = event.currentTarget.dataset
-      // 点击开始抽奖后才有status值，在start()方法里，没点击开始抽奖不让点卡片
-      if (item.status == undefined) return
+      // 没有点击开始抽奖，点击单个卡片无效
+       
+      if (!this.data.sign) return
+      // 触发父组件方法
       this.triggerEvent('getcards', { item, index })
     }
   }

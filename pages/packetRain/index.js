@@ -190,7 +190,7 @@ Page({
     const bgStage = new cax.Stage(info.windowWidth, info.windowHeight, 'myCanvas', this)
     // 开启定时器创建shape1(+1红包)
     this.startInterval1(bgStage)
-    // //开启定时器移动红包雨
+     // 开启定时器移动红包雨
     this.startInterval3(bgStage)
     //倒计时关闭
     this.stopGame(bgStage)

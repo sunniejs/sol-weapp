@@ -1,313 +1,170 @@
-/* pages/game/game.wxss */
-/* pages/redBacketRain/redBacketRain.wxss */
-page {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-}
-
-.bgView {
-  height: 100%;
-  width: 100%;
-  background: lightblue;
-  position: fixed;
-}
-
-.bgView2 {
-  height: 100%;
-  width: 100%;
-  background: #000000;
-  position: fixed;
-}
-
-.caxClass {
-  display: flex;
-  position: fixed;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  height: 100%;
-  background: url(https://tweapp.top1buyer.com/redBacketBG.jpg);
-  background-size: 100% 100%;
-}
-
-.caxClass text:nth-child(1) {
-  position: absolute;
-  text-align: center;
-  font-size: 45rpx;
-  color: white;
-  padding-left: 50rpx;
-  top: 150rpx;
-  font-weight: bold;
-  left: 20rpx;
-  z-index: 1010;
-}
-
-.rain-score {
-  position: absolute;
-  font-size: 45rpx;
-  color: white;
-  padding-left: 50rpx;
-  top: 150rpx;
-  font-weight: bold;
-  left: 20rpx;
-  z-index: 1010;
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-
-.continuationClass {
-  position: absolute;
-  text-align: center;
-  font-size: 45rpx;
-  color: white;
-  padding-left: 50rpx;
-  top: 90rpx;
-  font-weight: bold;
-  left: 20rpx;
-  z-index: 1010;
-}
-
-.scoreChangeClass {
-  margin-left: 10rpx;
-  font-size: 40rpx;
-  color: #fffdc5;
-  opacity: 0;
-}
-
-.scoreChangeClass2_color {
-  color: red;
-}
-
-/* .caxClass text:nth-child(2){
-   position: absolute;
-  text-align: center;
-  font-size: 40rpx;
-  color: #E6781E;
-  padding-left: 50rpx;
-  top: 250rpx;
-}
-
-.caxClass text:nth-child(3){
-    position: absolute;
-  text-align: center;
-  font-size: 40rpx;
-  color: #E6781E;
-  padding-left: 50rpx;
-  top: 300rpx;
-} */
-.countDownView {
-  position: absolute;
-  left: 50rpx;
-  top: 220rpx;
-  background-size: 100% 100%;
-  width: 120rpx;
-  height: 266rpx;
+.grid-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  background: url("https://tweapp.top1buyer.com/s-red-card@2x.png?v=2") repeat-y;
+  background-size: contain;
 }
 
-.timeout {
-  font-size: 35rpx;
-  color: white;
-  text-align: center;
-  width: 40rpx;
-}
-
-.sec {
+.top-warpper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 
-.sec .numOfTime {
-  font-size: 40rpx;
-  font-weight: bold;
-  color: white;
-}
-
-.sec .miao {
-  font-size: 40rpx;
-  font-weight: bold;
-  color: white;
-}
-
-.lifeView {
-  position: absolute;
-  right: 20rpx;
-  top: 150rpx;
-  height: 400rpx;
-  width: 180rpx;
-}
-
-.lifeView text:nth-child(1) {
-  position: absolute;
-  font-size: 30rpx;
-  text-align: center;
-  top: 10rpx;
-  left: 10rpx;
-}
-
-.lifeView image {
-  position: absolute;
-  width: 40rpx;
-  height: 240rpx;
-  top: 80rpx;
-  left: 80rpx;
-}
-
-.bg {
+.top-warpper .grid {
+  margin-top: 104rpx;
+  position: relative;
+  padding: 30rpx 0rpx 40rpx 0rpx;
   display: flex;
-  margin: 40rpx auto;
-  text-align: center;
-  background: url("https://tweapp.top1buyer.com/l-rain-bg@2x.png") no-repeat;
+  flex-direction: column;
+  align-items: center;
+  width: 660rpx;
+  background: linear-gradient(to bottom, #FFF1DA, #FED99D);
+}
+
+.top-warpper .grid .top-bg {
+  position: absolute;
+  top: -20rpx;
+  height: 58rpx;
+  width: 748rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-top-bg@2x.png") no-repeat;
   background-size: cover;
-  width: 750rpx;
-  height: 1000rpx;
 }
 
-.shadeView {
-  margin: 176rpx auto;
-  text-align: center;
-  background: url("https://tweapp.top1buyer.com/l-rain-gold@2x.png") no-repeat;
+.top-warpper .grid .bottom-bg {
+  position: absolute;
+  bottom: -40rpx;
+  height: 58rpx;
+  width: 748rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-bottom-bg@2x.png") no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 550rpx;
-  height: 700rpx;
-  align-items: center;
-  z-index: 9999;
 }
 
-.shadeView-top {
-  margin-top: 30rpx;
-  font-size: 40rpx;
-  color: #ffffff;
-}
 
-.shadeView_scoreView {
-  width: 360rpx;
-  height: 220rpx;
-  line-height: 220rpx;
-  background-size: 100% 100%;
-  margin-top: 70rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-  /* box-sizing:border-box; */
-}
 
-.shadeView_scoreView text:nth-child(1) {
-  font-size: 100rpx;
-  color: #ffffff;
-  line-height: 76rpx;
-}
-
-.shadeView_scoreView text:nth-child(2) {
-  font-size: 30rpx;
-  color: #ffffff;
-  margin-left: 12rpx;
-}
-
-.shadeView_gameOverBtn {
-  width: 550rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.shadeView_gameOverBtn .explain {
-  font-size: 30rpx;
-  color: #ffffff;
-}
-
-.shadeView_gameOverBtn .btn {
-  margin-top: 58rpx;
-  width: 300rpx;
-  height: 70rpx;
-  background-color: #fff9e8;
-  text-align: center;
-  line-height: 70rpx;
-  border-radius: 40rpx;
-  font-size: 30rpx;
-  color: #b10000;
-}
-
-.shadeView_gameOverBtn .rule {
-  margin-top: 28rpx;
+.top-warpper .grid .award-record {
+  margin-top: 18rpx;
   font-size: 24rpx;
-  color: #ffffff;
+  text-decoration: underline;
+  color: #960001;
+}
+
+.top-warpper .grid .card-off {
+  text-align: center;
+}
+
+.top-warpper .grid .card-off .image {
+  margin-top: 150rpx;
+  width: 312rpx;
+  height: 298rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-off.png") no-repeat;
+  background-size: cover;
+}
+
+.top-warpper .grid .card-off .text-off {
+  margin: 66rpx auto 140rpx auto;
+  font-size: 40rpx;
+}
+
+.top-warpper .swiper_warpper {
+  margin-top: 44rpx;
+  width: 680rpx;
+  height: 154rpx;
+  padding: 10rpx;
+  background: #D80C0D url("https://tweapp.top1buyer.com/s-card-award-border@2x.png") center center no-repeat;
+  background-size: 680rpx 154rpx;
+  margin-bottom: 50rpx;
+}
+
+.top-warpper .swiper_warpper .swiper_container {
+  width: 600rpx;
+  height: 102rpx;
+  padding: 26rpx 40rpx;
+}
+
+.top-warpper .swiper_warpper .swiper_container .swiper_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24rpx;
+  line-height: 34rpx;
+  color: #ffe4b6;
+}
+
+.top-warpper .swiper_warpper .swiper_container .swiper_item .item-icon {
+  margin-right: 16rpx;
+  width: 24rpx;
+  height: 24rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-horn-icon@2x.png") no-repeat;
+  background-size: cover;
+}
+
+.top-warpper .swiper_warpper .swiper_container .swiper_item .item-text {
+  flex: 1;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.top-warpper .home-btn {
+  margin-top: 46rpx;
+  width: 680rpx;
+  height: 94rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-go-home@2x.png?v=3") no-repeat;
+  background-size: cover;
+  color: #ffe9c4;
+  font-size: 40rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.top-warpper .more-info {
+  margin-top: 26rpx;
+  font-size: 24rpx;
+  color: #ffe9c4;
+}
+
+.top-warpper .more-info text {
   text-decoration: underline;
 }
 
-.btn-group {
-  position: absolute;
-  z-index: 1010;
-  /* margin-bottom: 50px; */
-}
-
-.coverView {
+.top-warpper .bottom {
   display: flex;
-  position: fixed;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
   width: 100%;
-  height: 100%;
-  background: lightblue;
-  background-size: 100% 100%;
+  padding: 0 24rpx;
+  margin-top: -12rpx;
+  margin-bottom: 36rpx;
+  box-sizing: border-box;
+  clear: both;
 }
 
-.coverView cover-view:nth-child(1) {
-  position: absolute;
-  text-align: center;
-  font-size: 45rpx;
-  color: white;
-  padding-left: 50rpx;
-  top: 150rpx;
-  font-weight: bold;
-  z-index: 1010;
-}
-
-.warper {
-  width: 580rpx;
-  height: 668rpx;
-  background: url("https://tweapp.top1buyer.com/s-card-rules.png?v=3") no-repeat;
+.top-warpper .bottom .left {
+  width: 116rpx;
+  height: 36rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-bottom-left@2x.png") no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  margin: 106rpx 0 200rpx 0;
 }
 
-.warper .close {
-  position: absolute;
-  right: 20rpx;
-  top: -100rpx;
-  width: 60rpx;
-  height: 102rpx;
+.top-warpper .bottom .right {
+  width: 116rpx;
+  height: 36rpx;
+  background: url("https://tweapp.top1buyer.com/s-card-bottom-right@2x.png") no-repeat;
+  background-size: cover;
 }
 
-.content {
-  margin-top: 170rpx;
-  padding-left: 10rpx;
-  width: 424rpx;
-  height: 396rpx;
-  color: #411F16;
-  font-size: 22rpx;
-  text-align: left;
-}
-
-.content view {
-  line-height: 32rpx;
-  margin-top: 16rpx;
+.recommend .recommend-title {
+  width: 660rpx;
+  height: 88rpx;
+  margin: 34rpx auto;
+  background: url("https://tweapp.top1buyer.com/s-card-activity-title.png") repeat-y;
+  background-size: contain;
 }

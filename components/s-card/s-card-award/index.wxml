@@ -1,10 +1,10 @@
 <s-popup visible="{{visible}}" position="center">
-  <view class="warper">
+  <view class="warpper">
     <!--是自己-->
     <block wx:if="{{award.isMe}}">
       <image class="close" bindtap="closeAward" src="https://tweapp.top1buyer.com/s-top_close@2x.png?v=1"></image>
       <!--分享中-->
-      <view wx:if="{{award.status==1}}" class="shareing-warper ongoing">
+      <view wx:if="{{award.status==1}}" class="shareing-warpper ongoing">
         <view class="help-num">还差
           <text>{{award.helpNum-award.helpedNum}}</text>位好友助力，即可开启这份惊喜
         </view>
@@ -21,9 +21,9 @@
         <view class="help-tip">助力完成后即可开奖</view>
       </view>
       <!--待领取和已领取-->
-      <view wx:else class="award-warper type{{award.type}} {{award.helpNum>0?'have-users':''}}">
+      <view wx:else class="award-warpper type{{award.type}} {{award.helpNum>0?'have-users':''}}">
         <!--优惠券类型-->
-        <view class="coupon-warper" wx:if="{{award.type==1}}">
+        <view class="coupon-warpper" wx:if="{{award.type==1}}">
           <view class="coupon-top">
             <text class="rmb">¥</text>
             <text class="coupon-amount">{{award.couponAmount/100}}</text>
@@ -55,7 +55,7 @@
     <!--是别人-->
     <block wx:else>
       <image class="close" bindtap="reLoad" src="https://tweapp.top1buyer.com/s-top_close@2x.png?v=1"></image>
-      <view wx:if="{{award.status==1 && !award.helpSign}}" class="shareing-warper ongoing">
+      <view wx:if="{{award.status==1 && !award.helpSign}}" class="shareing-warpper ongoing">
         <view class="help-num">还差
           <text>{{award.helpNum-award.helpedNum}}</text>位好友助力，即可开启这份惊喜</view>
         <view class="big-prize">新年锦鲤到，贺岁送红包</view>
@@ -71,7 +71,7 @@
         <button wx:else class="award-btn" data-id="{{award.id}}" bindtap="triggerItemEvent">立即帮Ta助力</button>
         <view class="help-tip">助力完成后即可开奖</view>
       </view>
-      <view wx:else class="shareing-warper help-done-bg {{award.helpNum>0?'have-users':''}}">
+      <view wx:else class="shareing-warpper help-done-bg {{award.helpNum>0?'have-users':''}}">
         <!--如果助力已满并且没有主力过-->
         <block wx:if="{{award.sign &&!award.helpSign}}">
           <view class="help-done">
