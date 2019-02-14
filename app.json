@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/filter/index",
     "pages/wheel/index",
-    "pages/gridCard/index"
+    "pages/gridCard/index",
+    "pages/packetRain/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

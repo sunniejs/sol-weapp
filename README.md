@@ -13,7 +13,13 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 大转盘  "pages/wheel/index"   
 </p>
 <p>
+  <img src="./page1.gif" width="400"  style="display:inline;">
+</p>
+<p>
 九宫格翻牌  "pages/gridCard/index"
+</p>
+<p>
+  <img src="./page2.gif" width="400"  style="display:inline;">
 </p>
 <p>
 红包雨   开发中
