@@ -14,11 +14,7 @@ Page({
             url: '/pages/gridCard/index',
             name: '九宫格翻盘'
           },
-          {
-            id: 'picketRain',
-            url: '/pages/packetRain/index',
-            name: '红包雨'
-          },
+          
         ],
       },
       {
