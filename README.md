@@ -18,11 +18,8 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 "pages/filter/index"      功能筛选
 # 筛选预览
 <p>
-  <img src="./page5.gif" width="400"  style="display:inline;">
+  <img src="./page5.gif" width="800"  style="display:inline;">
 </p>
-<<<<<<< HEAD
-<img src="./mine.jpg" style="display:inline;width:100px;height">
- 
 如果对你有帮助送我一颗小星星吧
 =======
 # 关于我
@@ -33,4 +30,4 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 </p>
  
 如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
->>>>>>> 74af8a0dceb9e782ce188e4d31e2ab2df3b03507
+
