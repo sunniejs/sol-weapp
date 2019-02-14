@@ -1,35 +1,8 @@
-<!--pages/game/game.wxml-->
-<view class='bgView' hidden='{{isGameOver}}'>
-  <cax id="myCanvas" class="caxClass" >
-    <view class="rain-score">
-        <view>金币:{{score}}</view>
-        <view class='scoreChangeClass {{changeScore < 0 ? "scoreChangeClass2_color":""}}' animation="{{animationData}}">{{changeScore>0 ? "+":""}}{{changeScore}}</view>
-    </view>
-    <view class='countDownView' style='background-image: url(http://videoss.cdn.bcebos.com/countdown.png)'>
-      <view class="timeout">倒计时</view>
-      <view class="sec">
-          <view class="numOfTime">{{numOfTime}}</view>
-          <view class="miao">s</view>
-      </view>
-    </view>
-  </cax>
+<!--pages/packetRain/index.wxml-->
+<view class="container">
+  <image mode="aspectFit" src="/assets/logo.png"></image>
+  <view class='title'>Soul Weapp</view>
+  <view>红包雨</view>
 </view>
 
-<view class='bgView2' hidden='{{!isGameOver}}'>
-  <view class="bg">
-      <view class='shadeView'>
-          <view class="shadeView-top">恭喜您获得</view>
-          <view class='shadeView_scoreView'>
-            <text>{{score}}</text>
-            <text>金币</text>
-          </view>
-          <view class='shadeView_gameOverBtn'>
-            <view class="explain">金币已存入您的账户中</view> 
-            <view class="explain">可用于下单时抵扣商品金额</view>
-            <view class="btn" bindtap="backToHome">我知道了</view>
-            <view class="rule" bindtap="checkrule">查看规则></view>
-          </view>
-        </view>
-  </view>
-</view>
- 
+<s-packetrain readyTime="{{readyTime}}"></s-packetrain>

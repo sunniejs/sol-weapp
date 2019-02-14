@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cax": "/components/s-packetrain/cax/cax"
+  }
+}
