@@ -1,7 +1,7 @@
 # soul-weapp 简介
 小程序常用商城组件案例及营销组件
 <p>
-  <img src="./index.png" width="600"  style="display:inline;">
+  <img src="./index.png" width="300"  style="display:inline;">
 </p>
 # 运行例子
 git clone https://github.com/sunnie1992/soul-weapp.git
@@ -25,6 +25,7 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 <p>
   <img src="./page5.gif" width="600"  style="display:inline;">
 </p>
+
 # 关于我
 
 您可以扫描添加下方的微信并备注 Soul 给我提意见，交流学习。
