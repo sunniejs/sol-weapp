@@ -32,23 +32,9 @@ Page({
   // 子组件触发，点击打开单个卡片奖品
   emitGetCards(e) {
     const { item, index } = e.detail
+    // 改变卡片翻转状态 status :0 反面 ，1 正面
     this.setData({
-      [`card[${index}].isBack`]: true
+      [`card[${index}].status`]: 1
     })
-    // const userCode = App.globalData.userInfo.userCode
-    // getCardAwardInfo({ sort: index + 1 })
-    //   .then(res => {
-    //     const prize = res.data.userPrize
-    //     prize.user = res.data.user
-    //     console.log(prize)
-    //     this.setData({
-    //       awardVisible: true,
-    //       award: prize,
-    //       [`card[${index}]`]: prize
-    //     })
-    //   })
-    //   .catch(err => {
-    //     console.log(err)
-    //   })
   }
 })

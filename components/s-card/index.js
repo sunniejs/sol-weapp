@@ -19,7 +19,7 @@ Component({
         .then(() => {
           // 延迟100毫秒翻转第一排牌面
           for (let i = 0; i < 3; i++) {
-            card[i].isBack = true
+            card[i].status = 1
           }
           this.setData({
             card
@@ -29,7 +29,7 @@ Component({
         .then(() => {
            // 延迟200毫秒翻转第二排牌面
           for (let i = 3; i < 6; i++) {
-            card[i].isBack = true
+            card[i].status = 1
           }
           this.setData({
             card
@@ -39,7 +39,7 @@ Component({
         .then(() => {
            // 延迟200毫秒翻转第三排牌面
           for (let i = 6; i <= 8; i++) {
-            card[i].isBack = true
+            card[i].status = 1
           }
           this.setData({
             card
@@ -49,7 +49,7 @@ Component({
         .then(() => {
             // 将所有背面朝上
           for (let i = 0; i < 9; i++) {
-            card[i].isBack = false
+            card[i].status = 0
           }
           this.setData({
             card

@@ -4,7 +4,6 @@
     <view class="grid" >
       <view class="top-bg"></view>
       <s-card id="card" card="{{card}}" sign="{{sign}}" bind:getcards="emitGetCards"></s-card>
-      <view class="award-record" bindtap="getRecords">我的领取记录></view>
       <view class="bottom-bg"></view>
     </view>
     <view class="swiper_warpper">
