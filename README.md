@@ -1,31 +1,25 @@
 # soul-weapp 简介
-小程序常用案例及营销组件
+小程序常用商城组件案例及营销组件
 
 # 运行例子
 git clone https://github.com/sunnie1992/soul-weapp.git
 
 微信开发者工具打开项目
 
+#  营销组件
+<p>
+大转盘  "pages/wheel/index"   
+</p>
+<p>
+九宫格翻牌  "pages/gridCard/index"
+</p>
+
 # 页面
-"pages/filter/index"  功能筛选
-
-# 预览
+"pages/filter/index"      功能筛选
+# 筛选预览
 <p>
-  <img src="./page5.gif" width="800"  style="display:inline;">
+  <img src="./page5.gif" width="400"  style="display:inline;">
 </p>
-
-# 其他
-
-正在整理小程序营销组件，后续添加营销组件
-<p>
-大转盘
-</p>
-<p>
-九宫格翻牌
-</p>
-
-
-
 <<<<<<< HEAD
 <img src="./mine.jpg" style="display:inline;width:100px;height">
  
