@@ -137,7 +137,10 @@ Page({
     var that = this
     var ranNum = Math.random() * (info.windowWidth - 80)
     newName = new cax.Bitmap('../../assets/images/rdc.png')
+    // 旋转角度
     var angle = Math.random() * 90 - 45 
+    console.log(angle)
+     newName.rotation = angle
     // 随机大小0.4~0.5
     newName.scaleX = newName.scaleY = (Math.random() * 10 +40) / 100
     // x轴随机位置
