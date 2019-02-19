@@ -13,7 +13,7 @@ Page({
   init() {
     this.setData({
       time: 15, // 游戏时间
-      readyTime:10, // 准备时间
+      readyTime:3, // 准备时间
       min: 1, // 金额最小是1
       max: 5 // 金额最大是5
     })
