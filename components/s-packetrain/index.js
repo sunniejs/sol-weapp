@@ -10,6 +10,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    visible: {
+      type: Boolean,
+      value: false
+    },
     // 游戏事件单位秒
     time: {
       type: Number,
@@ -28,6 +32,7 @@ Component({
       type: Number,
       value: 3
     },
+    // 初始速度
     createSpeed: {
       type: Number,
       value: 400
@@ -43,12 +48,15 @@ Component({
     createPacketTimer: '', // 创建红包Timer
     packetMoveDownTimer: '', // 红包下落Timer
     readyRainTimer: null, // 准备时间Timer
-    readyVisible: true // 显示准备倒计时
+    readyVisible: true, // 显示准备倒计时
+    isGameOver: false
   },
   ready() {
+    // 开始
     this.start()
   },
   methods: {
+    // 倒计时开始
     start() {
       var that = this
       this.data.readyRainTimer = setInterval(function() {
@@ -68,6 +76,7 @@ Component({
         }
       }, 1000)
     },
+    // 游戏开始
     play() {
       const bgStage = new cax.Stage(
         info.windowWidth,
@@ -133,8 +142,11 @@ Component({
         newName.destroy()
         // 动态显示分数
         that.animationOfScore()
-        // 随机产生红包金额
-        var changeOfScore = that._getRandom()
+        // 随机产生红包金额 最小到最大值之间的金币数
+        var changeOfScore = Math.floor(
+          Math.random() * this.data.max + this.data.min
+        )
+        console.log(changeOfScore)
         // 当前总金额
         var nowScore = that.data.score + changeOfScore
         that.setData({
@@ -146,13 +158,7 @@ Component({
       //将创建的红包shape都放入数组中
       shapeArray.push(newName)
     },
-    // 随机产生红包金额
-    _getRandom() {
-      var random = Math.random()
-      random == 0 ? 1 : random // 如果随机数是0   运气爆棚，直接给个最大奖
-      var val = random * this.data.max
-      return  Math.round(val)
-    },
+
     //分数动画
     animationOfScore() {
       const animation = wx.createAnimation({
@@ -195,7 +201,7 @@ Component({
         if (nowTime == 0) {
           that.rainOver(bgStage)
         }
-         
+
         that.setData({
           time: nowTime
         })
@@ -211,6 +217,15 @@ Component({
         value.destroy()
         bgStage.update()
       })
-    }
+      this.setData({
+        isGameOver: true
+      })
+    },
+    // 点击我知道了
+    finish() {
+      this.triggerEvent('finish')
+    },
+    // 查看规则
+    checkrule() {}
   }
 })

@@ -5,4 +5,4 @@
   <view>红包雨</view>
 </view>
 
-<s-packetrain readyTime="{{readyTime}}"></s-packetrain>
+<s-packetrain visible="{{visible}}" time="{{time}}" readyTime="{{readyTime}}" min="{{min}}" max="{{max}}" bindfinish="doFinish"></s-packetrain>

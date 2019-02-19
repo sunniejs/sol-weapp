@@ -34,7 +34,7 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 
 # 关于我
 
-您可以扫描添加下方的微信并备注 Soul 给我提意见，交流学习。
+您可以扫描添加下方的微信并备注 Soul 加交流群，给我提意见，交流学习。
 <p>
   <img src="./mine.jpg" width="256" style="display:inline;">
 </p>
