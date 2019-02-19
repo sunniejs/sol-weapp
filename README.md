@@ -22,7 +22,10 @@ git clone https://github.com/sunnie1992/soul-weapp.git
   <img src="./page2.gif" width="400"  style="display:inline;">
 </p>
 <p>
-红包雨   开发中
+红包雨     "pages/packetRain/index"
+</p>
+<p>
+  <img src="./page6.gif" width="400"  style="display:inline;">
 </p>
 
 # 页面
