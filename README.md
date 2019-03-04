@@ -7,7 +7,8 @@
 git clone https://github.com/sunnie1992/soul-weapp.git
 
 微信开发者工具打开项目
-
+# 更新日志
+2019.03.04 更新 小程序保存多张图片到相册
 #  营销组件
 <p>
 大转盘  "pages/wheel/index"   
@@ -30,6 +31,7 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 
 # 页面
 "pages/filter/index"      功能筛选
+
 # 筛选预览
 <p>
   <img src="https://tweapp.top1buyer.com/page5.gif" width="600"  style="display:inline;">
