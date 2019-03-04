@@ -24,10 +24,12 @@ Component({
       type: Number,
       value: 5
     },
+    // 最小金币数
     min: {
       type: Number,
       value: 1
     },
+    // 最大金币数
     max: {
       type: Number,
       value: 3

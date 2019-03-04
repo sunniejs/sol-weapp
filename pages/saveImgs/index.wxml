@@ -1,0 +1,17 @@
+<!--pages/saveImgs/index.wxml-->
+<view class="app-container">
+  <view class="material-list">
+    <view class="item">
+      <view class="header">
+        <image class="activity-img" src="https://tweapp.top1buyer.com/preview/1.jpg"></image>
+        <view class="activity-title">保存多张图片到相册</view>
+        <view class="download-btn" bindtap="downloadImgs">点击下载</view>
+      </view>
+      <view class="content">
+        <view class="share-images">
+          <image wx:for="{{list}}" wx:key="index" class="share-img" mode='aspectFill' src="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -4,7 +4,8 @@
     "pages/filter/index",
     "pages/wheel/index",
     "pages/gridCard/index",
-    "pages/packetRain/index"
+    "pages/packetRain/index",
+    "pages/saveImgs/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

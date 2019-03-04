@@ -29,6 +29,12 @@ Page({
             url: '/pages/filter/index',
             name: '筛选'
           },
+             {
+            id: 'saveImgs',
+            url: '/pages/saveImgs/index',
+            name: '保存多张图片'
+          },
+          
         ]
       },
       

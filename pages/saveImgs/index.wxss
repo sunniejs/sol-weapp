@@ -1,0 +1,91 @@
+/* pages/saveImgs/index.wxss */
+@charset "UTF-8";
+.app-container .material-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.app-container .material-list .item {
+  margin-bottom: 20rpx;
+  padding: 24rpx 30rpx 24rpx 20rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.app-container .material-list .item .header {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  align-items: center;
+}
+
+.app-container .material-list .item .header .activity-img {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 10rpx;
+}
+
+.app-container .material-list .item .header .activity-title {
+  display: flex;
+  flex: 1;
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+
+.app-container .material-list .item .header .download-btn {
+  width: 162rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #313131;
+  color: #ffffff;
+  border-radius: 28rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.app-container .material-list .item .content {
+  margin: 24rpx 0 0 106rpx;
+}
+
+.app-container .material-list .item .content .description {
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 38rpx;
+}
+
+.app-container .material-list .item .content .share-images {
+  width: 500rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.app-container .material-list .item .content .share-images .share-img {
+  width: 160rpx;
+  height: 160rpx;
+  margin-bottom: 10rpx;
+  background: #ddd;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.app-container .material-list .item .content .share-images .share-img image {
+  width: 160rpx;
+  height: 236rpx;
+}

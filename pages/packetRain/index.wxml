@@ -4,5 +4,5 @@
   <view class='title'>Soul Weapp</view>
   <view>红包雨</view>
 </view>
-
+<!--红包雨组件-->
 <s-packetrain visible="{{visible}}" time="{{time}}" readyTime="{{readyTime}}" min="{{min}}" max="{{max}}" bindfinish="doFinish"></s-packetrain>

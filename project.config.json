@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
-	"appid": "wx964c60a9f3689cdf",
+	"appid": "wx0804ce9074b8d441",
 	"projectname": "soul-weapp",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -54,7 +54,14 @@
 				{
 					"id": -1,
 					"name": "九宫格",
-					"pathName": "pages/gridCard/index"
+					"pathName": "pages/gridCard/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "下载图片",
+					"pathName": "pages/saveImgs/index",
+					"scene": null
 				}
 			]
 		}
