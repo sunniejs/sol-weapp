@@ -48,7 +48,8 @@ Page({
       },
       function fail() {
         wx.showToast({
-          title: '您拒绝了保存到相册'
+          title: '您拒绝了保存到相册',
+          icon:'none'
         })
       }
     )

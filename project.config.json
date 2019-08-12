@@ -9,16 +9,26 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
-	"appid": "wx0804ce9074b8d441",
+	"libVersion": "1.9.97",
+	"appid": "wx9e6373cc7408241f",
 	"projectname": "soul-weapp",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -37,7 +47,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -61,6 +71,13 @@
 					"id": -1,
 					"name": "下载图片",
 					"pathName": "pages/saveImgs/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "拖拽",
+					"pathName": "pages/touchMove/index",
 					"scene": null
 				}
 			]
