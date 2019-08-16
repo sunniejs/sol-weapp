@@ -1,10 +1,19 @@
 # soul-weapp 简介
 
 小程序常用商城组件案例及营销组件
+这里你能找到的有：
 
-<p>
-  <img src="https://tweapp.top1buyer.com/preview/index.png" width="300"  style="display:inline;">
-</p>
+1.  红包雨
+2.  大转盘
+3.  九宫格翻牌
+4.  筛选页面 demo
+5.  保存多张图片 demp
+6.  横向滚动 demo
+7.  。。。
+    持续更新中
+    <p>
+      <img src="https://tweapp.top1buyer.com/preview/index.png" width="300"  style="display:inline;">
+    </p>
 
 # 线上体验
 
