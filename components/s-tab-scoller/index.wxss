@@ -150,3 +150,12 @@
   color: #eb0e0e;
   border: 1rpx solid #eb0e0e;
 }
+.pop-mask {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}

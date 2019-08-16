@@ -21,4 +21,5 @@
       </view>
     </view>
   </view>
+  <div class='pop-mask' wx:if="{{showNavDrap}}" bindtap="showAllNav"></div>
 </view>
