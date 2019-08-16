@@ -1,0 +1,3 @@
+<!-- pages/tab-scroller/index.wxml -->
+<s-tab-scoller list="{{list}}" bindchange="navChange"></s-tab-scoller>
+<view class="container">{{name}}</view>

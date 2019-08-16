@@ -1,2 +1,7 @@
 <!--pages/touchMove/index.wxml-->
-<text>pages/touchMove/index.wxml</text>
+<view>
+  
+</view>
+<s-float-icons>
+<view>toach</view>
+</s-float-icons>

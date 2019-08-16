@@ -1,7 +1,3 @@
-page {
-  background: #f8f8f8;
-}
-
 .index-hd {
   padding: 80rpx;
   text-align: center;
@@ -77,11 +73,11 @@ page {
   vertical-align: middle;
 }
 
- .title-text {
+.title-text {
   display: inline-block;
   vertical-align: middle;
   font-size: 28px;
   margin-left: 12px;
   font-weight: 400;
-  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }

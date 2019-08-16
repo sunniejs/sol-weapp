@@ -33,12 +33,12 @@ Page({
             id: 'saveImgs',
             url: '/pages/saveImgs/index',
             name: '保存多张图片'
+          },
+          {
+            id: 'tabScroller',
+            url: '/pages/tabScroller/index',
+            name: '横向滚动'
           }
-          // {
-          //   id: 'touchMove',
-          //   url: '/pages/touchMove/index',
-          //   name: '拖拽'
-          // },
         ]
       }
     ]

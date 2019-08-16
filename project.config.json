@@ -47,7 +47,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -78,6 +78,14 @@
 					"id": -1,
 					"name": "拖拽",
 					"pathName": "pages/touchMove/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/tabScroller/index",
+					"pathName": "pages/tabScroller/index",
+					"query": "",
 					"scene": null
 				}
 			]
