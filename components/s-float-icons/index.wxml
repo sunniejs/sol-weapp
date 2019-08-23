@@ -1,4 +1,0 @@
-<!--components/s-float-icons/index.wxml-->
-<view class="ex-class float-container"  bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" style="left:{{x}}rpx;top:{{y}}rpx;" >
-  <slot></slot>
-</view>

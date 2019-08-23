@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "横向滚动",
-  "usingComponents": {
-    "s-tab-scoller": "/components/s-tab-scoller/index"
-  }
-}

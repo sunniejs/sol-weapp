@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "红包雨",
-  "usingComponents": {
-    "s-packetrain": "/components/s-packetrain/index"
-  }
-}

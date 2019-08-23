@@ -1,4 +1,0 @@
-/* pages/tab-scroller/index.wxss */
-.container {
-  padding-top: 100rpx;
-}
