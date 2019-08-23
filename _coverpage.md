@@ -16,7 +16,7 @@
 - 导航栏、筛选页、高度业务化组件
 
 [GitHub](https://github.com/sunnie1992/sol-weapp)
-[文档](/README)
+[文档](/readme)
 
 <!-- 背景色 -->
 
