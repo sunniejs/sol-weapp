@@ -1,73 +1,20 @@
-# sol-weapp 简介
+# So Weapp 🎉
 
-小程序常用商城组件案例及营销组件
-这里你能找到的有：
+> [So Weapp](https://github.com/sunnie1992/sol-weapp) 是一套简单、易用、业务化的商城营销组件库。
 
-1.  红包雨
-2.  大转盘
-3.  九宫格翻牌
-4.  筛选页面 demo
-5.  保存多张图片 demp
-6.  横向滚动 demo
-7.  。。。
-    持续更新中
-    <p>
-      <img src="https://tweapp.top1buyer.com/preview/index.png" width="300"  style="display:inline;">
-    </p>
+## 预览
 
-# 线上体验
+扫描下方小程序二维码体验示例：
 
-<p>
-  <img src="https://image-static.segmentfault.com/300/521/3005215915-5d5106ffbcf03_articlex" width="300"  style="display:inline;">
-</p>
+![logo](_images/qrcode.jpg)
 
-# 运行例子
+## 贡献代码
 
-git clone https://github.com/sunnie1992/sol-weapp.git
+使用过程中发现任何问题都可以提[Issue](https://github.com/sunnie1992/sol-weapp/issues) 给我，也非常欢迎 PR
+或 [Pull Request ](https://github.com/sunnie1992/sol-weapp/pulls)
 
-微信开发者工具打开项目
+## 交流学习
 
-# 更新日志
+扫描添加下方的微信并备注 Sol 加交流群，交流学习，及时获取代码最新动态。
 
-2019.03.04 更新 小程序保存多张图片到相册
-
-# 营销组件
-
-<p>
-大转盘  "pages/wheel/index"   
-</p>
-<p>
-  <img src="https://tweapp.top1buyer.com/page1.gif" width="400"  style="display:inline;">
-</p>
-<p>
-九宫格翻牌  "pages/gridCard/index"
-</p>
-<p>
-  <img src="https://tweapp.top1buyer.com/page2.gif" width="400"  style="display:inline;">
-</p>
-<p>
-红包雨     "pages/packetRain/index"
-</p>
-<p>
-  <img src="https://tweapp.top1buyer.com/page6.gif" width="400"  style="display:inline;">
-</p>
-
-# 页面
-
-"pages/filter/index" 功能筛选
-
-# 筛选预览
-
-<p>
-  <img src="https://tweapp.top1buyer.com/page5.gif" width="600"  style="display:inline;">
-</p>
-
-# 关于我
-
-您可以扫描添加下方的微信并备注 Sol 加交流群，给我提意见，交流学习。
-
-<p>
-  <img src="https://tweapp.top1buyer.com/mine.jpg" width="256" style="display:inline;">
-</p>
- 
-如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
+![logo](_images/mine.png)
