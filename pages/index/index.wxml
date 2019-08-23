@@ -1,8 +1,8 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="index">
   <view class="index-hd">
     <image class="index-logo" src="/assets/logo.png"></image>
-    <view class='title-text'>Soul Weapp</view>
+    <view class='title-text'>Sol Weapp</view>
   </view>
   <view class="index-bd">
     <view class="kind-list">

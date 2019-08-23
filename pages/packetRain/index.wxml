@@ -1,8 +1,8 @@
-<!--pages/packetRain/index.wxml-->
+<!-- pages/packetRain/index.wxml -->
 <view class="container">
   <image mode="aspectFit" src="/assets/logo.png"></image>
-  <view class='title'>Soul Weapp</view>
+  <view class='title'>So Weapp</view>
   <view>红包雨</view>
 </view>
-<!--红包雨组件-->
+<!-- 红包雨组件 -->
 <s-packetrain visible="{{visible}}" time="{{time}}" readyTime="{{readyTime}}" min="{{min}}" max="{{max}}" bindfinish="doFinish"></s-packetrain>

@@ -46,7 +46,7 @@ Page({
   /* 转发*/
   onShareAppMessage: function(ops) {
     return {
-      title: 'soul-weapp组件',
+      title: 'sol-weapp组件',
       path: '/pages/index/index',
       imageUrl: '../../assets/qrcode.png'
     }

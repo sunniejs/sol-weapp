@@ -1,4 +1,4 @@
-# soul-weapp 简介
+# sol-weapp 简介
 
 小程序常用商城组件案例及营销组件
 这里你能找到的有：
@@ -23,7 +23,7 @@
 
 # 运行例子
 
-git clone https://github.com/sunnie1992/soul-weapp.git
+git clone https://github.com/sunnie1992/sol-weapp.git
 
 微信开发者工具打开项目
 
@@ -64,7 +64,7 @@ git clone https://github.com/sunnie1992/soul-weapp.git
 
 # 关于我
 
-您可以扫描添加下方的微信并备注 Soul 加交流群，给我提意见，交流学习。
+您可以扫描添加下方的微信并备注 Sol 加交流群，给我提意见，交流学习。
 
 <p>
   <img src="https://tweapp.top1buyer.com/mine.jpg" width="256" style="display:inline;">
