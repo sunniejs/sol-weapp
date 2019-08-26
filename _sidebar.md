@@ -1,4 +1,4 @@
-- [介绍](/introduction.md)
+- [介绍](/README.md)
 - [快速上手](/zh-cn/quickstart.md)
   - [开始之前](/zh-cn/quickstart.md#开始之前)
   - [使用](/zh-cn/quickstart.md#使用)
