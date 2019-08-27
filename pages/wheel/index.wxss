@@ -1,1 +1,14 @@
 /* pages/wheel/index.wxss */
+.page-wheel {
+  padding: 20rpx;
+}
+
+.page-wheel .sol-button {
+  margin-right: 20rpx;
+}
+
+.wheel-mode {
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+}

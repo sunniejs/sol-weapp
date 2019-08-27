@@ -1,29 +1,35 @@
 Component({
+  externalClasses: ['ex-class'],
   properties: {
-    // 奖区数量
+    // 划分区域
     areaNumber: {
       type: Number,
       value: 6
-    },
-    // 速度
-    speed: {
-      type: Number,
-      value: 16
     },
     // 中奖区域 从1开始
     awardNumer: {
       type: Number,
       value: 1
     },
-    // 抽奖模式，装盘转，指针旋转
+    // 速度
+    speed: {
+      type: Number,
+      value: 16
+    },
+    // 抽奖模式:1:盘转,2:指针旋转
     mode: {
       type: Number,
       value: 2
     },
-    // 是否可以点击
-    disabled: {
+    // 是否可以开始
+    ready: {
       type: Boolean,
-      value: false
+      value: false,
+      observer(newVal, oldVal) {
+        if (newVal) {
+          this.begin()
+        }
+      }
     }
   },
   data: {
@@ -33,27 +39,25 @@ Component({
   },
   methods: {
     init() {
-      let { areaNumber, singleAngle, mode } = this.data
-      this.data.singleAngle = 360 / this.data.areaNumber
+      let { areaNumber } = this.data
+      const singleAngle = 360 / areaNumber
       this.setData({
-        singleAngle: this.data.singleAngle,
-        mode: this.data.mode
+        singleAngle: singleAngle
       })
     },
+    // 点击开始抽奖
     start() {
-      // 如果已经抽过奖了
-      if (this.data.disabled) {
-        wx.showToast({
-          title: '已经抽过奖了哦',
-          icon:'none'
-        })
-        return
-      }
+      this.triggerEvent('start')
+    },
+    begin() {
+      // 点击开始抽奖
       let { deg, awardNumer, singleAngle, speed, isStart, mode } = this.data
       if (isStart) return
       this.data.isStart = true
+
       const endAddAngle = (awardNumer - 1) * singleAngle + singleAngle / 2 + 360 // 中奖角度
       const rangeAngle = (Math.floor(Math.random() * 4) + 4) * 360 // 随机旋转几圈再停止
+      console.log(endAddAngle)
       let cAngle
       deg = 0
       this.timer = setInterval(() => {
@@ -65,30 +69,20 @@ Component({
           deg += cAngle
           if (deg >= endAddAngle + rangeAngle) {
             deg = endAddAngle + rangeAngle
+            console.log(deg)
             this.data.isStart = false
             clearInterval(this.timer)
             this.triggerEvent('success')
           }
         }
-
         this.setData({
           singleAngle,
           deg,
           mode
         })
       }, 1000 / 60)
-    },
-    reset() {
-      const { mode } = this.data
-      this.data.deg = 0
-      this.setData({
-        singleAngle: this.data.singleAngle,
-        deg: 0,
-        mode
-      })
     }
   },
-
   attached() {
     this.init()
   }

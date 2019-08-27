@@ -1,79 +1,53 @@
 // pages/wheel/index.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    award:1,
-    disabled:false
+    award: 1,
+    mode: 2, // 旋转模式
+    ready: false,
+    awardList: [
+      { title: '10个金币' },
+      { title: '20个金币' },
+      { title: '40个金币' },
+      { title: '50个金币' },
+      { title: '80个金币' },
+      { title: '200个金币' }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onLoad: function(options) {},
+  // 用户点击开始抽奖
+  wheelStart() {
+    // 请求玩数据之后
     this.setData({
-      award: Math.floor(Math.random() * 6 + 1) // 生成1到6随机
+      award: Math.floor(Math.random() * 6 + 1), //安全起见生成奖项应该由后端完成，生成1到6随机
+      ready: true // 开始抽奖
     })
+    console.log(this.data.award)
   },
   // 抽奖完成后操作
   wheelSuccess() {
-    console.log('loginSuccess')
+    console.log('bind:success')
+    const index = this.data.award - 1
     wx.showToast({
-      title: '恭喜你获得'+this.data.award+'等奖',
-      icon:'none'
+      title: `恭喜你获得${this.data.awardList[index].title}`,
+      icon: 'none'
     })
+  },
+  // 切换模式
+  switchMode(e) {
+    const { type } = e.currentTarget.dataset
     this.setData({
-      disabled:true // 只能抽奖一次
+      mode: type,
+      ready: false
     })
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  /* 转发*/
+  onShareAppMessage: function(ops) {
+    return {
+      title: '大转盘组件',
+      path: '/pages/wheel/index'
+    }
   }
 })

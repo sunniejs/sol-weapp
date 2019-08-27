@@ -1,2 +1,13 @@
-<!--pages/wheel/index.wxml-->
- <s-wheel award-numer="{{award}}" disabled="{{disabled}}" bind:success="wheelSuccess" ></s-wheel>
+<!-- pages/wheel/index.wxml -->
+<view class="page-wheel">
+  <s-wheel award-numer="{{award}}" ready="{{ready}}" mode="{{mode}}" bind:start="wheelStart" bind:success="wheelSuccess"></s-wheel>
+  <view class="wheel-mode">
+    <view>旋转模式：</view>
+    <view class="sol-button  {{mode=='1'?'sol-button--danger':''}}" data-type="1" bindtap="switchMode">
+      指针旋转
+    </view>
+    <view class="sol-button  {{mode=='2'?'sol-button--danger':''}}" data-type="2" bindtap="switchMode">
+      转盘旋转
+    </view>
+  </view>
+</view>

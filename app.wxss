@@ -6,5 +6,41 @@ page {
   min-height: 100vh;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
+  font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeiTi', Arial, 'Microsoft YaHei', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.sol-button {
+  appearance: none;
+  border-radius: 4rpx;
+  padding: 0 24rpx;
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  display: inline-block;
+  font-size: 28rpx;
+  height: 66rpx;
+  line-height: 66rpx;
+  outline: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: #333333;
+  background-color: #fff;
+  border: 1rpx solid #ebedf0;
+}
+
+.sol-button--danger {
+  color: #fff;
+  background-color: #de3535;
+
 }

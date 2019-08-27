@@ -1,17 +1,15 @@
 <view>
   <view class="wheel_wp">
     <block wx:if="{{mode == 1}}">
-      <image src="https://tweapp.top1buyer.com/s-dial_bg.png?v=3" />
-      <view class="wheel_pointer" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{deg}}deg) translateZ(0)"
-        bindtap="start">
-        <image src="https://tweapp.top1buyer.com/s-dial_pointer.png?v=1" />
+      <image src="./images/s-dial_bg.png" />
+      <view class="wheel_pointer" bindtap="start" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{deg}}deg) translateZ(0)">
+        <image src="./images/s-dial_pointer.png" />
       </view>
     </block>
     <block wx:if="{{mode == 2}}">
-      <image src="https://tweapp.top1buyer.com/s-dial_bg.png?v=3" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{ deg}}deg) translateZ(0)"
-      />
+      <image src="./images/s-dial_bg.png" style="-webkit-transform:rotate({{deg}}deg) translateZ(0);transform:rotate({{ deg}}deg) translateZ(0)" />
       <view class="wheel_pointer" bindtap="start">
-        <image src="https://tweapp.top1buyer.com/s-dial_pointer.png?v=1" />
+        <image src="./images/s-dial_pointer.png" />
       </view>
     </block>
   </view>
