@@ -44,7 +44,7 @@ git clone https://github.com/sunnie1992/sol-weapp.git
  
 # 关于我
 
-您可以扫描添加下方的微信并备注 Sol 加交流群，给我提意见，交流学习。
+扫描添加下方的微信并备注 Sol 加交流群，交流学习，及时获取代码最新动态。
 
 <p>
   <img src="https://tweapp.top1buyer.com/mine.jpg" width="256" style="display:inline;">
