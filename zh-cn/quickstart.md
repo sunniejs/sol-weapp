@@ -1,10 +1,10 @@
 ## 开始之前 😊
 
-使用 So Weapp 前，请确保你阅读过微信官方的 [小程序简易教程](https://developers.weixin.qq.com/miniprogram/dev/) 和[自定义组件介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/) 。
+使用 Sol Weapp 前，请确保你阅读过微信官方的 [小程序简易教程](https://developers.weixin.qq.com/miniprogram/dev/) 和[自定义组件介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/) 。
 
 ## 使用
 
-下载 [GitHub](https://github.com/sunnie1992/sol-weapp) So Weapp 的代码，然后将 components/ 目录下你需要的组件拷贝到你的组件目录下
+下载 [GitHub](https://github.com/sunnie1992/sol-weapp) Sol Weapp 的代码，然后将 components/ 目录下你需要的组件拷贝到你的组件目录下
 
 ```bash
 git clone https://github.com/sunnie1992/sol-weapp.git

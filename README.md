@@ -1,6 +1,6 @@
-# So Weapp 🎉
+# Sol Weapp 🎉
 
-> [So Weapp](https://github.com/sunnie1992/sol-weapp) 是一套简单、易用、业务化的商城营销组件库。
+> [Sol Weapp](https://github.com/sunnie1992/sol-weapp) 是一套简单、易用、业务化的商城营销组件库。
 
 ## 预览
 
