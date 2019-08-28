@@ -5,7 +5,7 @@
  <h1>
     <span>
       <span style="font-weight:400;">Sol Weapp</span>
-      <span style="font-size:14px">0.2.0</span>
+      <span style="font-size:14px">1.0.0</span>
     </span>
  </h1>
 
