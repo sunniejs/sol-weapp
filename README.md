@@ -1,4 +1,8 @@
-![logo](static/logo.png)
+<p align="center">
+    <a href="https://sunnie1992.github.io/sol-weapp/">
+        <img width="200" src="./static/logo.png">
+    </a>
+</p>
 
 ## sol-weapp
 
@@ -8,7 +12,7 @@
 
 扫描下方小程序二维码体验示例：
 
-![logo](_images/qrcode.jpg)
+![logo](static/qrcode.jpg)
 
 ## 在这里你能找到
 
@@ -19,9 +23,6 @@
 - 保存多张图片 demp
 - 横向滚动 demo
 - 。。。持续更新中
-   <p>
-     <img src="https://tweapp.top1buyer.com/preview/index.png" width="300"  style="display:inline;">
-   </p>
 
 # 运行例子
 
@@ -36,21 +37,11 @@ git clone https://github.com/sunnie1992/sol-weapp.git
 # 营销组件
 
 <p>
-  <img src="https://tweapp.top1buyer.com/page2.gif" width="300"  style="display:inline;">  
-  <img src="https://tweapp.top1buyer.com/page1.gif" width="300"  style="display:inline;">
-  <img src="https://tweapp.top1buyer.com/page6.gif" width="300"  style="display:inline;">
+  <img src="https://tweapp.top1buyer.com/page2.gif" width="250"  style="display:inline;">  
+  <img src="https://tweapp.top1buyer.com/page1.gif" width="250"  style="display:inline;">
+  <img src="https://tweapp.top1buyer.com/page6.gif" width="250"  style="display:inline;">
 </p>
-
-# 页面
-
-"pages/filter/index" 功能筛选
-
-# 筛选预览
-
-<p>
-  <img src="https://tweapp.top1buyer.com/page5.gif" width="300"  style="display:inline;">
-</p>
-
+ 
 # 关于我
 
 您可以扫描添加下方的微信并备注 Sol 加交流群，给我提意见，交流学习。
