@@ -1,5 +1,5 @@
 Component({
-  externalClasses: ['ex-class'],
+  externalClasses: ['sol-class'],
   properties: {
     // 划分区域
     areaNumber: {
@@ -19,7 +19,14 @@ Component({
     // 抽奖模式:1:盘转,2:指针旋转
     mode: {
       type: Number,
-      value: 2
+      value: 2,
+      observer(newVal, oldVal) {
+        // 切换模式的时候重置
+        this.setData({
+          ready: false,
+          deg: 0
+        })
+      }
     },
     // 是否可以开始
     ready: {
@@ -54,8 +61,12 @@ Component({
       let { deg, awardNumer, singleAngle, speed, isStart, mode } = this.data
       if (isStart) return
       this.data.isStart = true
-
-      const endAddAngle = (awardNumer - 1) * singleAngle + singleAngle / 2 + 360 // 中奖角度
+      let endAddAngle = 0
+      if (mode == 2) {
+        endAddAngle = 360 - ((awardNumer - 1) * singleAngle + singleAngle / 2) // 中奖角度
+      } else {
+        endAddAngle = (awardNumer - 1) * singleAngle + singleAngle / 2 + 360 // 中奖角度
+      }
       const rangeAngle = (Math.floor(Math.random() * 4) + 4) * 360 // 随机旋转几圈再停止
       console.log(endAddAngle)
       let cAngle
@@ -69,7 +80,6 @@ Component({
           deg += cAngle
           if (deg >= endAddAngle + rangeAngle) {
             deg = endAddAngle + rangeAngle
-            console.log(deg)
             this.data.isStart = false
             clearInterval(this.timer)
             this.triggerEvent('success')
@@ -83,6 +93,7 @@ Component({
       }, 1000 / 60)
     }
   },
+
   attached() {
     this.init()
   }

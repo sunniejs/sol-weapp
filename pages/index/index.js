@@ -10,14 +10,14 @@ Page({
             name: '大转盘'
           },
           {
-            id: 'gridCard',
-            url: '/pages/gridCard/index',
-            name: '九宫格翻牌'
-          },
-          {
             id: 'picketRain',
             url: '/pages/packetRain/index',
             name: '红包雨'
+          },
+          {
+            id: 'gridCard',
+            url: '/pages/gridCard/index',
+            name: '九宫格翻牌'
           }
         ]
       },

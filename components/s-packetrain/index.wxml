@@ -15,10 +15,9 @@
           </view>
         </view>
         <view class="rain-score">
-          <view>金币:{{score}}</view>
-          <view class='scoreChangeClass {{changeScore < 0 ? "scoreChangeClass2_color":""}}' animation="{{animationData}}">{{changeScore>0 ? "+":""}}{{changeScore}}</view>
+          <view>金币:{{showScore}}</view>
+          <view class='scoreChangeClass'  animation="{{animationData}}">{{showChangeScore>0 ? "+":""}}{{showChangeScore}}</view>
         </view>
-
       </cax>
     </view>
     <view class='rain-bg rain-over' hidden='{{!isGameOver}}'>
@@ -26,7 +25,7 @@
         <view class='shadeView'>
           <view class="shadeView-top">恭喜您获得</view>
           <view class='shadeView_scoreView'>
-            <text>{{score}}</text>
+            <text>{{showScore}}</text>
             <text>金币</text>
           </view>
           <view class='shadeView_gameOverBtn'>

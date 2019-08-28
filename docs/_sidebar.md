@@ -5,4 +5,5 @@
   - [引入组件](/zh-cn/quickstart.md#引入组件)
 - 营销组件
   - [大转盘](/zh-cn/wheel.md#大转盘)
+  - [红包雨](/zh-cn/packet.md#红包雨)
   - 组件将全面升级，开发中敬请期待。。。

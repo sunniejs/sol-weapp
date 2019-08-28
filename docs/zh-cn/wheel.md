@@ -1,6 +1,6 @@
 ## 大转盘
 
-点击抽奖，转盘转动，结束后弹出对应奖项
+点击抽奖，转盘或指针转动，结束后弹出对应奖项
 
 ## 注意
 
@@ -19,7 +19,7 @@
 ## 使用
 
 ```html
-<s-wheel award-numer="{{award}}" disabled="{{disabled}}" bind:success="wheelSuccess"></s-wheel>
+<s-wheel award-numer="{{award}}" ready="{{ready}}" mode="{{mode}}" bind:start="wheelStart" bind:success="wheelSuccess"></s-wheel>
 ```
 
 ## API
@@ -27,9 +27,11 @@
 | 参数         | 类型     | 描述                           | 默认值 |
 | ------------ | -------- | ------------------------------ | ------ |
 | areaNumber   | Number   | 奖项个数                       | 6      |
-| awardNumer   | Number   | 中奖区域 从 1 开始             | 1      |
+| awardNumer   | Number   | 中奖区域 顺时针从 1 开始       | 1      |
+| ready        | Boolean  | 开始执行抽奖动画               | false  |
 | speed        | Number   | 旋转速度                       | 16     |
 | mode         | Number   | 抽奖模式 1:转盘旋转 2:指针旋转 | 1      |
+| bind:start   | Function | 点击开始抽奖触发函数           | -      |
 | bind:success | Function | 成功后的回调函数               | -      |
 
 ## 效果展示
