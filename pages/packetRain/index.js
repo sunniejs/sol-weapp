@@ -12,11 +12,11 @@ Page({
   initModeOne() {
     this.setData({
       visible: true,
-      time: 8, // 游戏时间
+      time: 15, // 游戏时间
       readyTime: 3, // 准备时间
       mode: 1,
-      total: 100, // 红包总金额200
-      number: 20, // 50个红包
+      total: 200, // 红包总金额200
+      number: 50, // 50个红包
       min: 0, // 金额最小是0
       max: 10 // 金额最大是10
     })
