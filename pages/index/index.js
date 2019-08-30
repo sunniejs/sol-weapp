@@ -18,6 +18,11 @@ Page({
             id: 'gridCard',
             url: '/pages/gridCard/index',
             name: '九宫格翻牌'
+          },
+          {
+            id: 'tabScroller',
+            url: '/pages/tabScroller/index',
+            name: '横向滚动'
           }
         ]
       },
@@ -33,11 +38,6 @@ Page({
             id: 'saveImgs',
             url: '/pages/saveImgs/index',
             name: '保存多张图片'
-          },
-          {
-            id: 'tabScroller',
-            url: '/pages/tabScroller/index',
-            name: '横向滚动'
           }
         ]
       }

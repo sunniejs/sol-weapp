@@ -1,7 +1,6 @@
-/* components/s-tab-scoller/index.wxss */
 .label-nav {
   position: fixed;
-  z-index: 1000;
+  z-index: 1500;
   top: 0;
   left: 0;
   right: 0;
@@ -9,9 +8,12 @@
 
 .label-nav .drop-nav-list {
   background: #fff;
+  width: 100%;
+  box-sizing: border-box;
   padding: 0rpx 30rpx 40rpx 30rpx;
   position: absolute;
   top: 0;
+  z-index: 1001;
 }
 
 .label-nav .drop-nav-list .drop-title {
@@ -27,7 +29,7 @@
   width: 66rpx;
   height: 90rpx;
   position: absolute;
-  z-index: 1000;
+  z-index: 1500;
   background: #fff;
   right: 0;
 }
@@ -65,10 +67,6 @@
   text-align: center;
 }
 
-.label-nav .drop-nav-list .nav-list-content .nav-item text {
-  color: #999999;
-}
-
 .label-nav .drop-nav-list .nav-list-content .nav-item:nth-of-type(3n) {
   margin-right: 0;
 }
@@ -101,7 +99,7 @@
   border-bottom-width: 0;
   border-left-width: 0;
   content: ' ';
-  top: 50%;
+  top: 40%;
   right: 20rpx;
   position: absolute;
   width: 20rpx;
@@ -122,19 +120,26 @@
   display: inline-block;
   box-sizing: border-box;
   padding: 0 16rpx;
-  min-width: 140rpx;
+  min-width: 120rpx;
   height: 90rpx;
   line-height: 90rpx;
   font-size: 30rpx;
   text-align: center;
+  vertical-align: top;
 }
 
-.label-nav .label-scoll .label-item .num {
-  padding: 0 8rpx;
+.label-nav .label-scoll .label-item .inner .num {
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 6rpx;
+  margin-bottom: 6rpx;
   height: 30rpx;
   line-height: 30rpx;
+  box-sizing: border-box;
+  min-width: 30rpx;
+  padding: 0 4rpx;
   font-size: 24rpx;
-  border: 1rpx solid #ffffff;
+  border: 2rpx solid #ffffff;
   border-radius: 18rpx;
 }
 
@@ -143,14 +148,33 @@
 }
 
 .label-nav .label-scoll .active {
-  color: #eb0e0e;
+  color: #FF8787;
 }
 
-.label-nav .label-scoll .active .num {
-  color: #eb0e0e;
-  border: 1rpx solid #eb0e0e;
+.label-nav .label-scoll .active .inner {
+  position: relative;
+  display: inline-block;
 }
-.pop-mask {
+
+.label-nav .label-scoll .active .inner:after {
+  content: '';
+  position: absolute;
+  background: #FF8787;
+  display: block;
+  left: 50%;
+  top: 70rpx;
+  width: 44rpx;
+  height: 4rpx;
+  border-radius: 4rpx;
+  transform: translateX(-50%);
+}
+
+.label-nav .label-scoll .active .inner .num {
+  color: #FF8787;
+  border: 2rpx solid #FF8787;
+}
+
+.label-nav .pop-mask {
   position: fixed;
   z-index: -1;
   top: 0;

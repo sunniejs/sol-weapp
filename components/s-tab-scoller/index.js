@@ -2,15 +2,26 @@
 Component({
   externalClasses: ['ex-class'],
   properties: {
-    list: Array
-  },
-
-  options: {
-    multipleSlots: true
+    tabs: {
+      type: Array,
+      value: []
+    },
+    theme: {
+      type: String,
+      value: 'white'
+    },
+    current: {
+      type: Number,
+      value: '',
+      observer(newVal) {
+        // 监听当前index值，切换
+        this.updated(newVal)
+      }
+    }
   },
   data: {
     showNavDrap: false,
-    navIndex: 0,
+    activeIndex: 0,
     navScrollLeft: 0
   },
 
@@ -18,16 +29,25 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    /**
+     * 显示下拉框
+     */
     showAllNav() {
       this.setData({
         showNavDrap: !this.data.showNavDrap
       })
     },
-    //选择
-    chooseNav(e) {
-      var item = e.currentTarget.dataset.item
-      var index = e.currentTarget.dataset.index
-      var pop = e.currentTarget.dataset.pop
+    /**
+     * 触发 点击事件
+     */
+    onClick(e) {
+      const { index, pop } = e.currentTarget.dataset
+      this.updated(index, pop)
+    },
+    /**
+     * 切换
+     */
+    updated(index, pop) {
       // 点击弹出的选项
       if (pop) {
         this.setData({
@@ -60,9 +80,9 @@ Component({
         .exec()
       //设置当前样式
       this.setData({
-        navIndex: index
+        activeIndex: index
       })
-      this.triggerEvent('change', item)
+      this.triggerEvent('change', { index: index })
     }
   }
 })
