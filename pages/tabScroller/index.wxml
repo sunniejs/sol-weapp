@@ -1,9 +1,0 @@
-<!-- pages/tab-scroller/index.wxml -->
-<s-tab-scoller tabs="{{list}}" current="{{index}}" bindchange="onTabsChange"></s-tab-scoller>
-<swiper class="container" current="{{index}}" duration="300" bindchange="onSwitchTab">
-  <swiper-item wx:for="{{list}}" wx:key="index">
-    <view class= "content">
-      {{index}}--{{item.title}}
-    </view>  
-  </swiper-item>
-</swiper>

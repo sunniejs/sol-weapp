@@ -1,0 +1,16 @@
+<!--components/s-card/index.wxml-->
+<view class="gridcard  {{isMove ? 'move' : ''}}">
+  <block wx:for="{{card}}" wx:for-item="item" wx:key="index">
+    <view class="gridcard_item {{item.status==1 ? 'back' : ''}}" bindtap="openCard" data-item="{{item}}" data-index="{{index}}">
+      <view class="gridcard_back">
+        <image src="{{item.img}}" />
+      </view>
+      <view class="gridcard_front">
+      </view>
+    </view>
+  </block>
+</view>
+<view class="card-warpper">
+  <view wx:if="{{!sign}}" class="card-btn" bindtap="onStart"></view>
+<view wx:else class="card-btn ongoing"></view>
+</view>

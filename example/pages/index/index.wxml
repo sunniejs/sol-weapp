@@ -1,0 +1,22 @@
+<!-- index.wxml -->
+<view class="container">
+	<view class="title">
+		<image class="logo" src="/assets/logo.png" />
+		<view class="title-text">Sol Weapp</view>
+	</view>
+	<view class="desc">小程序商城组件库,让开发变得更简单</view>
+	<view class="kind-list">
+		<block wx:for-items="{{components}}" wx:key="index">
+			<view>{{item.title}}</view>
+			<view wx:for-items="{{item.children}}" wx:key="index" class="kind-list-item">
+				<view id="{{item.id}}" class="kind-list-item-hd">
+					<navigator url="{{item.url}}" class="navigator" hover-class="none">
+						<view class="kind-list-text">{{item.name}}</view>
+						<view class="kind-list-arraw">></view>
+					</navigator>
+				</view>
+			</view>
+		</block>
+	</view>
+</view>
+

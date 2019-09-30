@@ -1,0 +1,13 @@
+<!-- pages/big-wheel/index.wxml -->
+<view class="page-wheel">
+  <sol-wheel award-numer="{{award}}" ready="{{ready}}"   mode="{{mode}}" bind:start="wheelStart" bind:success="wheelSuccess"></sol-wheel>
+  <view class="wheel-mode">
+    <view>旋转模式：</view>
+    <view class="sol-button  {{mode=='1'?'sol-button--danger':''}}" data-type="1" bindtap="switchMode">
+      指针旋转
+    </view>
+    <view class="sol-button  {{mode=='2'?'sol-button--danger':''}}" data-type="2" bindtap="switchMode">
+      转盘旋转
+    </view>
+  </view>
+</view>

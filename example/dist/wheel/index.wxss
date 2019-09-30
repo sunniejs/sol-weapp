@@ -1,0 +1,29 @@
+.wheel_header image {
+  width: 590rpx;
+  height: 102rpx;
+  margin-bottom: 30rpx
+}
+.wheel_wp {
+  width: 640rpx;
+  height: 640rpx;
+  position: relative;
+  margin: 0 auto
+}
+.wheel_wp image {
+  display: block;
+  width: 100%;
+  height: 100%
+}
+.wheel_wp .wheel_pointer {
+  position: absolute;
+  width: 224rpx;
+  height: 224rpx;
+  top: 50%;
+  left: 50%;
+  margin: -112rpx 0 0 -112rpx
+}
+.close image {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 74rpx
+}

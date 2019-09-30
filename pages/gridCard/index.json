@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "九宫格翻牌",
-  "usingComponents": {
-    "s-card": "/components/s-card/index"
-  }
-}

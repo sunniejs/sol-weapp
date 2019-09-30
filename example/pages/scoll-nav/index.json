@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "滚动导航条",
+    "usingComponents": {
+        "scoll-nav": "/dist/scoll-nav/index"
+    }
+}
