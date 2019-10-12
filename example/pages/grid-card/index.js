@@ -1,40 +1,96 @@
-import { getCardTemplate, getCardAwardInfo } from '../../utils/api.js'
 Page({
-  data: {
-    card: [], // 九宫格奖项
-    msgList: [], // 获奖记录
-    loading: true
-  },
-  onLoad: function(options) {
-    // 获取卡片数据模板
-    this.fetchData()
-  },
-  // 请求翻牌数据,用于数据请求/回显
-  fetchData() {
-    // 后台提供接口，这里使用easy-mock提供模拟数据,有点慢耐心等待
-    // 接口请求统一封装在 /utils/api.js下，request封装在/utils/request.js
-    getCardTemplate({})
-      .then(res => {
-        // 设置数据
-        this.setData({
-          card: res.data.prize, // 九宫格奖项
-          sign: !!res.data.sign, // 是否抽过奖
-          msgList: res.data.userList, // 获奖记录
-          loading: false // 请求完成
+    data: {
+        times: 2,
+        // 九宫格奖项
+        card: [
+            {
+                id: 1,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0 //   :0 反面 , 1 正面
+            },
+            {
+                id: 2,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 3,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 4,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 5,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 6,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 7,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 8,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            },
+            {
+                id: 9,
+                prizeName: '金币',
+                img: 'https://timgs.top1buyer.com/admin/marketing/gridcard_img_20190121140854599.png',
+                status: 0
+            }
+        ],
+        loading: true
+    },
+    onLoad: function(options) {
+        // 获取卡片数据模板
+        // this.fetchData()
+        wx.request({
+            url: 'https://rest.flamia.net/rest/items/get', //仅为示例，并非真实的接口地址
+            data: {
+                code: '12345'
+            },
+            header: {
+                'content-type': 'application/json' // 默认值
+            },
+            success(res) {
+                console.log(res.data)
+            }
         })
-      })
-      .catch(err => {
+    },
+    /**
+     * 点击开始抽奖
+     */
+    start() {
+        // 触发组件方法
+        this.selectComponent('#sol-grid-card').start()
+    },
+
+    // 子组件触发，点击打开单个卡片奖品
+    openCard(e) {
+        const { item, index } = e.detail
+        // 改变卡片翻转状态 status :0 反面 , 1 正面
         this.setData({
-          loading: false // 请求失败
+            [`card[${index}].status`]: 1
         })
-      })
-  },
-  // 子组件触发，点击打开单个卡片奖品
-  emitGetCards(e) {
-    const { item, index } = e.detail
-    // 改变卡片翻转状态 status :0 反面 ，1 正面
-    this.setData({
-      [`card[${index}].status`]: 1
-    })
-  }
+        // 请求接口记录用户获得的奖项
+    }
 })

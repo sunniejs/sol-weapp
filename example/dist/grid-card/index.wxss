@@ -1,0 +1,88 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 600rpx;
+  height: 780rpx
+}
+.card .project {
+  position: absolute;
+  float: left;
+  width: 200rpx;
+  height: 260rpx;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  transition: all 1s cubic-bezier(.68,-.22,.265,1.22)
+}
+.card .project image {
+  width: 180rpx;
+  height: 240rpx
+}
+.card .project .back,
+.card .project .front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 1s cubic-bezier(.68,-.22,.265,1.22);
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  width: 180rpx;
+  height: 240rpx
+}
+.card .project .front {
+  transform: rotateY(0)
+}
+.card .project .back {
+  transform: rotateY(180deg)
+}
+.card .project.flip .back {
+  transform: rotateY(0)
+}
+.card .project.flip .front {
+  transform: rotateY(180deg)
+}
+.card .ani {
+  top: 260rpx!important;
+  left: 200rpx!important
+}
+.card .item0 {
+  top: 0;
+  left: 0
+}
+.card .item1 {
+  top: 0;
+  left: 200rpx
+}
+.card .item2 {
+  top: 0;
+  left: 400rpx
+}
+.card .item3 {
+  top: 260rpx;
+  left: 0
+}
+.card .item4 {
+  top: 260rpx;
+  left: 200rpx
+}
+.card .item5 {
+  top: 260rpx;
+  left: 400rpx
+}
+.card .item6 {
+  top: 520rpx;
+  left: 0
+}
+.card .item7 {
+  top: 520rpx;
+  left: 200rpx
+}
+.card .item8 {
+  top: 520rpx;
+  left: 400rpx
+}

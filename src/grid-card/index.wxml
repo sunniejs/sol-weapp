@@ -1,0 +1,56 @@
+<!--components/s-card/index.wxml 
+<view class="gridcard  {{isMove ? 'move' : ''}}">
+  <block wx:for="{{card}}" wx:for-item="item" wx:key="index">
+    <view class="gridcard_item {{item.status==1 ? 'back' : ''}}" bindtap="openCard" data-item="{{item}}" data-index="{{index}}">
+      <view class="gridcard_back">
+        <image src="{{item.img}}" />
+      </view>
+      <view class="gridcard_front">
+      </view>
+    </view>
+  </block>
+</view>
+<view class="card-warpper">
+  <view wx:if="{{!sign}}" class="card-btn" bindtap="onStart"></view>
+<view wx:else class="card-btn ongoing"></view>
+</view>
+-->
+<view class="card">
+  <block wx:for="{{card}}" wx:key="index" >
+      <view data-index="{{index}}"  data-item="{{item}}" bindtap="openCard" class="project item{{index}} {{item.isMove ? 'ani' : ''}} {{item.status==1 ? 'flip' : ''}}" >
+        <image class="front" src="./image/card.png" />
+        <view class="back">
+           <image src="{{item.img}}" />
+        </view>
+    </view>
+  </block>
+ 
+	<!--<view class="project item0">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item1">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item2">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item3">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item4">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item5">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item6">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item7">
+		<image class="back" src="./image/card.png" />
+	</view>
+	<view class="project item8">
+		<image class="back" src="./image/card.png" />
+	</view>-->
+</view>
+
