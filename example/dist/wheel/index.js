@@ -34,7 +34,7 @@ Component({
             value: false,
             observer(newVal, oldVal) {
                 if (newVal) {
-                    this.begin()
+                    this.start()
                 }
             }
         }

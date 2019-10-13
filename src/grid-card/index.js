@@ -1,56 +1,26 @@
 Component({
     properties: {
-        // 是否可以开始
-        ready: {
-            type: Boolean,
-            value: false,
-            observer(newVal) {
-                if (newVal) {
-                    this.start()
-                }
-            }
-        },
         // 九宫格卡片
         card: {
             type: Array,
             value: []
         },
-        // 抽奖次数
-        times: {
-            type: Number,
-            value: 1
-        },
-
-        // 是否已开启九宫格抽奖
-        sign: Boolean
+        // 模式
+        mode: {
+            type: String,
+            value: '1'
+        }
     },
     data: {
         move: ''
     },
     methods: {
         start() {
-            // 洗牌
-            const { card } = this.data
-            for (let i = 0; i < 9; i++) {
-                runAsync(i * 60)
-                    .then(() => {
-                        card[i].isMove = true
-                        this.setData({
-                            card
-                        })
-                        return runAsync(i * 60 + 1500)
-                    })
-                    .then(() => {
-                        card[i].isMove = false
-                        this.setData({
-                            card
-                        })
-                    })
-            }
-        },
-        onStart() {
-            // 开始动画
-            const { card } = this.properties
+            const {
+                card,
+                mode
+            } = this.data
+
             runAsync(100)
                 .then(() => {
                     // 延迟100毫秒翻转第一排牌面
@@ -91,26 +61,39 @@ Component({
                         card
                     })
                     return runAsync(1000)
-                })
-                .then(() => {
+                }).then(() => {
                     // 洗牌动画
-                    this.setData({
-                        isMove: true
-                    })
-                    return runAsync(500)
+                    for (let i = 0; i < 9; i++) {
+                        runAsync(i * 40)
+                            .then(() => {
+                                card[i].isMove = true
+                                this.setData({
+                                    card
+                                })
+                                return runAsync(i * 40 + 1200)
+                            })
+                            .then(() => {
+                                card[i].isMove = false
+                                this.setData({
+                                    card
+                                })
+                            })
+                    }
                 })
-                .then(() => {
-                    this.setData({
-                        isMove: false,
-                        sign: true // 已开启九宫格抽奖
-                    })
-                })
+
         },
+
         // 点击打开单个卡片，开奖
         openCard(event) {
-            const { item, index } = event.currentTarget.dataset
+            const {
+                item,
+                index
+            } = event.currentTarget.dataset
             // 触发父组件方法
-            this.triggerEvent('open', { item, index })
+            this.triggerEvent('open', {
+                item,
+                index
+            })
         }
     }
 })
@@ -120,8 +103,8 @@ Component({
  * @return {type}   返回Promise对象
  */
 function runAsync(time) {
-    return new Promise(function(resolve, reject) {
-        const timer = setTimeout(function() {
+    return new Promise(function (resolve, reject) {
+        const timer = setTimeout(function () {
             resolve()
             clearTimeout(timer)
         }, time)
