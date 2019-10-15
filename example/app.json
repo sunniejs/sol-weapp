@@ -3,11 +3,8 @@
         "pages/index/index",
         "pages/big-wheel/index",
         "pages/packet-rain/index",
-        "pages/scoll-nav/index",
-        "pages/filter/index",
         "pages/grid-card/index",
-        "pages/saveImgs/index",
-        "pages/touchMove/index"
+        "pages/scoll-nav/index"
 
     ],
     "window": {

@@ -30,22 +30,22 @@ Page({
                         name: '滚动导航条'
                     }
                 ]
-            },
-            {
-                title: '页面demo',
-                children: [
-                    {
-                        id: 'filter',
-                        url: '/pages/filter/index',
-                        name: '筛选'
-                    },
-                    {
-                        id: 'saveImgs',
-                        url: '/pages/saveImgs/index',
-                        name: '保存多张图片'
-                    }
-                ]
             }
+            // {
+            //     title: '页面demo',
+            //     children: [
+            //         {
+            //             id: 'filter',
+            //             url: '/pages/filter/index',
+            //             name: '筛选'
+            //         },
+            //         {
+            //             id: 'saveImgs',
+            //             url: '/pages/saveImgs/index',
+            //             name: '保存多张图片'
+            //         }
+            //     ]
+            // }
         ]
     },
     /* 转发*/
