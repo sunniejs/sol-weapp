@@ -1,5 +1,4 @@
-<!-- pages/tab-scroller/index.wxml -->
-<scoll-nav tabs="{{list}}" current="{{index}}" bindchange="onTabsChange"></scoll-nav>
+<sol-scoll-nav tabs="{{list}}" current="{{index}}" bindchange="onTabsChange"></sol-scoll-nav>
 <swiper class="container" current="{{index}}" duration="300" bindchange="onSwitchTab">
   <swiper-item wx:for="{{list}}" wx:key="index">
     <view class= "content">

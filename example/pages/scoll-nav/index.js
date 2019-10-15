@@ -1,4 +1,3 @@
-// pages/tab-scroller/index.js
 Page({
     /**
      * 页面的初始数据
@@ -36,7 +35,7 @@ Page({
     /* 转发*/
     onShareAppMessage: function(ops) {
         return {
-            title: '滚动导航条',
+            title: 'SOL-滚动导航条',
             path: '/pages/scoll-nav/index'
         }
     }

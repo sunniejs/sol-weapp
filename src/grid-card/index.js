@@ -4,22 +4,14 @@ Component({
         card: {
             type: Array,
             value: []
-        },
-        // 模式
-        mode: {
-            type: String,
-            value: '1'
         }
     },
     data: {
         move: ''
     },
     methods: {
-        start() {
-            const {
-                card,
-                mode
-            } = this.data
+        start(callback) {
+            const { card, mode } = this.data
 
             runAsync(100)
                 .then(() => {
@@ -61,7 +53,8 @@ Component({
                         card
                     })
                     return runAsync(1000)
-                }).then(() => {
+                })
+                .then(() => {
                     // 洗牌动画
                     for (let i = 0; i < 9; i++) {
                         runAsync(i * 40)
@@ -77,18 +70,22 @@ Component({
                                 this.setData({
                                     card
                                 })
+
+                                return runAsync(1600)
+                            })
+                            .then(() => {
+                                // 结束后回调
+                                if (typeof callback === 'function') {
+                                    callback()
+                                }
                             })
                     }
                 })
-
         },
 
         // 点击打开单个卡片，开奖
         openCard(event) {
-            const {
-                item,
-                index
-            } = event.currentTarget.dataset
+            const { item, index } = event.currentTarget.dataset
             // 触发父组件方法
             this.triggerEvent('open', {
                 item,
@@ -103,8 +100,8 @@ Component({
  * @return {type}   返回Promise对象
  */
 function runAsync(time) {
-    return new Promise(function (resolve, reject) {
-        const timer = setTimeout(function () {
+    return new Promise(function(resolve, reject) {
+        const timer = setTimeout(function() {
             resolve()
             clearTimeout(timer)
         }, time)

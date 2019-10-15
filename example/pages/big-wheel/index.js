@@ -44,7 +44,7 @@ Page({
     /* 转发*/
     onShareAppMessage: function(ops) {
         return {
-            title: 'sol-大转盘组件',
+            title: 'SOL-大转盘组件',
             path: '/pages/big-wheel/index'
         }
     }

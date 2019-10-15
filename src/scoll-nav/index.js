@@ -5,10 +5,6 @@ Component({
             type: Array,
             value: []
         },
-        theme: {
-            type: String,
-            value: 'white'
-        },
         current: {
             type: Number,
             value: '',

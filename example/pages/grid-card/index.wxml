@@ -1,6 +1,6 @@
 <view class="container">
   <view class="grid-card">
-   <grid-card id="sol-grid-card" times="{{times}}" card="{{card}}"  bind:open="openCard"></grid-card>
+   <sol-grid-card id="sol-grid-card"   card="{{card}}"  bind:open="openCard"></sol-grid-card>
 </view>
 <view>
    <view class="sol-button"  bindtap="start">
