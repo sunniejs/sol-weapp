@@ -6,7 +6,7 @@
 
 ## sol-weapp
 
-> 一套简单、易用、业务化的商城营销组件库。
+> 一套简单、易用、业务化的商城营销组件库。让开发变得更简单
 
 ## 预览
 
@@ -16,13 +16,11 @@
 
 ## 在这里你能找到
 
-- 红包雨
-- 大转盘
-- 九宫格翻牌
-- 筛选页面 demo
-- 保存多张图片 demp
-- 横向滚动 demo
-- 。。。持续更新中
+-   大转盘
+-   红包雨
+-   九宫格翻牌
+-   Tab 滚动导航
+-   。。。持续更新中
 
 # 运行例子
 
@@ -32,14 +30,16 @@ git clone https://github.com/sunnie1992/sol-weapp.git
 
 # 更新日志
 
-2019.03.04 更新 小程序保存多张图片到相册
+2019.03.04 V0.0.1 更新 小程序保存多张图片到相册
+2019.10.01 V1.0.0 更新 重构红包雨，大转盘
+2019.10.15 V1.1.0 更新 构建升级，重构九宫格翻牌
 
 # 营销组件
 
 <p>
-  <img src="https://tweapp.top1buyer.com/page2.gif" width="250"  style="display:inline;">  
-  <img src="https://tweapp.top1buyer.com/page1.gif" width="250"  style="display:inline;">
-  <img src="https://tweapp.top1buyer.com/page6.gif" width="250"  style="display:inline;">
+  <img src="static/1.gif" width="250"  style="display:inline;">  
+  <img src="static/2.gif" width="250"  style="display:inline;">
+  <img src="static/3.gif" width="250"  style="display:inline;">
 </p>
  
 # 关于我
