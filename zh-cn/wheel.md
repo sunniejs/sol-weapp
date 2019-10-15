@@ -28,7 +28,6 @@
 | ------------ | -------- | ------------------------------ | ------ |
 | areaNumber   | Number   | 奖项个数                       | 6      |
 | awardNumer   | Number   | 中奖区域 顺时针从 1 开始       | 1      |
-| ready        | Boolean  | 开始执行抽奖动画               | false  |
 | speed        | Number   | 旋转速度                       | 16     |
 | mode         | Number   | 抽奖模式 1:转盘旋转 2:指针旋转 | 1      |
 | bind:start   | Function | 点击开始抽奖触发函数           | -      |
