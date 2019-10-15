@@ -35,4 +35,4 @@ Tab 滚动导航,可以通过点击 Tab ,下拉面板,滑动页面三种方式�
 
 ## 效果展示
 
-![logo](../_images/1.gif)
+![logo](../_images/4.gif)
