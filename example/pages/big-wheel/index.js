@@ -6,7 +6,6 @@ Page({
     data: {
         award: 1,
         mode: 2, // 旋转模式
-        ready: false,
         awardList: [
             { title: '10个金币' },
             { title: '20个金币' },
@@ -21,9 +20,10 @@ Page({
     wheelStart() {
         // 设置奖项
         this.setData({
-            award: Math.floor(Math.random() * 6 + 1), //安全起见生成奖项应该由后端完成，生成1到6随机
-            ready: true // 开始抽奖
+            award: Math.floor(Math.random() * 6 + 1) //安全起见生成奖项应该由后端完成，生成1到6随机
         })
+        // 触发组件开始方法
+        this.selectComponent('#sol-wheel').begin()
     },
     // 抽奖完成后操作
     wheelSuccess() {

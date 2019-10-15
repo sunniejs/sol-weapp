@@ -23,19 +23,8 @@ Component({
             observer(newVal, oldVal) {
                 // 切换模式的时候重置
                 this.setData({
-                    ready: false,
                     deg: 0
                 })
-            }
-        },
-        // 是否可以开始
-        ready: {
-            type: Boolean,
-            value: false,
-            observer(newVal, oldVal) {
-                if (newVal) {
-                    this.start()
-                }
             }
         }
     },
