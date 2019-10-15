@@ -1,4 +1,6 @@
 /**app.wxss**/
+@import "./assets/css/iconfont.wxss";
+
 page {
     color: #333;
     font-size: 16px;

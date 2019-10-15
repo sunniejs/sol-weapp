@@ -12,7 +12,7 @@
 				<view id="{{item.id}}" class="kind-list-item-hd">
 					<navigator url="{{item.url}}" class="navigator" hover-class="none">
 						<view class="kind-list-text">{{item.name}}</view>
-						<view class="kind-list-arraw">></view>
+						<view class="kind-list-arraw iconfont icon-{{item.id}}"></view>
 					</navigator>
 				</view>
 			</view>

@@ -41,7 +41,11 @@
     font-size: 32rpx;
 }
 
-.kind-list-arraw {}
+.kind-list-arraw {
+    width: 28px;
+    height: 28px;
+    font-size: 26px;
+}
 
 .kind-list-item-hd {
     padding: 20rpx;
