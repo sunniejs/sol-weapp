@@ -11,7 +11,7 @@
 ```json
 {
   "usingComponents": {
-    "s-wheel": "/components/s-wheel/index"
+    "sol-wheel": "/dist/wheel/index"
   }
 }
 ```
@@ -19,7 +19,7 @@
 ## 使用
 
 ```html
-<s-wheel award-numer="{{award}}" ready="{{ready}}" mode="{{mode}}" bind:start="wheelStart" bind:success="wheelSuccess"></s-wheel>
+<sol-wheel award-numer="{{award}}" ready="{{ready}}" mode="{{mode}}" bind:start="wheelStart" bind:success="wheelSuccess"></sol-wheel>
 ```
 
 ## API

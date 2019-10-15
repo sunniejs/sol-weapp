@@ -11,7 +11,7 @@
 ```json
 {
   "usingComponents": {
-    "s-packetrain": "/components/s-packetrain/index"
+    "sol-packet-rain": "/dist/packet-rain/index"
   }
 }
 ```
@@ -19,7 +19,7 @@
 ## 使用
 
 ```html
-<s-packetrain
+<sol-packet-rain
   visible="{{visible}}"
   total="{{total}}"
   mode="{{mode}}"
@@ -31,7 +31,7 @@
   min="{{min}}"
   max="{{max}}"
   bind:finish="success"
-></s-packetrain>
+></sol-packet-rain>
 ```
 
 ## API
