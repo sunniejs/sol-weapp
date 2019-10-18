@@ -1,0 +1,57 @@
+.slot-machine-container {
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    width: 550rpx;
+    height: 520rpx;
+    background: transparent url('https://tweapp.top1buyer.com/dg/weapp/main_bg_machine.png') bottom center no-repeat;
+    background-size: cover;
+
+    .reel-container {
+        position: absolute;
+        left: 60rpx;
+        top: 178rpx;
+        width: 435rpx;
+        height: 283rpx;
+        overflow: hidden;
+
+        .reel {
+            position: absolute;
+            width: 121rpx;
+            height: 2160rpx;
+            background: transparent url('https://tweapp.top1buyer.com/dg/weapp/reel_strip.png') 0 0 repeat-y;
+            background-size: contain;
+
+        }
+
+        .reel0 {
+            left: 10rpx;
+            top: -1360rpx;
+        }
+
+        .reel1 {
+            left: 158rpx;
+            top: -992rpx;
+        }
+
+        .reel2 {
+            left: 304rpx;
+            top: -1116rpx;
+        }
+
+
+
+
+        .reel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background: transparent url('http://slotmachinescript.com/img/slotmachine1/reel_overlay.png') 0 0 repeat-y;
+            background-size: cover;
+
+        }
+    }
+}

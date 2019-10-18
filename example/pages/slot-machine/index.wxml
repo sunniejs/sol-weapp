@@ -1,2 +1,2 @@
 <!--pages/slot-machine/index.wxml-->
-<text>pages/slot-machine/index.wxml</text>
+<slot-machine></slot-machine>

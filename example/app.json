@@ -1,17 +1,17 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/big-wheel/index",
-    "pages/packet-rain/index",
-    "pages/grid-card/index",
-    "pages/scoll-nav/index",
-    "pages/slot-machine/index"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Sol Weapp",
-    "navigationBarTextStyle": "black"
-  },
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/big-wheel/index",
+        "pages/packet-rain/index",
+        "pages/grid-card/index",
+        "pages/scoll-nav/index",
+        "pages/slot-machine/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "Sol Weapp",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json"
 }

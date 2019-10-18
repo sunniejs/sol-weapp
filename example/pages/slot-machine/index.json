@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+    "navigationBarTitleText": "老虎机",
+    "usingComponents": {
+        "slot-machine": "/dist/slot-machine/index"
+    }
 }

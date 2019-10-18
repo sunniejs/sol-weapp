@@ -18,6 +18,11 @@ Page({
                         id: 'grid-card',
                         url: '/pages/grid-card/index',
                         name: '九宫格翻牌'
+                    },
+                    {
+                        id: 'slot-machine',
+                        url: '/pages/slot-machine/index',
+                        name: '老虎机'
                     }
                 ]
             },
