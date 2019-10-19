@@ -21,7 +21,8 @@
             height: 2160rpx;
             background: transparent url('https://tweapp.top1buyer.com/dg/weapp/reel_strip.png') 0 0 repeat-y;
             background-size: contain;
-
+            transition: all 1s cubic-bezier(0.68, -.22, .265, 1.22);
+            // transition: all 600ms 缓动函数的贝赛尔曲线; 
         }
 
         .reel0 {

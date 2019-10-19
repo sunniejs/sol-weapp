@@ -20,7 +20,8 @@
   width: 121rpx;
   height: 2160rpx;
   background: transparent url(https://tweapp.top1buyer.com/dg/weapp/reel_strip.png) 0 0 repeat-y;
-  background-size: contain
+  background-size: contain;
+  transition: all 1s cubic-bezier(.68,-.22,.265,1.22)
 }
 .slot-machine-container .reel-container .reel0 {
   left: 10rpx;
