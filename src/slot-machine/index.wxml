@@ -1,6 +1,6 @@
 <view class="slot-machine-container">
 	<view class="reel-container">
-		<view wx:for="{{reels}}" wx:key="index" class="reel reel{{index}}" style="top:{{item.top}}rpx" > </view>
+		<view wx:for="{{reels}}" wx:key="index" class="reel reel{{index}} ani" style="top:{{item.top}}rpx" > </view>
 		<view class="reel-overlay" />
 	</view>
 </view>

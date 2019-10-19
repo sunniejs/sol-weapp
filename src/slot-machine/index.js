@@ -162,7 +162,7 @@ Component({
                 [`reels[${index}].top`]: position - stripHeight
             })
 
-
+         
             // if ((window.clearInterval(d), c.data('spinTimer', null), null != b)) {
 
             // const cellHeight = stripHeight / numIconsPerReel
