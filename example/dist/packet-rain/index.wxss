@@ -6,13 +6,9 @@
   bottom: 0;
   background-color: #000;
   opacity: .8;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: start;
   justify-content: flex-start;
   z-index: 10000
 }
@@ -32,23 +28,16 @@
   right: 0;
   top: 0;
   bottom: 0;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-align: center;
   align-items: center;
   z-index: 9999
 }
 .rain-bg .cax-class {
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-align: end;
   align-items: flex-end;
   width: 100%;
   height: 100%;
@@ -75,13 +64,9 @@
   width: 180rpx;
   height: 50rpx;
   border-radius: 50rpx;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: center;
   justify-content: center
 }
 .rain-bg .cax-class .timeout-warpper .timeout {
@@ -90,13 +75,9 @@
   text-align: center
 }
 .rain-bg .cax-class .timeout-warpper .sec {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: center;
   justify-content: center
 }
 .rain-bg .cax-class .timeout-warpper .sec .numOfTime {
@@ -118,11 +99,8 @@
   font-weight: 700;
   left: 20rpx;
   z-index: 1010;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-align: baseline;
   align-items: baseline
 }
 .rain-bg .cax-class .rain-score .scoreChangeClass {
@@ -136,7 +114,6 @@
   position: fixed
 }
 .rain-over .bg {
-  display: -ms-flexbox;
   display: flex;
   margin: 40rpx auto;
   text-align: center;
@@ -150,15 +127,11 @@
   text-align: center;
   background: url(https://tweapp.top1buyer.com/l-rain-gold@2x.png) no-repeat;
   background-size: cover;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 550rpx;
   height: 700rpx;
-  -ms-flex-align: center;
   align-items: center;
   z-index: 9999
 }
@@ -173,13 +146,9 @@
   line-height: 220rpx;
   background-size: 100% 100%;
   margin-top: 70rpx;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-align: baseline;
   align-items: baseline
 }
 .rain-over .bg .shadeView .shadeView_scoreView text:nth-child(1) {
@@ -194,13 +163,9 @@
 }
 .rain-over .bg .shadeView .shadeView_gameOverBtn {
   width: 550rpx;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: center;
   justify-content: center
 }
 .rain-over .bg .shadeView .shadeView_gameOverBtn .explain {

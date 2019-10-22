@@ -2,46 +2,38 @@
     position: relative;
     margin: 0 auto;
     z-index: 2;
-    width: 550rpx;
-    height: 520rpx;
+    width: 275px;
+    height: 260px;
     background: transparent url('https://tweapp.top1buyer.com/dg/weapp/main_bg_machine.png') bottom center no-repeat;
     background-size: cover;
 
     .reel-container {
         position: absolute;
-        left: 60rpx;
-        top: 178rpx;
-        width: 435rpx;
-        height: 283rpx;
+        left: 30px;
+        top: 89px;
+        width: 217px;
+        height: 141px;
         overflow: hidden;
 
         .reel {
             position: absolute;
-            width: 121rpx;
-            height: 2160rpx;
+            width: 60px;
+            height: 1080px;
             background: transparent url('https://tweapp.top1buyer.com/dg/weapp/reel_strip.png') 0 0 repeat-y;
             background-size: contain;
-            transition: all 1s cubic-bezier(0.68, -.22, .265, 1.22);
-            // transition: all 600ms 缓动函数的贝赛尔曲线; 
         }
 
         .reel0 {
-            left: 10rpx;
-            top: -1360rpx;
+            left: 5px;
         }
 
         .reel1 {
-            left: 158rpx;
-            top: -992rpx;
+            left: 79px;
         }
 
         .reel2 {
-            left: 304rpx;
-            top: -1116rpx;
+            left: 152px;
         }
-
-
-
 
         .reel-overlay {
             position: absolute;
@@ -55,4 +47,70 @@
 
         }
     }
+}
+
+// @keyframes bounce {
+//     20% {
+//         -webkit-transform: translate3d(0, 10px, 0);
+//         transform: translate3d(0, 10px, 0)
+//     }
+
+//     40%,
+//     45% {
+//         opacity: 1;
+//         -webkit-transform: translate3d(0, -20px, 0);
+//         transform: translate3d(0, -20px, 0)
+//     }
+
+//     to {
+//         opacity: 0;
+//         -webkit-transform: translate3d(0, 2000px, 0);
+//         transform: translate3d(0, 2000px, 0)
+//     }
+// }
+
+@keyframes bounce {
+
+    // 0%,
+    // 20%,
+    // 53%,
+    // 80%,
+    // to {
+
+    //     animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+    //     -webkit-transform: translateZ(0);
+    //     transform: translateZ(0)
+    // }
+
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform: translate3d(0, -200px, 0)
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform: translate3d(0, -150px, 0)
+    }
+
+    90% {
+        transform: translate3d(0, -200px, 0)
+    }
+
+    to {
+        transform: translate3d(0, -200px, 0)
+    }
+}
+
+
+
+.bounce {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom
 }

@@ -1,5 +1,4 @@
 .label-nav {
-  display: -ms-flexbox;
   display: flex;
   position: relative
 }
@@ -7,7 +6,7 @@
   background: #fff;
   width: 100%;
   box-sizing: border-box;
-  padding: 0 30rpx 40rpx 30rpx;
+  padding: 0rpx 30rpx 40rpx 30rpx;
   position: absolute;
   top: 0;
   z-index: 1001
@@ -38,15 +37,13 @@
   position: absolute;
   width: 20rpx;
   height: 20rpx;
+  -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(-45deg)
 }
 .label-nav .drop-nav-list .nav-list-content {
   overflow: hidden;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap
 }
 .label-nav .drop-nav-list .nav-list-content .nav-item {
@@ -92,6 +89,7 @@
   position: absolute;
   width: 20rpx;
   height: 20rpx;
+  -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(135deg)
 }
 .label-nav .label-scoll {

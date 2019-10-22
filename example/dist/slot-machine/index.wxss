@@ -11,29 +11,25 @@
   position: absolute;
   left: 60rpx;
   top: 178rpx;
-  width: 435rpx;
-  height: 283rpx;
+  width: 434rpx;
+  height: 282rpx;
   overflow: hidden
 }
 .slot-machine-container .reel-container .reel {
   position: absolute;
-  width: 121rpx;
+  width: 120rpx;
   height: 2160rpx;
   background: transparent url(https://tweapp.top1buyer.com/dg/weapp/reel_strip.png) 0 0 repeat-y;
-  background-size: contain;
-  transition: all 1s cubic-bezier(.68,-.22,.265,1.22)
+  background-size: contain
 }
 .slot-machine-container .reel-container .reel0 {
-  left: 10rpx;
-  top: -1360rpx
+  left: 10rpx
 }
 .slot-machine-container .reel-container .reel1 {
-  left: 158rpx;
-  top: -992rpx
+  left: 158rpx
 }
 .slot-machine-container .reel-container .reel2 {
-  left: 304rpx;
-  top: -1116rpx
+  left: 304rpx
 }
 .slot-machine-container .reel-container .reel-overlay {
   position: absolute;
@@ -44,4 +40,31 @@
   z-index: 100;
   background: transparent url(http://slotmachinescript.com/img/slotmachine1/reel_overlay.png) 0 0 repeat-y;
   background-size: cover
+}
+@keyframes bounce {
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(.645,.045,.355,1);
+    transform: translate3d(0,-400rpx,0)
+  }
+  70% {
+    animation-timing-function: cubic-bezier(.645,.045,.355,1);
+    transform: translate3d(0,-300rpx,0)
+  }
+  90% {
+    transform: translate3d(0,-400rpx,0)
+  }
+  to {
+    transform: translate3d(0,-400rpx,0)
+  }
+}
+.bounce {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom
 }
