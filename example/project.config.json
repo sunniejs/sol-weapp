@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -89,6 +89,12 @@
 					"name": "pages/tabScroller/index",
 					"pathName": "pages/tabScroller/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/slot-machine/index",
+					"pathName": "pages/slot-machine/index",
 					"scene": null
 				}
 			]

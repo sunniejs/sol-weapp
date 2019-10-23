@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "老虎机",
+    "usingComponents": {
+        "sol-slot-machine": "/dist/slot-machine/index"
+    }
+}

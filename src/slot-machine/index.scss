@@ -1,0 +1,82 @@
+.slot-machine-container {
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    width: 275px;
+    height: 260px;
+    background: transparent url('https://tweapp.top1buyer.com/dg/weapp/main_bg_machine.png') bottom center no-repeat;
+    background-size: cover;
+
+    .reel-container {
+        position: absolute;
+        left: 30px;
+        top: 89px;
+        width: 217px;
+        height: 141px;
+        overflow: hidden;
+
+        .reel {
+            position: absolute;
+            width: 60px;
+            height: 1080px;
+            background: transparent url('https://tweapp.top1buyer.com/dg/weapp/reel_strip.png') 0 0 repeat-y;
+            background-size: contain;
+        }
+
+        .reel0 {
+            left: 5px;
+        }
+
+        .reel1 {
+            left: 79px;
+        }
+
+        .reel2 {
+            left: 152px;
+        }
+
+        .reel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            background: transparent url('http://slotmachinescript.com/img/slotmachine1/reel_overlay.png') 0 0 repeat-y;
+            background-size: cover;
+
+        }
+    }
+}
+
+@keyframes bounce {
+
+    40%,
+    43% {
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform: translate3d(0, -20px, 0)
+    }
+
+    70% {
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform: translate3d(0, 10px, 0)
+    }
+
+    to {
+        animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform: translate3d(0, 0px, 0)
+    }
+
+
+}
+
+.bounce {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom
+}

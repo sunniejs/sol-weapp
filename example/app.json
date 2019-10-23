@@ -4,8 +4,8 @@
         "pages/big-wheel/index",
         "pages/packet-rain/index",
         "pages/grid-card/index",
-        "pages/scoll-nav/index"
-
+        "pages/scoll-nav/index",
+        "pages/slot-machine/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -1,0 +1,8 @@
+<!--pages/slot-machine/index.wxml-->
+<view class="container">
+	<sol-slot-machine id="sol-slot-machine" result="{{result}}" bind:finish="doFinish" />
+	<view class="btn-group">
+		<view class="sol-button" bindtap="start">开始</view>
+	</view>
+</view>
+
