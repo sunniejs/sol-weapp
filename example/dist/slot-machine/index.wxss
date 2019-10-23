@@ -45,17 +45,15 @@
   40%,
   43% {
     animation-timing-function: cubic-bezier(.645,.045,.355,1);
-    transform: translate3d(0,-400rpx,0)
+    transform: translate3d(0,-40rpx,0)
   }
   70% {
     animation-timing-function: cubic-bezier(.645,.045,.355,1);
-    transform: translate3d(0,-300rpx,0)
-  }
-  90% {
-    transform: translate3d(0,-400rpx,0)
+    transform: translate3d(0,20rpx,0)
   }
   to {
-    transform: translate3d(0,-400rpx,0)
+    animation-timing-function: cubic-bezier(.645,.045,.355,1);
+    transform: translate3d(0,0rpx,0)
   }
 }
 .bounce {

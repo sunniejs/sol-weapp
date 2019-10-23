@@ -16,7 +16,7 @@ Component({
     },
     data: {
         stripHeight: 720, // 总高度
-        alignmentOffset: 43, // 结果位置偏移量
+        alignmentOffset: 100, // 结果位置偏移量
         payoutStopTime: 700,
         reelSpeed1Delta: 100, // 间隔位移
         reelSpeed1Time: 0,
@@ -73,24 +73,25 @@ Component({
             })
             // 开始滚动
             this.start_reel_spin(0, 0)
-            // this.start_reel_spin(1, 0)
-            // this.start_reel_spin(2, 0)
+            this.start_reel_spin(1, 0)
+            this.start_reel_spin(2, 0)
             // 结束
-            runAsync(firstReelStopTime).then(() => {
-                this.stop_reel_spin(0, result.reels[0])
-                return runAsync(secondReelStopTime)
-            })
-            // .then(() => {
-            //     this.stop_reel_spin(1, result.reels[1])
-            //     return runAsync(thirdReelStopTime)
-            // })
-            // .then(() => {
-            //     this.stop_reel_spin(2, result.reels[2])
-            //     return runAsync(payoutStopTime)
-            // })
-            // .then(() => {
-            //     //     this.end_spin()
-            // })
+            runAsync(firstReelStopTime)
+                .then(() => {
+                    this.stop_reel_spin(0, result.reels[0])
+                    return runAsync(secondReelStopTime)
+                })
+                .then(() => {
+                    this.stop_reel_spin(1, result.reels[1])
+                    return runAsync(thirdReelStopTime)
+                })
+                .then(() => {
+                    this.stop_reel_spin(2, result.reels[2])
+                    return runAsync(payoutStopTime)
+                })
+                .then(() => {
+                    this.end_spin()
+                })
             // var b = function () {
             //     var a = 0
             //     setTimeout(() => {
@@ -124,15 +125,14 @@ Component({
             //     b()
             // }, firstReelStopTime)
         },
-        // 开始选择动画
+        // 开始动画
         start_reel_spin: function(index, b) {
             const { stripHeight, reelSpeed1Delta } = this.data
-            const c = Date.now()
             const position = parseInt(-(Math.random() * stripHeight * 2))
             this.setData({
                 [`reels[${index}].top`]: position
             })
-
+            // 循环动画
             this.data.timer[index] = setInterval(() => {
                 this.setData({
                     [`reels[${index}].top`]: this.data.reels[index].top + reelSpeed1Delta
@@ -143,20 +143,19 @@ Component({
                     })
                 }
             }, 20)
-            // d.data('spinTimer', g)
         },
         // 停止动画
         stop_reel_spin: function(index, lottery) {
             const { stripHeight, numIconsPerReel, alignmentOffset, bounceHeight, positioningTime } = this.data
             const cellHeight = stripHeight / numIconsPerReel
-            const position = -stripHeight - lottery * cellHeight + alignmentOffset
+            const position = -stripHeight - (lottery - 1) * cellHeight + alignmentOffset
             // 清除滚动timer
             clearInterval(this.data.timer[index])
-
+            // 最终位置
             this.setData({
                 [`reels[${index}].top`]: position - stripHeight
             })
-
+            // 到最终位置之前的动画
             var animation = wx.createAnimation({
                 transformOrigin: '50% 50%',
                 duration: positioningTime,
@@ -174,12 +173,12 @@ Component({
                 })
             })
             // c.animate({ top: f }, 3000, 'easeOutElastic')
-            // runAsync(1000).then(() => {
+            // runAsync(0).then(() => {
             //     var animation1 = wx.createAnimation({
             //         transformOrigin: '50% 50%',
             //         duration: 1000,
             //         timingFunction: 'ease',
-            //         delay: 1000
+            //         delay: 0
             //     })
             //     animation1.translateY(-bounceHeight).step()
             //     this.setData({
