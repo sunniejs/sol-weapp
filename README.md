@@ -25,6 +25,7 @@ git clone https://github.com/sunnie1992/sol-weapp.git
 安装必要模块
 
 ```bash
+// 根目录执行
 npm install
 // or
 npm i
@@ -33,12 +34,14 @@ npm i
 本地开发
 
 ```bash
+// 根目录执行,微信 web 开发者工具 打开 example 目录
 npm run start
 ```
 
 打包线上
 
 ```bash
+// 根目录执行
 npm run build
 ```
 
