@@ -3,7 +3,7 @@
   - [开始之前](/zh-cn/quickstart.md#开始之前)
   - [使用](/zh-cn/quickstart.md#使用)
   - [引入组件](/zh-cn/quickstart.md#引入组件)
-  - [开发](/zh-cn/develop.md#开发)
+- [开发](/zh-cn/develop.md#开发)
 - 营销组件
   - [大转盘](/zh-cn/wheel.md#大转盘)
   - [红包雨](/zh-cn/packet.md#红包雨)
