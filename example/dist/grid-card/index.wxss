@@ -10,8 +10,11 @@
   float: left;
   width: 200rpx;
   height: 260rpx;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-align: center;
   align-items: center;
   transition: all 1s cubic-bezier(.68,-.22,.265,1.22)
 }
@@ -21,6 +24,7 @@
 }
 .card .project .back,
 .card .project .front {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: all 1s cubic-bezier(.68,-.22,.265,1.22);
@@ -47,20 +51,20 @@
   left: 200rpx!important
 }
 .card .item0 {
-  top: 0rpx;
-  left: 0rpx
+  top: 0;
+  left: 0
 }
 .card .item1 {
-  top: 0rpx;
+  top: 0;
   left: 200rpx
 }
 .card .item2 {
-  top: 0rpx;
+  top: 0;
   left: 400rpx
 }
 .card .item3 {
   top: 260rpx;
-  left: 0rpx
+  left: 0
 }
 .card .item4 {
   top: 260rpx;
@@ -72,7 +76,7 @@
 }
 .card .item6 {
   top: 520rpx;
-  left: 0rpx
+  left: 0
 }
 .card .item7 {
   top: 520rpx;

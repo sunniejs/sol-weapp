@@ -53,16 +53,12 @@
   }
   to {
     animation-timing-function: cubic-bezier(.645,.045,.355,1);
-    transform: translate3d(0,0rpx,0)
+    transform: translate3d(0,0,0)
   }
 }
 .bounce {
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-name: bounce;
   animation-name: bounce;
-  -webkit-transform-origin: center bottom;
   transform-origin: center bottom
 }

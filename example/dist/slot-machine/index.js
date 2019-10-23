@@ -1,134 +1,84 @@
 Component({
     externalClasses: ['sol-class'],
     properties: {
-        tabs: {
+        // 中奖结果
+        result: {
             type: Array,
             value: []
-        },
-        current: {
-            type: Number,
-            value: '',
-            observer(newVal) {
-                // 监听当前index值，切换
-                this.updated(newVal)
-            }
         }
     },
     data: {
-        stripHeight: 720, // 总高度
-        alignmentOffset: 100, // 结果位置偏移量
-        payoutStopTime: 700,
-        reelSpeed1Delta: 100, // 间隔位移
-        reelSpeed1Time: 0,
-        positioningTime: 200, // 停止前动画时间
-        bounceHeight: 200,
-        winningsFormatPrefix: '',
-        soundEnabled: !0,
-        sounds: {},
-        spinDisabled: false,
         credits: 50, //积分
         curBet: 1, // 每局消耗积分
-        firstReelStopTime: 667, // 动画停止时间
-        secondReelStopTime: 575,
-        thirdReelStopTime: 568,
+        stripHeight: 720, // 总高度
+        alignmentOffset: 100, // 结果位置偏移量
+        reelSpeed1Delta: 100, // 间隔位移
+        positioningTime: 200, // 停止前动画时间
+        bounceHeight: 200, // 结束弹射动画高度
+        firstReelStopTime: 667, // 第一个动画延迟停止时间
+        secondReelStopTime: 575, // 第二个动画延迟停止时间
+        thirdReelStopTime: 568, // 第三个动画延迟停止时间
+        payoutStopTime: 1500, // 触发结束延迟时间
+        numIconsPerReel: 6, // 每个轮子几个格子
+        timer: [],
         reels: [
+            // 轮子动画属性
             {
-                top: -1360,
+                top: -1345, // 初始位置
+                animation: '', // 结束滚动动画
+                css: '' // 反弹动画css
+            },
+            {
+                top: -977,
                 animation: '',
                 css: ''
             },
             {
-                top: -992,
-                animation: '',
-                css: ''
-            },
-            {
-                top: -1116,
+                top: -1101,
                 animation: '',
                 css: ''
             }
-        ],
-        timer: [],
-        result: {
-            reels: ['1.0', '1.0', '1.0'],
-            prize: null,
-            success: true,
-            credits: 96,
-            dayWinnings: 69,
-            lifetimeWinnings: 69
-        },
-        numIconsPerReel: 6
+        ]
     },
 
     /**
      * 组件的方法列表
      */
     methods: {
-        spin: function() {
-            const { credits, curBet, secondReelStopTime, thirdReelStopTime, firstReelStopTime, payoutStopTime, result } = this.data
-            if (this.data.spinDisabled) return !1
-            this.setData({
-                spinDisabled: true,
-                credits: credits - curBet
-            })
+        start() {
+            const { firstReelStopTime, secondReelStopTime, thirdReelStopTime, result, payoutStopTime } = this.data
             // 开始滚动
-            this.start_reel_spin(0, 0)
-            this.start_reel_spin(1, 0)
-            this.start_reel_spin(2, 0)
+            this.start_reel_spin(0)
+            this.start_reel_spin(1)
+            this.start_reel_spin(2)
             // 结束
             runAsync(firstReelStopTime)
                 .then(() => {
-                    this.stop_reel_spin(0, result.reels[0])
+                    this.stop_reel_spin(0, result[0])
                     return runAsync(secondReelStopTime)
                 })
                 .then(() => {
-                    this.stop_reel_spin(1, result.reels[1])
+                    this.stop_reel_spin(1, result[1])
                     return runAsync(thirdReelStopTime)
                 })
                 .then(() => {
-                    this.stop_reel_spin(2, result.reels[2])
+                    this.stop_reel_spin(2, result[2])
                     return runAsync(payoutStopTime)
                 })
                 .then(() => {
-                    this.end_spin()
+                    // 完成
+                    // 重置
+                    this.reset_reel_spin(0)
+                    this.reset_reel_spin(1)
+                    this.reset_reel_spin(2)
+                    this.triggerEvent('finish')
                 })
-            // var b = function () {
-            //     var a = 0
-            //     setTimeout(() => {
-            //         slotMachine.stop_reel_spin(1, d.reels[0])
-            //     }, a);
-            //     (a += slotMachine.secondReelStopTime);
-            //     setTimeout(() => {
-            //         slotMachine.stop_reel_spin(2, d.reels[1])
-            //     }, a);
-            //     (a += slotMachine.thirdReelStopTime);
-            //     setTimeout(function () {
-            //         slotMachine.stop_reel_spin(3, d.reels[2])
-            //     }, a);
-            //     (a += slotMachine.payoutStopTime);
-            //     setTimeout(function () {
-            //         slotMachine.end_spin(d)
-            //     }, a)
-            // };
-
-            // var d = {
-            //     reels: ['1.0', '1.0', '1.0'],
-            //     prize: null,
-            //     success: true,
-            //     credits: 96,
-            //     dayWinnings: 69,
-            //     lifetimeWinnings: 69
-            // };
-            // // 第一个轮子停止滚动时间
-            // console.log(firstReelStopTime)
-            // setTimeout(() => {
-            //     b()
-            // }, firstReelStopTime)
         },
         // 开始动画
-        start_reel_spin: function(index, b) {
+        start_reel_spin(index) {
             const { stripHeight, reelSpeed1Delta } = this.data
             const position = parseInt(-(Math.random() * stripHeight * 2))
+
             this.setData({
                 [`reels[${index}].top`]: position
             })
@@ -145,8 +95,8 @@ Component({
             }, 20)
         },
         // 停止动画
-        stop_reel_spin: function(index, lottery) {
-            const { stripHeight, numIconsPerReel, alignmentOffset, bounceHeight, positioningTime } = this.data
+        stop_reel_spin(index, lottery) {
+            const { stripHeight, numIconsPerReel, alignmentOffset, positioningTime, bounceHeight } = this.data
             const cellHeight = stripHeight / numIconsPerReel
             const position = -stripHeight - (lottery - 1) * cellHeight + alignmentOffset
             // 清除滚动timer
@@ -166,52 +116,22 @@ Component({
             this.setData({
                 [`reels[${index}].animation`]: animation.export()
             })
-
+            // 弹射动画
             runAsync(positioningTime).then(() => {
+                // translateY重置成0为下次做准备
+                animation.translateY(0).step({ duration: 0 })
                 this.setData({
+                    [`reels[${index}].animation`]: animation.export(),
                     [`reels[${index}].css`]: 'bounce'
                 })
             })
-            // c.animate({ top: f }, 3000, 'easeOutElastic')
-            // runAsync(0).then(() => {
-            //     var animation1 = wx.createAnimation({
-            //         transformOrigin: '50% 50%',
-            //         duration: 1000,
-            //         timingFunction: 'ease',
-            //         delay: 0
-            //     })
-            //     animation1.translateY(-bounceHeight).step()
-            //     this.setData({
-            //         [`reels[${index}].animation`]: animation1.export()
-            //     })
-            // })
-            // animation2.translateY(bounceHeight).step()
-            // animation: easeInElastic .35s forwards;
-
-            // if ((window.clearInterval(d), c.data('spinTimer', null), null != b)) {
-
-            // const cellHeight = stripHeight / numIconsPerReel
-            // const position = -stripHeight - lottery * cellHeight + alignmentOffset
-            // this.setData({
-            //     [`reels[${index}].top`]: position - stripHeight
-            // })
-            // c.css({
-            //     top:
-            // }).animate({
-            //         top: f + slotMachine.bounceHeight
-            //     },
-            //     slotMachine.positioningTime,
-            //     'linear',
-            //     function () {
-            //         c.animate({
-            //             top: f
-            //         }, slotMachine.bounceTime, 'easeOutElastic')
-            //     }
-            // )
-            //  }
+        },
+        // 重置动画
+        reset_reel_spin(index) {
+            this.setData({
+                [`reels[${index}].css`]: ''
+            })
         }
-        // this.start_reel_spin(1, secondReelStopTime)
-        // this.start_reel_spin(2, secondReelStopTime + thirdReelStopTime)
     }
 })
 /**
