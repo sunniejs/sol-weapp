@@ -7,6 +7,7 @@
   - [大转盘](/zh-cn/wheel.md#大转盘)
   - [红包雨](/zh-cn/packet.md#红包雨)
   - [九宫格翻牌](/zh-cn/gridcard.md#九宫格翻牌)
+  - [老虎机](/zh-cn/slotmachine.md#老虎机)
 - 商城业务组件
   - [Tab 滚动导航](/zh-cn/tabscroller.md#Tab滚动导航)
 - 组件将全面升级，开发中敬请期待。。。
