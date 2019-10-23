@@ -8,6 +8,40 @@
 
 ![logo](_images/qrcode.jpg)
 
+## 开发
+
+全局安装 gulp-cli
+
+```bash
+npm install --global gulp-cli
+```
+
+通过 git clone 下载项目文件。
+
+```bash
+git clone https://github.com/sunnie1992/sol-weapp.git
+```
+
+安装必要模块
+
+```bash
+npm install
+// or
+npm i
+```
+
+本地开发
+
+```bash
+npm run start
+```
+
+打包线上
+
+```bash
+npm run build
+```
+
 ## 贡献代码
 
 使用过程中发现任何问题都可以提[Issue](https://github.com/sunnie1992/sol-weapp/issues) 给我，也非常欢迎 PR
