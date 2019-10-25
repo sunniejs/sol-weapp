@@ -1,5 +1,4 @@
 <!-- index.wxml -->
-<view class="tips">本小程序仅供学习交流</view>
 <view class="container">
 	<view class="title">
 		<image class="logo" src="/assets/logo.png" />

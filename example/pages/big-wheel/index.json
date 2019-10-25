@@ -1,5 +1,4 @@
 {
-    "navigationBarTitleText": "转盘动画",
     "usingComponents": {
         "sol-wheel": "/dist/wheel/index"
     }

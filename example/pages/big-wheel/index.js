@@ -16,7 +16,7 @@ Page({
         ] // 顺时针对应每个奖项
     },
     onLoad: function(options) {},
-    // 用户点击开始
+    // 用户点击开始抽奖
     wheelStart() {
         // 设置奖项
         this.setData({
@@ -25,7 +25,7 @@ Page({
         // 触发组件开始方法
         this.selectComponent('#sol-wheel').begin()
     },
-    // 完成后操作
+    // 抽奖完成后操作
     wheelSuccess() {
         const index = this.data.award - 1
         console.log('bind:success', this.data.awardList[index])

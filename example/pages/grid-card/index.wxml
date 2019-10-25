@@ -4,7 +4,7 @@
 </view>
 <view>
    <view class="sol-button"  bindtap="start">
-      开始
+      开始抽奖
     </view>
 </view>
 </view>

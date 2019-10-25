@@ -19,7 +19,6 @@
 -   大转盘
 -   红包雨
 -   九宫格翻牌
--   老虎机
 -   Tab 滚动导航
 -   。。。持续更新中
 
@@ -34,7 +33,6 @@ git clone https://github.com/sunnie1992/sol-weapp.git
 2019.03.04 V0.0.1 更新 小程序保存多张图片到相册
 2019.10.01 V1.0.0 更新 重构红包雨，大转盘
 2019.10.15 V1.1.0 更新 构建升级，重构九宫格翻牌
-2019.10.23 V1.1.3 更新 老虎机
 
 # 营销组件
 
@@ -42,9 +40,6 @@ git clone https://github.com/sunnie1992/sol-weapp.git
   <img src="static/1.gif" width="250"  style="display:inline;">  
   <img src="static/2.gif" width="250"  style="display:inline;">
   <img src="static/3.gif" width="250"  style="display:inline;">
-</p>
-<p>
-  <img src="static/5.gif" width="250"  style="display:inline;">  
 </p>
  
 # 关于我
