@@ -9,7 +9,7 @@
 		<block wx:for-items="{{components}}" wx:key="index">
 			<view>{{item.title}}</view>
 			<view wx:for-items="{{item.children}}" wx:key="index" class="kind-list-item">
-				<view id="{{item.id}}" class="kind-list-item-hd">
+				<view wx:if="{{item.show}}" id="{{item.id}}" class="kind-list-item-hd">
 					<navigator url="{{item.url}}" class="navigator" hover-class="none">
 						<view class="kind-list-text">{{item.name}}</view>
 						<view class="kind-list-arraw iconfont icon-{{item.id}}"></view>

@@ -1,0 +1,25 @@
+/* pages/about/index.wxss */
+
+.container {
+    padding: 50rpx 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title {
+    margin: 30rpx auto;
+    font-size: 44rpx;
+    font-weight: 400;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    font-size: 28rpx;
+    line-height: 48rpx;
+}
