@@ -7,22 +7,22 @@ Page({
                     {
                         id: 'big-wheel',
                         url: '/pages/big-wheel/index',
-                        name: '大转盘'
+                        name: '大转盘动画'
                     },
                     {
                         id: 'packet-rain',
                         url: '/pages/packet-rain/index',
-                        name: '红包雨'
+                        name: '下雨动画'
                     },
                     {
                         id: 'grid-card',
                         url: '/pages/grid-card/index',
-                        name: '九宫格翻牌'
+                        name: '九宫格翻牌动画'
                     },
                     {
                         id: 'slot-machine',
                         url: '/pages/slot-machine/index',
-                        name: '老虎机'
+                        name: '老虎机动画'
                     }
                 ]
             },

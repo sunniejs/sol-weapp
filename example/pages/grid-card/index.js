@@ -57,16 +57,16 @@ Page({
                 status: 0
             }
         ],
-        ready: false // 是否点击开始抽奖
+        ready: false // 是否点击开始
     },
     onLoad: function(options) {},
     /**
-     * 点击开始抽奖
+     * 点击开始
      */
     start() {
         if (this.data.ready) {
             wx.showToast({
-                title: `已经开启抽奖`,
+                title: `已经开启`,
                 icon: 'none'
             })
             return

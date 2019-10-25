@@ -1,5 +1,17 @@
 .container {
-    padding: 45px 20px 20px;
+    padding: 65px 20px 20px;
+}
+
+.tips {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    font-size: 28px;
+    height: 38px;
+    line-height: 38px;
+    color: red;
+    text-align: center;
 }
 
 .index-bd {

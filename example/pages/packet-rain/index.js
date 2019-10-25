@@ -15,8 +15,8 @@ Page({
             time: 15, // 游戏时间
             readyTime: 3, // 准备时间
             mode: 1,
-            total: 200, // 红包总金额200
-            number: 50, // 50个红包
+            total: 200, // 总金额200
+            number: 50, // 50个
             min: 0, // 金额最小是0
             max: 10 // 金额最大是10
         })
@@ -42,7 +42,7 @@ Page({
     },
     onShareAppMessage: function(ops) {
         return {
-            title: 'sol-红包雨',
+            title: 'sol-下雨动画',
             path: '/pages/packet-rain/index'
         }
     }

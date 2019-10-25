@@ -1,6 +1,6 @@
 <view class="rain-container" wx:if="{{visible}}">
   <view wx:if="{{readyVisible}}" class="ready-time">
-    <view class="top">一大波红包即将来袭</view>
+    <view class="top">即将开始</view>
     <view class="countdown">{{readyTime}}</view>
   </view>
   <view wx:else>

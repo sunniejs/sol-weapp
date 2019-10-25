@@ -2,9 +2,9 @@
 <view class="container">
   <image mode="aspectFit" src="/assets/logo.png"></image>
   <view class='title'>Sol Weapp</view>
-  <view>红包雨</view>
+  <view>下雨动画</view>
 </view>
-<!-- 红包雨组件 -->
+<!-- 下雨动画组件 -->
 <sol-packet-rain visible="{{visible}}" total="{{total}}"
  mode="{{mode}}" createSpeed="{{createSpeed}}" 
  decimal="{{decimal}}" number="{{number}}" 

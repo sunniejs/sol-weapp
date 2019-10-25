@@ -16,7 +16,7 @@ Component({
             type: Number,
             value: 16
         },
-        // 抽奖模式:1:盘转,2:指针旋转
+        //模式:1:盘转,2:指针旋转
         mode: {
             type: Number,
             value: 2,
@@ -41,12 +41,12 @@ Component({
                 singleAngle: singleAngle
             })
         },
-        // 点击开始抽奖
+        // 点击开始
         start() {
             this.triggerEvent('start')
         },
+        // 点击开始
         begin() {
-            // 点击开始抽奖
             let { deg, awardNumer, singleAngle, speed, isStart, mode } = this.data
             if (isStart) return
             this.data.isStart = true
