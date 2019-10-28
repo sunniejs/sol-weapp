@@ -1,0 +1,7 @@
+<!--pages/save-imgs/index.wxml-->
+<view class="container">
+	<view class="btn-group">
+		<view class="sol-button" bindtap="download">保存多张图片到相册</view>
+	</view>
+</view>
+

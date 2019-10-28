@@ -1,37 +1,39 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/big-wheel/index",
-        "pages/packet-rain/index",
-        "pages/grid-card/index",
-        "pages/scoll-nav/index",
-        "pages/slot-machine/index",
-        "pages/about/index"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Sol Weapp",
-        "navigationBarTextStyle": "black"
-    },
-    "tabBar": {
-        "color": "#7A7E83",
-        "selectedColor": "#15AAF8",
-        "borderStyle": "black",
-        "backgroundColor": "#ffffff",
-        "list": [{
-                "pagePath": "pages/index/index",
-                "iconPath": "./assets/images/home_d.png",
-                "selectedIconPath": "./assets/images/home.png",
-                "text": "首页"
-            },
-            {
-                "pagePath": "pages/about/index",
-                "iconPath": "./assets/images/me_d.png",
-                "selectedIconPath": "./assets/images/me.png",
-                "text": "关于"
-            }
-        ]
-    },
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/index/index",
+    "pages/big-wheel/index",
+    "pages/packet-rain/index",
+    "pages/grid-card/index",
+    "pages/scoll-nav/index",
+    "pages/slot-machine/index",
+    "pages/about/index",
+    "pages/save-imgs/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Sol Weapp",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#15AAF8",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./assets/images/home_d.png",
+        "selectedIconPath": "./assets/images/home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/about/index",
+        "iconPath": "./assets/images/me_d.png",
+        "selectedIconPath": "./assets/images/me.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }
