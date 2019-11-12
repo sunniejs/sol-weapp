@@ -39,6 +39,12 @@ Page({
                         url: '/pages/scoll-nav/index',
                         name: '滚动导航条',
                         show: true
+                    },
+                    {
+                        id: 'radar-canvas',
+                        url: '/pages/radar-canvas/index',
+                        name: '雷达图',
+                        show: true
                     }
                 ]
             },

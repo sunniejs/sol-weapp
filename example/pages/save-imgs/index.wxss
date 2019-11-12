@@ -4,6 +4,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.images image {
+    width: 100px;
+    height: 100px;
 }
 
 .sol-button {

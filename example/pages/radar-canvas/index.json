@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "雷达图",
+    "usingComponents": {
+        "sol-radar-canvas": "/dist/radar-canvas/index"
+    }
+}

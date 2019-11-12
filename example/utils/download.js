@@ -41,7 +41,7 @@ export function wxSaveAuth() {
 }
 
 /**
- * 多文件下载并且保存，所有文件下载成功才算返回成功
+ * 多文件下载并且保存 
  * @param {Array} urls 网络图片数组
  */
 export function downloadImgs(urls) {
@@ -52,7 +52,7 @@ export function downloadImgs(urls) {
     const imageList = []
     // 循环数组
     for (let i = 0; i < urls.length; i++) {
-        imageList.push(getTempPath(urls[i], i, urls.length))
+        imageList.push(getTempPath(urls[i]))
     }
     const loadTask = []
     let index = 0
@@ -64,23 +64,34 @@ export function downloadImgs(urls) {
                     .then(res => {
                         resolve(res)
                     })
-                    .catch(res => {
-                        reject(res)
+                    .catch(err => {
+                        reject(err)
                     })
             })
         )
     }
-    // Promise.all
-    Promise.all(loadTask).then(res => {
-        resolve('success')
-    })
+    // Promise.all 所有图片下载完成后弹出
+    Promise.all(loadTask)
+        .then(res => {
+            wx.showToast({
+                title: '下载完成',
+                duration: 3000
+            })
+        })
+        .catch(err => {
+            wx.showToast({
+                title: `下载完成`,
+                icon: 'none',
+                duration: 3000
+            })
+        })
 }
 /**
  *
  * @param {String} url 单张网络图片
  */
 //下载内容,临时文件路径
-function getTempPath(url, index, amount) {
+function getTempPath(url) {
     return new Promise((resolve, reject) => {
         wx.downloadFile({
             url: url,
@@ -89,21 +100,15 @@ function getTempPath(url, index, amount) {
                 wx.saveImageToPhotosAlbum({
                     filePath: temp,
                     success: function(res) {
-                        wx.showLoading({
-                            title: `正在下载${index}/${amount}`,
-                            icon: 'none'
-                        })
                         return resolve(res)
                     },
                     fail: function(err) {
-                        console.log(err)
-                        reject(err)
+                        reject(url + JSON.stringify(err))
                     }
                 })
-                //  resolve(temp)
             },
             fail: function(err) {
-                reject(err)
+                reject(url + JSON.stringify(err))
             }
         })
     })

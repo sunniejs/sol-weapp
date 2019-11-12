@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -103,6 +103,12 @@
 					"name": "pages/save-imgs/index",
 					"pathName": "pages/save-imgs/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "雷达图",
+					"pathName": "pages/radar-canvas/index",
 					"scene": null
 				}
 			]

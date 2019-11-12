@@ -1,0 +1,3 @@
+<view class='radarContainer'>
+<canvas class='radarCanvas' canvas-id='radarCanvas'></canvas>
+</view>

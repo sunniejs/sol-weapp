@@ -1,0 +1,6 @@
+<!--pages/radar-canvas/index.wxml <view class='radarContainer'>
+<canvas class='radarCanvas' canvas-id='radarCanvas'></canvas>
+</view>-->
+<view class="radar-container">
+<sol-radar-canvas canvas="{{canvas}}" radar-data="{{radarData}}"  ></sol-radar-canvas>
+</view>
