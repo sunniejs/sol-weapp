@@ -1,0 +1,15 @@
+.wux-backdrop {
+  background: rgba(0,0,0,.7)
+}
+.wux-backdrop,
+.wux-backdrop--transparent {
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0
+}
+.wux-backdrop--transparent {
+  background: 0 0
+}

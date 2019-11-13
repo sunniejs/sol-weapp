@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: '2019/10/25 17:20:00',
+        endDate: '2019/11/13 17:20:00',
         components: [
             {
                 title: '营销组件',
@@ -15,7 +15,7 @@ Page({
                         id: 'packet-rain',
                         url: '/pages/packet-rain/index',
                         name: '红包雨动画',
-                        show: true
+                        show: false
                     },
                     {
                         id: 'grid-card',
@@ -27,7 +27,7 @@ Page({
                         id: 'slot-machine',
                         url: '/pages/slot-machine/index',
                         name: '老虎机动画',
-                        show: true
+                        show: false
                     }
                 ]
             },
@@ -39,9 +39,15 @@ Page({
                         url: '/pages/scoll-nav/index',
                         name: '滚动导航条',
                         show: true
+                    },
+                    {
+                      id: 'share-sheet',
+                      url: '/pages/share-sheet/index',
+                      name: '底部分享弹窗',
+                      show: false
                     }
                 ]
-            }
+            },
             // {
             //     title: '页面demo',
             //     children: [

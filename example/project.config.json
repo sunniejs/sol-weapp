@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -95,6 +95,13 @@
 					"id": -1,
 					"name": "pages/slot-machine/index",
 					"pathName": "pages/slot-machine/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分享",
+					"pathName": "pages/share-sheet/index",
 					"scene": null
 				}
 			]

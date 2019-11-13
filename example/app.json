@@ -6,7 +6,8 @@
         "pages/grid-card/index",
         "pages/scoll-nav/index",
         "pages/slot-machine/index",
-        "pages/about/index"
+        "pages/about/index",
+        "pages/share-sheet/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

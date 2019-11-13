@@ -1,1 +1,49 @@
-"use strict";var _index=_interopRequireDefault(require("./index"));function _interopRequireDefault(t){return t&&t.__esModule?t:{default:t}}Component({properties:{option:{type:Object}},data:{width:0,height:0,id:"caxCanvas"+_index.default.caxCanvasId++,index:_index.default.caxCanvasId-1},methods:{getCaxCanvasId:function(){return this.data.id},touchStart:function(t){this.stage.touchStartHandler(t),this.stage.touchStart&&this.stage.touchStart(t)},touchMove:function(t){this.stage.touchMoveHandler(t),this.stage.touchMove&&this.stage.touchMove(t)},touchEnd:function(t){this.stage.touchEndHandler(t),this.stage.touchEnd&&this.stage.touchEnd(t)}}});
+import cax from './index'
+
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+
+    option: {
+      type: Object
+    }
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+    width: 0,
+    height: 0,
+    id: 'caxCanvas' + cax.caxCanvasId++,
+    index: cax.caxCanvasId - 1
+  },
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+
+    getCaxCanvasId: function () {
+      return this.data.id
+    },
+
+    touchStart: function (evt) {
+      this.stage.touchStartHandler(evt)
+      this.stage.touchStart && this.stage.touchStart(evt)
+    },
+
+    touchMove: function (evt) {
+      this.stage.touchMoveHandler(evt)
+      this.stage.touchMove && this.stage.touchMove(evt)
+    },
+
+    touchEnd: function (evt) {
+      this.stage.touchEndHandler(evt)
+      this.stage.touchEnd && this.stage.touchEnd(evt)
+    }
+
+  }
+})

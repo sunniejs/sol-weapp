@@ -1,0 +1,15 @@
+<!--pages/share-sheet/index.wxml-->
+<view class="app-container">
+	<view class="tips">
+		<view>	1.该组件由多个组件组成，需要引入	</view>
+		<view> 	canvas-drawer(生成canvas图片) 	</view>
+		<view> 	 wux(弹窗组件) 	</view>
+		<view> 	image-btn(将button改成img用户触发微信方法) 	</view>
+    <view>	2.动态生成二维码功能集成在组件内部，不需要可自行修改删除	</view>
+	</view>
+	<view class="btn-group">
+		<view class="sol-button" bindtap="doShare">点我分享</view>
+	</view>
+</view>
+<sol-share-sheet visible="{{showShare}}" share-data="{{shareData}}" />
+

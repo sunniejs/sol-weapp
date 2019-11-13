@@ -7,7 +7,6 @@ page {
     background: #f2f3f5;
     min-height: 100vh;
     box-sizing: border-box;
-    padding: 0 0 100rpx;
     -webkit-font-smoothing: antialiased;
     font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
 }
@@ -22,6 +21,12 @@ textarea {
     font: inherit;
     margin: 0;
     vertical-align: middle;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sol-button {

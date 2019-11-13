@@ -1,0 +1,4 @@
+<button plain='{{true}}' open-type='{{openType}}' data-share="{{shareData}}" class="container">
+  <slot name="img"></slot>
+  <slot name="text"></slot>
+</button>

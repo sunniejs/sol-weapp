@@ -51,3 +51,10 @@ git clone https://github.com/sunnie1992/sol-weapp.git
 </p>
  
 如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
+
+# 赞赏
+
+<p>
+  <img src="./static/appreciate.jpg" width="256" style="display:inline;">
+</p>
+ 

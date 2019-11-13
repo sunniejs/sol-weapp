@@ -14,7 +14,14 @@ Page({
   onLoad: function (options) {
 
   },
-
+  copy: function () {
+    wx.setClipboardData({
+      data: ' https://github.com/sunnie1992/sol-weapp/',
+      success: function (res) {
+        wx.showToast({ title: '复制成功', icon: 'none' })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

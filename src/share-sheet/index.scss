@@ -1,0 +1,93 @@
+@import "../style/iconfont.wxss";
+.s-share-bar {
+    border-top: 1rpx solid #ddd;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    color: #333333;
+    min-height: 226px;
+    text-align: left;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    .s-share-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 12px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .s-share-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+
+        .icon-warp {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            .iconfont{
+               font-size:50px;
+                width: 75px;
+                height: 70px;
+                text-align:center;  
+            }
+
+            .text {
+                font-size: 15px;
+                font-size: 12px;
+                color: #666666;
+                margin-top: 10px
+            }
+        }
+    }
+
+    .s-share-btns {
+        height: 49px;
+        line-height: 49px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        background: #E9E9E9;
+        font-weight: 600;
+    }
+}
+
+/* 图片弹出 */
+.draw-img-warper {
+    position: relative;
+    width: 300px;
+
+    .share-image {
+        width: 300px;
+    }
+
+    .drawer-btn-group {
+        display: flex;
+        align-items: center;
+
+        .download-btn {
+            color: #313131;
+            background: #ffffff;
+            height: 44px;
+            line-height: 44px;
+            margin: 15px 0 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            width: 100%;
+        }
+    }
+
+
+
+}

@@ -1,13 +1,5 @@
 /* pages/about/index.wxss */
 
-.container {
-    padding: 50rpx 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
 .title {
     margin: 30rpx auto;
     font-size: 44rpx;
@@ -17,9 +9,37 @@
 .list {
     display: flex;
     flex-direction: column;
+    color:#666;
+    font-size: 28rpx;
 }
 
 .item {
     font-size: 28rpx;
     line-height: 48rpx;
+}
+.container {
+  background: #fff;
+  padding:    20px;
+}
+
+.title {
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.logo,
+.title-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title-text {
+    font-size: 32px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
 }
