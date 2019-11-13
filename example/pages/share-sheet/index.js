@@ -20,7 +20,7 @@ Page({
          this.data.id = scene.split('&')[0]
       } else {
           // 页面分享进入
-          this.data.id = options.bossid // 分享人id
+          this.data.id = options.id // 分享人id
       }
     // 隐藏右上角分享功能
     wx.hideShareMenu()

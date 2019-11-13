@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: '2019/11/13 17:20:00',
+        endDate: '2019/11/14 09:00:00',
         components: [
             {
                 title: '营销组件',
