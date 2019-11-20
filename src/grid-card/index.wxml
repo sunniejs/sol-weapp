@@ -1,7 +1,7 @@
 <view class="card">
   <block wx:for="{{card}}" wx:key="index" >
       <view data-index="{{index}}"  data-item="{{item}}" bindtap="openCard" class="project item{{index}} {{item.isMove ? 'ani' : ''}} {{item.status==1 ? 'flip' : ''}}" >
-        <image class="front" src="./image/card.png" />
+        <image class="front" src="https://imgs.solui.cn/weapp/card.png" />
         <view class="back">
            <image src="{{item.img}}" />
         </view>

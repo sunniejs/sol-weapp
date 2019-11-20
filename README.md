@@ -47,7 +47,7 @@ git clone https://github.com/sunnie1992/sol-weapp.git
 扫描添加下方的微信并备注 Sol 加交流群，交流学习，及时获取代码最新动态。
 
 <p>
-  <img src="https://tweapp.top1buyer.com/mine.jpg" width="256" style="display:inline;">
+  <img src="https://imgs.solui.cn/weapp/me.png" width="256" style="display:inline;">
 </p>
  
 如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～

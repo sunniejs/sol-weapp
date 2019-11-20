@@ -1,15 +1,13 @@
 <view class="container">
 	<view class="title">
-		<image class="logo" src="/assets/logo.png" />
+		<image class="logo" src="https://imgs.solui.cn/weapp/logo.png" />
 		<view class="title-text">Sol Weapp</view>
 	</view>
 	<view class="list">
 		<view bindtap="copy" class="item">项目地址: https://github.com/sunnie1992/sol-weapp/</view>
 		<view class="item">项目作者: sunnie</view>
-		<view class="item">扫描添加下方的微信并备注 Sol 加交流群，交流学习，及时获取代码最新动态。</view>
-		<image mode="aspectFit" src="/assets/me.png" />
 		<view class="item">赞赏</view>
-  	<image mode="aspectFit" src="/assets/appreciate.jpg" />
+  	<image mode="aspectFit" src="https://imgs.solui.cn/weapp/appreciate.jpg" />
 	</view>
 </view>
 

@@ -34,7 +34,7 @@ Component({
     data: {
         cache: {
           // 假数据，需要删除
-          "pages/index/index123456":"https://tweapp.top1buyer.com/dg/weapp/qrcode.jpg"
+          "pages/index/index123456":"https://imgs.solui.cn/weapp/qrcode.jpg"
           // 假数据，需要删除
         },
         imgVisible: false,

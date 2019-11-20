@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: '2019/11/14 09:00:00',
+        endDate: '2019/11/25 09:00:00',
         components: [
             {
                 title: '营销组件',
@@ -43,9 +43,9 @@ Page({
                     {
                       id: 'share-sheet',
                       url: '/pages/share-sheet/index',
-                      name: '底部分享弹窗',
+                      name: '微信分享组件(转发好友/分享图)',
                       show: false
-                    }
+                  }
                 ]
             },
             // {
@@ -68,12 +68,14 @@ Page({
     onShow() {
         var myDate = new Date().getTime()
         var endData = new Date(this.data.endDate).getTime()
-
+        
         if (endData - myDate < 0) {
-            for (let i = 0; i < this.data.components[0].children.length; i++) {
+            for (let i = 0; i < this.data.components.length; i++) {
+              for (let j = 0; j< this.data.components[i].children.length; j++) {
                 this.setData({
-                    [`components[0].children[${i}].show`]: true
+                  [`components[${i}].children[${j}].show`]: true
                 })
+              }
             }
         }
     },
@@ -83,7 +85,7 @@ Page({
         return {
             title: 'sol-weapp营销组件',
             path: '/pages/index/index',
-            imageUrl: '../../assets/qrcode.jpg'
+            imageUrl: 'https://imgs.solui.cn/weapp/qrcode.jpg'
         }
     }
 })

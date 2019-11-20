@@ -111,7 +111,7 @@ Component({
     },
     audioOfClick() {
       innerAudioContext.autoplay = false
-      innerAudioContext.src = '/assets/dianji.mp3'
+      innerAudioContext.src = 'https://imgs.solui.cn/weapp/dianji.mp3'
       innerAudioContext.onPlay(() => {})
       innerAudioContext.onError(res => {})
     },
@@ -143,7 +143,7 @@ Component({
       let that = this
       let ranNum = Math.random() * (info.windowWidth - 80)
       // 红包背景
-      newName = new cax.Bitmap('/assets/images/rdc.png')
+      newName = new cax.Bitmap('https://imgs.solui.cn/weapp/rdc.png')
 
       // 旋转角度
       let angle = Math.random() * 90 - 45

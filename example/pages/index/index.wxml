@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
 	<view class="title">
-		<image class="logo" src="/assets/logo.png" />
+		<image class="logo" src="https://imgs.solui.cn/weapp/logo.png" />
 		<view class="title-text">Sol Weapp</view>
 	</view>
 	<view class="desc">小程序商城组件库,让开发变得更简单</view>

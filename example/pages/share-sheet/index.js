@@ -31,7 +31,7 @@ Page({
     let share = {
       shareType: 'index',
       shareTitle:`同样九年义务教育,你怎么能这么优秀，找到我！`,
-      shareImg:'https://tweapp.top1buyer.com/dg/weapp/qrcode.jpg',
+      shareImg:'https://imgs.solui.cn/weapp/qrcode.jpg',
       sharePath: '/pages/index/index?id=123456',
       shareParams:'123456' // 传递用于生成二维码的scence参数
     }
