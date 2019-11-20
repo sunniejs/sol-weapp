@@ -11,4 +11,5 @@
   - [老虎机](/zh-cn/slotmachine.md#老虎机)
 - 商城业务组件
   - [Tab 滚动导航](/zh-cn/tabscroller.md#Tab滚动导航)
+  - [微信分享组件(转发好友/分享图)](/zh-cn/share.md#微信分享组件)
 - 组件将全面升级，开发中敬请期待。。。
