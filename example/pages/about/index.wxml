@@ -7,7 +7,9 @@
 		<view bindtap="copy" class="item">项目地址: https://github.com/sunnie1992/sol-weapp/</view>
 		<view class="item">项目作者: sunnie</view>
 		<view class="item">赞赏</view>
-  	<image mode="aspectFit" src="https://imgs.solui.cn/weapp/appreciate.jpg" />
+    <view class="item">	<image  mode="aspectFit" src="https://imgs.solui.cn/weapp/appreciate.jpg" /> </view>
 	</view>
+  <view class="adContainer">
+    <ad unit-id="adunit-2da2cd4fd0716dfd"></ad>
+ </view>
 </view>
-
