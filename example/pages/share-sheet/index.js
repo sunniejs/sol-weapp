@@ -29,7 +29,7 @@ Page({
   doShare(){
     // 分享信息
     let share = {
-      shareType: 'index',
+      shareType: 'index',// 模板类型，用户可生成不同样式的海报图
       shareTitle:`同样九年义务教育,你怎么能这么优秀，找到我！`,
       shareImg:'https://imgs.solui.cn/weapp/qrcode.jpg',
       sharePath: '/pages/index/index?id=123456',

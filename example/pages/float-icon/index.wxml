@@ -1,0 +1,14 @@
+<!-- index.wxml -->
+<view class="app-container">
+  <view class="cell" wx:for="{{items}}" wx:key="index">
+    {{item.title}}
+  </view>
+  <!--icon -->
+  <sol-icon-container height="45" top="0" bottom="100">
+    <view class="icon-container {{scrollIng?'active':''}}" slot="icons" >
+      <view  class="float-icon">
+        <image  src="https://imgs.solui.cn/weapp/home-icon.png" mode="widthFix" />
+      </view>
+    </view>
+  </sol-icon-container>
+</view>

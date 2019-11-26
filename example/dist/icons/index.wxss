@@ -1,0 +1,79 @@
+.float-icon-item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 90rpx;
+  height: 90rpx
+}
+.float-icon-item image {
+  width: 68rpx
+}
+.share-icon .img {
+  margin-left: 10rpx;
+  width: 56rpx;
+  height: 54rpx;
+  animation: wiggle 2s cubic-bezier(.36,.07,.19,.97) .5s infinite;
+  transform: translate3d(0,0,0)
+}
+@keyframes wiggle {
+  10%,
+  90% {
+    transform: rotate(-7deg)
+  }
+  20%,
+  80% {
+    transform: rotate(14deg)
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(-14deg)
+  }
+  40%,
+  60% {
+    transform: rotate(14deg)
+  }
+}
+.share-icon .text {
+  font-size: 18rpx;
+  font-weight: 600;
+  color: #c50010;
+  text-align: center
+}
+.cart-icon .cart-num {
+  position: absolute;
+  right: 4rpx;
+  top: 6rpx;
+  display: inline-block;
+  min-width: 32rpx;
+  padding: 0 4rpx;
+  height: 26rpx;
+  text-align: center;
+  line-height: 26rpx;
+  background: red;
+  color: #fff;
+  border-radius: 32rpx;
+  font-size: 20rpx
+}
+.spellNumber-icon .cart-num {
+  position: absolute;
+  right: 4rpx;
+  top: -10rpx;
+  display: inline-block;
+  padding: 2rpx 16rpx;
+  text-align: center;
+  background: #fb0017;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22rpx
+}
+.top-icon .img {
+  width: 90rpx;
+  height: 90rpx
+}

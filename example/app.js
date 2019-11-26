@@ -31,7 +31,21 @@ App({
             })
         }
     },
+    onShow: function(options) {
+      let _this = this
+      wx.getSystemInfo({
+          success: res => {
+              // 全局存手机信息
+              _this.globalData.mobile = res
+              if (res.model.search('iPhone X') != -1 ) {
+                  _this.globalData.isIphoneX = true
+              }
+          }
+      })
+  },
     globalData: {
+        mobile: null, // 手机信息
+        isIphoneX: null,// 是否是IphoneX
         userInfo: null
     }
 })

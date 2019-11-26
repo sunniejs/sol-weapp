@@ -47,6 +47,10 @@
 			"currentL": -1,
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 7,
 			"list": [
@@ -102,6 +106,20 @@
 					"id": -1,
 					"name": "分享",
 					"pathName": "pages/share-sheet/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/float-icon/index",
+					"pathName": "pages/float-icon/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demo/index",
+					"pathName": "pages/demo/index",
 					"scene": null
 				}
 			]

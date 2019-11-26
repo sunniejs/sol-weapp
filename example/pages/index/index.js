@@ -45,7 +45,13 @@ Page({
                       url: '/pages/share-sheet/index',
                       name: '微信分享组件(转发好友/分享图)',
                       show: false
-                  }
+                    },
+                    {
+                      id: 'float-icon',
+                      url: '/pages/float-icon/index',
+                      name: '悬浮按钮',
+                      show: false
+                    }
                 ]
             },
             // {
@@ -63,7 +69,8 @@ Page({
             //         }
             //     ]
             // }
-        ]
+        ],
+        icons:['home','cart']
     },
     onShow() {
         var myDate = new Date().getTime()

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "sol-icon-container": "/dist/icon-container/index"
+  }
+}

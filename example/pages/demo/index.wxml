@@ -1,0 +1,37 @@
+<view class="perLable" >
+<view class='per-list'>
+<view class='per-box' animation="{{ani}}" style='width:{{boxWidth}}'>
+<view wx:for="{{boxwarp}}"  
+style='width:{{style.width}};margin-left:{{index==0?style.marginw:style.defaultw}}' data-index="{{index+1}}" wx:for-index='index' class='per-warps p-warp{{index}} {{index+1==currentindex?"main-warp":""}}' bindtouchstart="touchStart" data-disable="{{index+1==currentindex?'1':'0'}}" bindtouchmove="touchMove" bindtouchend="touchEnd" >
+<!-- 内容 -->
+<view class='per-b-context'>
+<view class='avater-center'>
+<view class='avater-user'>
+<image  class='avater-url' src='{{userinfo.avater}}' mode='widthFix'></image>
+</view>
+<view class='avater-context'>
+<view >{{userinfo.name}}</view>
+<view>{{userinfo.role_name}}</view>
+</view>
+</view>
+ <!-- <block wx:for="{{item.data}}" wx:for-index='indexchild' wx:for-item='ele' key="ele">
+<view class='a-label ps-lable{{indexchild}}' >
+<view class='a-able-font'>{{ele.name}}</view>
+<view>+{{indexchild}}</view>
+</view>
+</block> -->
+</view>
+<image class='warp-image' src='{{item.url}}'></image>
+
+</view>
+</view>
+</view>
+<view class='all-integral'>累计积分:1212</view>
+<!-- 底字 -->
+<view class='all-text'>
+<view class='all-text-warp' animation="{{textAi}}"  style='width:{{boxWidth}}'>
+<view class='all-child' style='width:{{footStyle.width}}' wx:for="{{boxwarp}}">{{item.title}}</view>
+</view>
+</view>
+<!-- 字体结束 -->
+</view>

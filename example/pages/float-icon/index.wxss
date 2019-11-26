@@ -1,0 +1,50 @@
+.container {
+    padding: 45px 20px 20px;
+}
+.cell{
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 16px;
+    overflow: hidden;
+    color: #323233;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #fff;
+   border-bottom:  1px solid #ebedf0;
+}
+
+/* icon */
+
+.icon-container{
+    position: absolute;
+    bottom: 10px;  
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 44rpx;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0rpx 0rpx 20rpx rgba(0, 0, 0, 0.07);
+    -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
+}
+.float-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 90rpx;
+    height: 90rpx;
+}
+ .float-icon  image {
+      width: 48rpx;
+      height: 48rpx;
+    }
+  .active{
+     transform: translate3d(100%, 0, 0); 
+  }

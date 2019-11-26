@@ -7,7 +7,9 @@
         "pages/scoll-nav/index",
         "pages/slot-machine/index",
         "pages/about/index",
-        "pages/share-sheet/index"
+        "pages/share-sheet/index",
+        "pages/float-icon/index",
+        "pages/demo/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

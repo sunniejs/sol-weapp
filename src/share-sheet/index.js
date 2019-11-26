@@ -15,6 +15,11 @@ Component({
             type: String,
             value: "bar" //  bar: 分享弹出，可以转发好友，或者生成图片  popup: 无分享弹窗，直接显示图片弹出 path: 直接返回图片路径
         },
+            // 分享给好友是否需要合成图片
+        synthetic: {
+            type: Boolean,
+            value: false
+          },
         //  只可以通过微信分享
         onlyFriend: {
             type: Boolean,
@@ -118,7 +123,7 @@ Component({
                 if (this.data.cache[url]) {
                     resolve(this.data.cache[url])
                 } else {
-                    // 该接口是为获取二维码，并未对接开发者可自行修改
+                    // 该接口是为获取动态生成的二维码，并未对接，开发者可自行修改
                     // 为程序正常运行，将二维码放到缓存里了！！！
                     // 开发时需要打开
                     // getCodeUrl(parmas)
