@@ -120,6 +120,21 @@
 					"id": -1,
 					"name": "pages/demo/index",
 					"pathName": "pages/demo/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demo/",
+					"pathName": "pages/demo/painter/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/demo/anchor/index",
+					"pathName": "pages/demo/anchor/index",
+					"query": "",
 					"scene": null
 				}
 			]

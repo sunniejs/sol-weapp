@@ -1,0 +1,8 @@
+{
+    "component": true,
+    "usingComponents": {
+        "s-popup": "/dist/wux/popup/index",
+        "image-btn": "/dist/image-btn/index",
+        "painter":"/dist/painter/painter"
+    }
+}

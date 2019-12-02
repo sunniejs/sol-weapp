@@ -1,7 +1,0 @@
-<view>
-	<view wx:for="{{icons}}" wx:key="index" class="float-icon-item {{item}}-icon sol-class" data-type="{{item}}" bindtap="iconsClick">
-      <image   class="img" src="{{status[item].img}}" mode="widthFix" />
-      <text wx:if="{{status[item].showText}}" class="text">{{status[item].content}}</text>
-  </view>
-</view>
-
