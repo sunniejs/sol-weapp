@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "sol-share-sheet": "/dist/painter-share-sheet/index"
+  }
+}
