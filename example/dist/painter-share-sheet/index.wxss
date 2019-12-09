@@ -146,32 +146,3 @@
   font-size: 30rpx;
   width: 100%
 }
-.swiper-block {
-  height: 1000rpx;
-  width: 100%;
-  margin-top: 60rpx
-}
-.swiper-item {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  overflow: unset
-}
-.slide-image {
-  height: 800rpx;
-  width: 520rpx;
-  border-radius: 9rpx;
-  box-shadow: 0 0 30rpx rgba(0,0,0,.2);
-  margin: 0rpx 30rpx;
-  z-index: 1
-}
-.active {
-  transform: scale(1.15);
-  transition: all .2s ease-in 0s;
-  z-index: 20
-}

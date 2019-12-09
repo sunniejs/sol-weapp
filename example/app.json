@@ -7,11 +7,8 @@
     "pages/scoll-nav/index",
     "pages/slot-machine/index",
     "pages/about/index",
-    "pages/share-sheet/index",
     "pages/float-icon/index",
-    "pages/demo/index",
-    "pages/demo/painter/index",
-    "pages/demo/anchor/index"
+    "pages/painter/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

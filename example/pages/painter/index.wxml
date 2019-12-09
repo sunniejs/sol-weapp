@@ -1,0 +1,40 @@
+  <view class="app-container">
+    <view class="title" >painter-share-sheet</view>
+    <view class="desc">该组件由多个组件构成，使用请仔细阅读文档</view>
+    <view  class="tips">
+       分享给好友，以及生成海报图
+    </view>
+    <view class="btn-group">
+      <view class="sol-button" bindtap="doShare">点我分享</view>
+    </view>
+    <view  class="tips">
+      <view class="">分享给好友的5：4图和海报图都需要绘制</view>  
+      <view class="">cardPoster:true</view>  
+    </view>
+    <view class="btn-group">
+      <view class="sol-button" bindtap="doShareGoods">点我分享</view>
+    </view>
+    <view  class="tips">
+        <view class=""> 只允许分享给好友</view>  
+        <view class="">shareMode:'card'</view>  
+    </view>
+    <view class="btn-group">
+      <view class="sol-button" bindtap="doCardOnlyShare">只分享给好友</view>
+    </view>
+    <view  class="tips">
+        <view class="">只生成海报图</view>  
+        <view class="">shareMode:'popup'</view>  
+        <view class="">showShare默认为false</view>  
+    </view>
+    <view class="btn-group">
+        <view class="sol-button" bindtap="doPopOnlyShare">只生成海报图</view>
+    </view>
+    <view  class="tips">
+        <view class="">直接返回海报图</view>  
+        <view class="">shareMode:'path'</view> 
+        <view class="">showShare默认为false</view>  
+        
+    </view>
+    <image mode="aspectFit" src="{{shareImgPath}}" />
+  </view>
+<sol-painter-share-sheet id="shareSheet" mode="{{shareMode}}" visible="{{showShare}}" share-data="{{shareData}}" bind:path="ImgPath" />

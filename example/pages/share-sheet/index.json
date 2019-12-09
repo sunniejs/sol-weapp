@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "底部分享弹窗",
-  "usingComponents": {
-      "sol-share-sheet": "/dist/share-sheet/index"
-  }
-}

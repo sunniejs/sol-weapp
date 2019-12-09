@@ -131,9 +131,16 @@
 					"scene": null
 				},
 				{
+					"id": 11,
+					"name": "pages/demo/painter/index",
+					"pathName": "pages/demo/painter/index",
+					"query": "",
+					"scene": null
+				},
+				{
 					"id": -1,
-					"name": "pages/demo/anchor/index",
-					"pathName": "pages/demo/anchor/index",
+					"name": "pages/index/index",
+					"pathName": "pages/demo/index",
 					"query": "",
 					"scene": null
 				}

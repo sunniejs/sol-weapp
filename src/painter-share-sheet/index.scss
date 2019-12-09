@@ -60,6 +60,7 @@
         font-weight: 600;
     }
 }
+ 
 
 /* 图片弹出 */
 .draw-img-warper {
@@ -91,35 +92,3 @@
 
 
 }
-.swiper-block{
-height: 1000rpx;
-width: 100%;
-margin-top: 30px;
-}
-
-.swiper-item{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-overflow:unset;
-}
-
-.slide-image{
-height:800rpx;
-width: 520rpx;
-border-radius: 9rpx;
-box-shadow: 0px 0px 30rpx rgba(0, 0,0,.2);
-margin: 0rpx 30rpx;
-z-index: 1;
-}
-
-.active{
-transform: scale(1.15);
-transition:all .2s ease-in 0s;
-z-index: 20;
-}
-
-
-
-

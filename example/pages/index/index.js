@@ -42,7 +42,7 @@ Page({
                     },
                     {
                       id: 'share-sheet',
-                      url: '/pages/share-sheet/index',
+                      url: '/pages/painter/index',
                       name: '微信分享组件(转发好友/分享图)',
                       show: false
                     },

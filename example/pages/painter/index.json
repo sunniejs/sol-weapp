@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "微信分享弹窗",
+  "usingComponents":{
+    "sol-painter-share-sheet": "/dist/painter-share-sheet/index"
+  }
+}

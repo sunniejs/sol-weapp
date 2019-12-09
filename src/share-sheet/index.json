@@ -1,8 +1,0 @@
-{
-    "component": true,
-    "usingComponents": {
-        "s-popup": "/dist/wux/popup/index",
-        "image-btn": "/dist/image-btn/index",
-        "canvas-drawer": "/dist/canvas-drawer/index"
-    }
-}

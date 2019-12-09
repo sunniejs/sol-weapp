@@ -1,22 +1,13 @@
 <s-popup class="wux-class s-popup" position="bottom" transparent="{{transparent}}" class-names="slideInUp" visible="{{ visible }}" bind:close="onShareClose">
-  <view class="painter-swiper">
-     <swiper class="swiper-block" previous-margin="90rpx" next-margin="90rpx" current="0" bindchange="swiperChange">
-       <block wx:for="{{tempImgs}}" wx:index="{{index}}">
-       <swiper-item class="swiper-item">
-         <image mode="aspectFill" src="{{item.poster}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}"/>
-       </swiper-item>
-       </block>
-     </swiper>
-  </view>
   <view class="s-share-bar">
     <view class="s-share-container">
       <view class="icon-warp">
-        <image-btn open-type="share" share-data="{{shareMsgData}}">
+        <sol-image-btn open-type="share" share-data="{{shareMsgData}}">
           <view slot="img" class="icon-wechat iconfont icon-weixin"></view>
           <view class="text" slot="text">分享微信群</view>
-        </image-btn>
+        </sol-image-btn>
       </view>
-      <view wx:if="{{!onlyFriend}}" class="icon-warp" catchtap="saveImg">
+      <view wx:if="{{mode!=='card'}}" class="icon-warp" catchtap="drawPosterCanvas">  
         <view class="icon-discover iconfont icon-xiazai"></view>
         <view class="text">存图发圈</view>
       </view>
@@ -27,7 +18,7 @@
 <!-- 图片弹窗 -->
 <s-popup visible="{{ imgVisible }}" position="center"  bind:close="onImgClose">
   <view class="draw-img-warper">
-    <image src="{{shareImage}}" mode='widthFix' class="share-image"></image>
+    <image wx:if="{{shareImage}}" src="{{shareImage}}" mode='widthFix' class="share-image"></image>
     <view class="drawer-btn-group">
       <view bind:tap="saveImg" class="download-btn">
         <view>保存到相册</view>
@@ -35,5 +26,4 @@
     </view>
   </view>
 </s-popup>
-<!-- canvas <canvas-drawer painting="{{painting}}" class="canvasdrawer" bind:getImage="doGetImage" />-->
 <painter customStyle='position: absolute; left: -9999rpx;' palette="{{template}}" bind:imgOK="onImgOK" widthPixels="1000"/>

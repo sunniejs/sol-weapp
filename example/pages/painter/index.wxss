@@ -1,0 +1,24 @@
+/* src/pages/xml2can/xml2can.wxss */
+
+ .app-container{
+   padding:50rpx 30rpx;
+ }
+ .title{
+   width:100%;
+    font-size:40rpx;
+    text-align:left;
+ }
+ .desc{
+   width:100%;
+   font-size:28rpx;
+   margin-bottom:10rpx;
+ }
+.tips {
+  width:100%;
+  font-size: 28rpx;
+  color: #999999;
+  margin:  10rpx;
+  text-align:left;
+}
+
+ 

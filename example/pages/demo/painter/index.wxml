@@ -1,4 +1,0 @@
-	<view class="btn-group">
-		<view class="sol-button" bindtap="doShare">点我分享</view>
-	</view>
-<sol-share-sheet  visible="{{showShare}}" share-data="{{shareData}}" temp-imgs="{{tempImgs}}" />
