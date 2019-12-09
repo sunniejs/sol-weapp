@@ -4,15 +4,17 @@
 
 ## 注意
 
-- 该组件由多个组件组成，需要引入 dist 文件下的 painter,wux,image-btn 三个组件组件使用方法如下
+- 该组件由多个组件组成，需要引入 example/dist/  文件下的 painter,wux,image-btn 三个组件组件使用方法如下
 
   > [Painter](https://github.com/Kujiale-Mobile/Painter)(生成 canvas 图片)
+
   > [wux](https://github.com/wux-weapp/wux-weapp)(生成 canvas 图片(弹窗组件)
+  
   > [image-btn](https://sunnie1992.github.io/sol-weapp/#/zh-cn/image-btn?id=图片按钮)(将 button 改成 img 用户触发微信方法)
 
 - 动态生成二维码功能集成在组件内部，开发者可根据自身需求修改组件。
 
-##组件
+## 组件
 
 将 example/dist/ 文件下的 painter,wux,image-btn 放入你的组件目录
 
