@@ -140,7 +140,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onLoad: function () {
+  onLoad: function (options) {
     console.log('painter onLoad=', options)
     // 通过二维码进入
     if (options.scene) {
