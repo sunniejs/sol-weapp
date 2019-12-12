@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: '2019/11/21 09:00:00',
+        endDate: '2019/12/11 09:00:00',
         components: [
             {
                 title: '营销组件',
@@ -38,7 +38,7 @@ Page({
                         id: 'scoll-nav',
                         url: '/pages/scoll-nav/index',
                         name: '滚动导航条',
-                        show: true
+                        show: false
                     },
                     {
                       id: 'share-sheet',

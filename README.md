@@ -19,6 +19,8 @@
 -   大转盘
 -   红包雨
 -   九宫格翻牌
+-   老虎机
+-   微信小程序分享(转发好友/分享图)
 -   Tab 滚动导航
 -   。。。持续更新中
 
@@ -40,6 +42,12 @@ git clone https://github.com/sunnie1992/sol-weapp.git
   <img src="static/1.gif" width="250"  style="display:inline;">  
   <img src="static/2.gif" width="250"  style="display:inline;">
   <img src="static/3.gif" width="250"  style="display:inline;">
+</p>
+ 
+# 谁在使用
+
+<p>
+  <img src="./static/jiemaishi.png" width="256" style="display:inline;">
 </p>
  
 # 关于我
