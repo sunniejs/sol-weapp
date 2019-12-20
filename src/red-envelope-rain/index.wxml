@@ -1,0 +1,45 @@
+<!-- <view class="red-envelope-popup">
+  <block wx:if="{{showStatus===2}}">
+    <view class="rain-wrapper">
+      <view class="time-info flex-row">
+        <view class="tip">剩余时间</view>
+        <view class="progress-wrapper">
+          <view class="progress"></view>
+        </view>
+        <view class="time">{{showRainTotalTime}} s</view>
+      </view>
+      <view class="canvas-wrapper">
+        <canvas disableScroll binderror="canvasIdErrorCallback" bindtouchstart="handleClickRain" canvasId="rain-canvas" style="width: 100vw; height: 100vh;z-index: 9999999"></canvas>
+      </view>
+    </view>
+  </block>
+</view> -->
+<view class="red-envelope-popup">
+    <view class="container flex-center">
+      <view bind:tap="handleClose" catch:touchmove="handleScrollTouch" class="close-bg"></view>
+      <block>
+          <block wx:if="{{showStatus===1}}">
+              <view class="reminder-wrapper flex-column-center">
+                  <image class="bg-img" src="https://cdn.webuy.ai/static/sh-assets/weapp/activitys/liveRoom/rain-time-bg.png?t=11"></image>
+                  <view class="cultdown-wrapper flex-column-center">
+                      <view class="time">{{reminderCount}}</view>
+                  </view>
+              </view>
+          </block>
+           <block wx:if="{{showStatus===2}}">
+            <view class="rain-wrapper">
+              <view class="time-info flex-row">
+                <view class="tip">剩余时间</view>
+                <view class="progress-wrapper">
+                  <view class="progress"></view>
+                </view>
+                <view class="time">{{showRainTotalTime}} s</view>
+              </view>
+              <view class="canvas-wrapper">
+                <canvas disableScroll binderror="canvasIdErrorCallback" bindtouchstart="handleClickRain" canvasId="rain-canvas" style="width: 100vw; height: 100vh;z-index: 9999999"></canvas>
+              </view>
+            </view>
+          </block>
+      </block>
+   </view>
+  </view>
