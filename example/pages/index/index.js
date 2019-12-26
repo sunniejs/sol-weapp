@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: '2019/12/11 09:00:00',
+        endDate: '2019/12/22 16:00:00',
         components: [
             {
                 title: '营销组件',
@@ -50,7 +50,7 @@ Page({
                       id: 'float-icon',
                       url: '/pages/float-icon/index',
                       name: '悬浮按钮',
-                      show: false
+                      show: true
                     }
                 ]
             },

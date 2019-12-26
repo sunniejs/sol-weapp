@@ -14,6 +14,16 @@ Page({
   onLoad: function (options) {
 
   },
+   // 图片点击放大 
+   previewImg: function (e) {
+    var src = e.currentTarget.dataset.src;
+    var imgList = [src] 
+    //图片预览
+    wx.previewImage({
+      current: src,  
+      urls: imgList  
+    })
+  },
   copy: function () {
     wx.setClipboardData({
       data: ' https://github.com/sunnie1992/sol-weapp/',
