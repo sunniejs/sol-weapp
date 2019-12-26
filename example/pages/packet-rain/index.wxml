@@ -5,8 +5,4 @@
   <view>红包雨</view>
 </view>
 <!-- 红包雨组件 -->
-<sol-packet-rain visible="{{visible}}" total="{{total}}"
- mode="{{mode}}" createSpeed="{{createSpeed}}" 
- decimal="{{decimal}}" number="{{number}}" 
- time="{{time}}" readyTime="{{readyTime}}" min="{{min}}"
- max="{{max}}" bind:finish="success"></sol-packet-rain>
+<sol-packet-rain visible="{{visible}}" createSpeed="{{createSpeed}}" time="{{time}}" readyTime="{{readyTime}}" min="{{min}}" max="{{max}}" bind:finish="success"></sol-packet-rain>

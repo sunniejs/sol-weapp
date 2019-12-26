@@ -1,48 +1,35 @@
-// components/s-packetrain/index.js
-import cax from './cax/index.js'
-const info = wx.getSystemInfoSync()
 const innerAudioContext = wx.createInnerAudioContext()
-let shapeArray = []
+ const APP = getApp()
+ let readyTimer = null
+ let rainTimer = null
+ let redEnvelopes = []
+ let animation = null
+ const minWidth = 30  // 红包图片最小宽度
+ const maxWidth = 40 // 红包图片最大宽度
 Component({
-  externalClasses: ['sol-class'],
   properties: {
-    // 是否开始展示游戏
+     // 是否开始展示游戏
     visible: {
       type: Boolean,
       value: false
     },
-    // 红包发放模式:1:红包总金额有上限,2:红包金额无上限
-    mode: {
-      type: Number,
-      value: '1'
-    },
-    // 初始速度
-    createSpeed: {
-      type: Number,
-      value: 400
-    },
-    // 游戏时间单位秒
+    // 游戏时间
     time: {
       type: Number,
-      value: 15
+      value:10
     },
-    // 倒计时单位秒
-    readyTime: {
+     // 倒计时单位秒
+     readyTime: {
+      type: Number,
+      value: 3
+    },
+    //  速度
+    createSpeed: {
       type: Number,
       value: 5
     },
-    // 金币、金额上限
-    total: {
-      type: Number,
-      value: 100
-    },
-    // 红包个数
-    number: {
-      type: Number,
-      value: 10
-    },
-    // 单个最小金额
-    min: {
+     // 单个最小金额
+     min: {
       type: Number,
       value: 0
     },
@@ -50,247 +37,235 @@ Component({
     max: {
       type: Number,
       value: 3
-    },
-    // 金额小数位
-    decimal: {
-      type: Number,
-      value: 0
     }
   },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-    score: 0, // 总分数
-    showScore: 0,
-    showChangeScore: 0,
-    gameTimer: '', // 游戏Timer
-    createPacketTimer: '', // 创建红包Timer
-    packetMoveDownTimer: '', // 红包下落Timer
-    readyRainTimer: null, // 准备时间Timer
-    readyVisible: true, // 显示准备倒计时
-    isGameOver: false,
-    packetArr: []
+    showRainTotalTime:10, // 红包雨时间
+    showStatus: 1, // 红包雨状态：1:准备倒计时，2:正在红包雨，3:红包雨结束
+    windowWidth: 375,
+    windowHeight: 555,
+    rainResult: {},
+    loading: false,
+    showScore:0,
+    showChangeScore:0,
+    scoreStyle:''
   },
-  ready() {
-    // 开始
-    this.start()
+  ready: function () {
+     // 重置
+    redEnvelopes = [] 
+    clearTimeout(readyTimer) 
+    clearTimeout(rainTimer)  
+    this.cancelCustomAnimationFrame(animation)
+     // 开始准备倒计时
+     this.cultdown()
+      const { windowWidth , windowHeight } = APP.globalData.systemInfo
+      this.data.windowWidth = windowWidth
+      this.data.windowWidth = windowHeight
+  },
+  detached: function () {
+    readyTimer && clearInterval(readyTimer)
+    rainTimer && clearInterval(rainTimer)
+    animation && this.cancelCustomAnimationFrame(animation)
   },
   methods: {
-    // 倒计时开始
-    start() {
-      let that = this
-      this.data.readyRainTimer = setInterval(function() {
-        if (that.data.readyTime == 0) {
-          // 清除准备倒计时
-          clearInterval(that.data.readyRainTimer)
-          that.setData({
-            readyVisible: false
-          })
-          // 开始红包雨
-          that.play()
-        } else {
-          that.data.readyTime -= 1
-          that.setData({
-            readyTime: that.data.readyTime
-          })
-        }
+    // 开始准备倒计时
+    cultdown: function () {
+      let _this=this
+      let { readyTime }= this.data
+      readyTimer=setInterval(function () {
+        if(--readyTime <= 0 ){
+          clearInterval(readyTimer)
+         // 显示红包雨
+          _this.showRain()
+        } 
+        _this.setData({
+          readyTime:readyTime
+        })
       }, 1000)
     },
-    // 游戏开始
-    play() {
-      const bgStage = new cax.Stage(info.windowWidth, info.windowHeight, 'myCanvas', this)
-      // 创建红包
-      this.createPacket(bgStage)
-      // 红包下落
-      this.packetMoveDown(bgStage)
-      //倒计时关闭
-      this.stopRain(bgStage)
-      this.audioOfClick()
+    // 展示红包雨界面
+    showRain: function () {
+    let _this=this
+    // 显示红包雨
+    this.setData({
+      showStatus: 2
+    })
+    // 初始化红包雨
+    this.initRain()
+    
+    // 倒计时进度条
+    this.ininProgress()
+    // 红包雨倒计时
+    let showRainTotalTime = this.data.time
+    rainTimer= setInterval(function () {
+        if(--showRainTotalTime <= 0 ){
+          clearInterval(rainTimer)
+          if(animation){
+            // 结束
+            _this.showRainResult()
+            _this.cancelCustomAnimationFrame(animation)
+          }
+        } 
+        _this.setData({
+           showRainTotalTime
+        });
+      }, 1000);
     },
+    // 倒计时进度条
+    ininProgress(){
+      const { time } = this.data
+      const animation = wx.createAnimation({
+        duration: time*1000
+      })
+     animation.translateX(-120).step()
+      this.setData({
+        progressAni: animation.export()
+      })
+    },
+    //分数动画
+    animationOfScore(x,y) {
+      const position = wx.createAnimation({
+        duration:  0
+      })
+      position.left(x).top(y).step()
+      this.setData({
+        scoreAni:position.export()
+      })
+      const animation= wx.createAnimation({
+        duration:  300,
+        timingFunction: 'ease'
+      })
+      animation.opacity(1).step()
+      setTimeout(function() {
+        animation.opacity(0).step()
+          this.setData({
+            scoreAni: animation.export()
+          })
+        }.bind(this),10)
+    },
+    // 关闭
+    handleClose: function () {
+       this.triggerEvent("finish")
+    },
+    // 显示结果
+    showRainResult: function () {
+      // 结束动画
+      this.cancelCustomAnimationFrame(animation)
+      this.setData({
+        showStatus: 3,
+        rainResult: {
+          amount: 100
+        }
+      });
+    },
+    // 红包下落函数
+    customRequestAnimationFrame: function (e) {
+      let _this = this
+      let timer = setTimeout(function () {
+          e.call(_this), clearTimeout(timer);
+        }, 1000 / 60)
+      return timer
+    },
+    // 清除红包下落函数
+    cancelCustomAnimationFrame: function (e) {
+      e && (clearTimeout(e), animation = null)
+    },
+    // 开始下落
+    doDrawRain: function () {
+      const context = this.context
+      const {windowWidth,windowHeight } = this.data
+      context.clearRect(0, 0,windowWidth, windowHeight)
+      for (let n = 0; n < redEnvelopes.length; n += 1) {
+        const i = redEnvelopes[n] // 红包
+        const {x,y,vx,vy,width,height,open}=i
+        const img = open ? this.openEnvelopeImg : this.redEnvelopeImg
+        const imgWidth  = open ? width + 20 :width
+        const imgHeight = open ? height + 25 :height
+        context.drawImage(img, x, y,imgWidth,imgHeight)
+            i.x += vx 
+            i.y += vy
+            i.y >= windowHeight && (i.y = 0, i.open =false)
+            i.x + width <= 0 && (i.x = windowWidth - width, i.open = false)
+      }
+      context.draw()
+      // 下落函数
+      animation= this.customRequestAnimationFrame(this.doDrawRain);
+    },
+    // 随机数
+    randNum: function (min, max) {
+      return Math.floor(min + Math.random() * (max - min));
+    },
+    // 准备红包雨下落
+    initRainDrops: function () {
+     const {windowWidth,windowHeight,createSpeed,max,min} = this.data
+      for (let n = 0; n < 10; n += 1) {
+        const startX = Math.floor(Math.random() *windowWidth)
+        const startY = Math.floor(Math.random() *windowHeight)
+        // 红包图片宽度大小30~40
+        const width = this.randNum(minWidth, maxWidth)
+        // 宽度为红包高度的百分之八十
+        const height = Math.floor(width / .8)
+        // 速度
+        const vy = 1 * Math.random() + createSpeed
+        // 红包金额
+        const score = this.randNum(min,max+1)
+          redEnvelopes.push({
+            x: startX,
+            y: startY,
+            vx: -1,  // x轴速度
+            vy: vy, // y轴速度
+            score:score,
+            width: width,
+            height: height,
+            open: false
+          });
+      }
+        this.doDrawRain();  
+    },
+    // 点击红包事件
+    handleClickRain: function (e) {
+      let touch = e.touches[0] 
+      let touchX =touch.x 
+      let touchY =touch.y 
+      let _this=this
+      for (let o = 0; o < redEnvelopes.length; o += 1) {
+        let i = redEnvelopes[o],
+        rainX = i.x,
+        rainY = i.y,
+        width = i.width,
+        height = i.height,
+        gapX = touchX - rainX,
+        gapY = touchY - rainY;
+        if (gapX >= -20 && gapX <= width + 20 && gapY >= -20 && gapY <= height + 20) {
+         _this.animationOfScore(touchX,touchY)
+         innerAudioContext.play()
+          i.open = true;
+         let score = _this.data.showScore + i.score
+         _this.setData({
+          showScore: score ,
+          showChangeScore: i.score 
+         })
+       
+          break;
+        }
+      }
+    },
+    // 初始化 canvas
+    initRain: function () {
+        this.context = wx.createCanvasContext("rain-canvas", this)
+        this.redEnvelopeImg = "./images/red-packet-rain.png",
+        this.openEnvelopeImg = "./images/red-packet-rain-open.png"
+        // 初始化红包雨
+        this.initRainDrops()
+        // 音效
+        this.audioOfClick()
+    },
+    handleScrollTouch: function () {},
     audioOfClick() {
       innerAudioContext.autoplay = false
       innerAudioContext.src = 'https://imgs.solui.cn/weapp/dianji.mp3'
       innerAudioContext.onPlay(() => {})
       innerAudioContext.onError(res => {})
     },
-    // 创建红包
-    createPacket(bgStage) {
-      const that = this
-      let indexNum = 0
-      let n = 0
-      const { total, number, max, min, time, mode, createSpeed } = this.data
-      // 红包总金额有上限,我上限必须设置createSpeed
-      if (mode == 1) {
-        n = (time * 1000) / number
-        // 产生一组随机金额
-        this.data.packetArr = this.randomRedPacketGenerator(number, total, min, max)
-      } else {
-        n = createSpeed
-      }
-      // 每 n 毫秒创建一个，n为 this.data.createSpeed
-      this.data.createPacketTimer = setInterval(function() {
-        let redCardName = 'redCard' + String(indexNum)
-        // 创建红包
-        that.createShape(bgStage, redCardName, indexNum)
-        indexNum++
-      }, n)
-    },
-    //创建红包shape
-    createShape(newStage, newName, index) {
-      //创建随机位置
-      let that = this
-      let ranNum = Math.random() * (info.windowWidth - 80)
-      // 红包背景
-      newName = new cax.Bitmap('https://imgs.solui.cn/weapp/rdc.png')
-
-      // 旋转角度
-      let angle = Math.random() * 90 - 45
-      newName.rotation = angle
-      // 随机大小缩放0.4~0.5
-      newName.scaleX = newName.scaleY = (Math.random() * 10 + 40) / 100
-      // x轴随机位置
-      newName.x = ranNum
-      // y轴-50
-      newName.y = -50
-      // 绑定 touchstart触摸事件
-      newName.on('touchstart', () => {
-        // 查询元素在数组中的索引值
-        Array.prototype.indexValue = function(arr) {
-          for (let i = 0; i < this.length; i++) {
-            if (this[i] == arr) {
-              return i
-            }
-          }
-        }
-        // 获取索引值
-        let shapeIndex = shapeArray.indexValue(newName)
-        // 从数组中删除
-        shapeArray.splice(shapeIndex, 1)
-        // 销毁
-        newName.destroy()
-        // 动态显示分数
-        that.animationOfScore()
-        innerAudioContext.play()
-        // 随机产生红包金额 最小到最大值之间的金额数
-        let changeOfScore = 0
-        if (this.data.mode == 1) {
-          changeOfScore = parseFloat(this.data.packetArr[index])
-        } else {
-          changeOfScore = parseFloat(Math.random() * this.data.max + this.data.min)
-        }
-        // 当前总金额
-        let nowScore = that.data.score + changeOfScore
-        that.setData({
-          score: nowScore,
-          showScore: nowScore.toFixed(this.data.decimal),
-          showChangeScore: changeOfScore.toFixed(this.data.decimal)
-        })
-      })
-
-      newStage.add(newName)
-      //将创建的红包shape都放入数组中
-      shapeArray.push(newName)
-    },
-
-    //分数动画
-    animationOfScore() {
-      const animation = wx.createAnimation({
-        duration: 300,
-        timingFunction: 'ease'
-      })
-      this.animation = animation
-      animation.opacity(1).step()
-      setTimeout(
-        function() {
-          animation.opacity(0).step()
-          this.setData({
-            animationData: animation.export()
-          })
-        }.bind(this),
-        10
-      )
-    },
-    // 红包下落
-    packetMoveDown(bgStage) {
-      let that = this
-      this.data.packetMoveDownTimer = setInterval(function() {
-        shapeArray.forEach(function(value, i) {
-          value.y = value.y + 3
-          if (value.y > info.windowHeight) {
-            bgStage.remove(value)
-            shapeArray.splice(i, 1)
-          }
-        })
-        bgStage.update()
-      }, 10)
-    },
-    //开启一个倒计时关闭下红包雨
-    stopRain(bgStage) {
-      let that = this
-      // 不停地调用函数，直到 clearInterval()
-      this.data.gameTimer = setInterval(function() {
-        let nowTime = that.data.time - 1
-        // 时间为0的时候结束
-        if (nowTime == 0) {
-          that.rainOver(bgStage)
-        }
-
-        that.setData({
-          time: nowTime
-        })
-      }, 1000)
-    },
-    //关闭下红包雨（rainOver）
-    rainOver(bgStage) {
-      // 结束后清除
-      clearInterval(this.data.createPacketTimer)
-      clearInterval(this.data.packetMoveDownTimer)
-      clearInterval(this.data.gameTimer)
-      shapeArray.forEach(function(value, i) {
-        value.destroy()
-        bgStage.update()
-      })
-      this.setData({
-        isGameOver: true
-      })
-    },
-    // 点击我知道了
-    finish() {
-      this.triggerEvent('finish')
-    },
-    // 查看规则
-    checkrule() {},
-    // 打乱
-    shuffle_pick(arr) {
-      const arr2 = []
-      for (let len = arr.length; len > 0; ) {
-        let rnd = Math.floor(Math.random() * len)
-        arr2.push(arr[rnd])
-        arr[rnd] = arr[--len]
-      }
-      return arr2
-    },
-    // 生成红包
-    randomRedPacketGenerator(num, total, min, max) {
-      if (min * num > total || max * num < total) {
-        throw Error(`没法满足最最少 ${min} 最大 ${max} 的条件`)
-      }
-      var rnds = [],
-        randNum,
-        _max,
-        _min
-      for (var i = num; i >= 1; i--) {
-        _min = total - max * (i - 1) > min ? total - max * (i - 1) : min
-        _max = total - min * (i - 1) < max ? total - min * (i - 1) : max
-        randNum = parseFloat(Math.random() * (_max - _min) + _min).toFixed(this.data.decimal)
-        total = parseFloat(total - randNum)
-        rnds.push(randNum)
-      }
-      let result = []
-      result = this.shuffle_pick(rnds)
-      return result
-    }
   }
-})
+});

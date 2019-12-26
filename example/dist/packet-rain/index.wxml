@@ -1,40 +1,51 @@
-<view class="rain-container" wx:if="{{visible}}">
-  <view wx:if="{{readyVisible}}" class="ready-time">
-    <view class="top">一大波红包即将来袭</view>
-    <view class="countdown">{{readyTime}}</view>
-  </view>
-  <view wx:else>
-    <view class='rain-bg' hidden='{{isGameOver}}'>
-      <cax id="myCanvas" class="cax-class">
-        <view class='timeout-warpper'>
-          <view class="timeout">倒计时</view>
-          <view class="sec">
-            <view class="numOfTime">{{time}}</view>
-            <view class="miao">s</view>
+<view  wx:if="{{visible}}" class="red-envelope-popup">
+  <view class="container flex-center">
+    <view bind:tap="handleClose" catch:touchmove="handleScrollTouch" class="close-bg"></view>
+    <block>
+      <block wx:if="{{showStatus===1}}">
+        <view class="reminder-wrapper flex-column-center">
+          <view class="title">一大波红包即将来袭</view>
+          <view class="time">{{readyTime}}</view>
+        </view>
+      </block>
+      <block wx:if="{{showStatus===2}}">
+        <view class="rain-wrapper flex-column">
+          <view class="time-info">
+            <view class="flex-row">
+              <view class="tip" >剩余时间</view>
+              <view class="progress-wrapper">
+                <view class="progress" animation="{{progressAni}}"></view>
+              </view>
+              <view class="time">{{showRainTotalTime}} s</view>
+            </view>
+            <view class="flex-row">
+             <view class="total-score">金币：{{showScore}}</view>
+            </view>
+          </view>
+          <view class="canvas-wrapper" >
+           <view class='score-change' animation="{{scoreAni}}">
+                +{{showChangeScore}}
+              </view>
+            <canvas disableScroll binderror="canvasIdErrorCallback" bindtouchstart="handleClickRain" canvasId="rain-canvas" style="width: 100vw; height: 100vh;z-index: 9999999"></canvas>
           </view>
         </view>
-        <view class="rain-score">
-          <view>金币:{{showScore}}</view>
-          <view class='scoreChangeClass'  animation="{{animationData}}">{{showChangeScore>0 ? "+":""}}{{showChangeScore}}</view>
+      </block>
+      <block wx:if="{{showStatus===3}}">
+        <view class="result-wrapper flex-column-center">
+          <block>
+            <view class="group-content flex-column-center">
+              <view class="result-title">恭喜您获得</view>
+              <view class="ready-wrapper flex-column-center">
+                <view class="money-wrapper flex-row">
+                  <view class="money">{{showScore}}</view>
+                  <view class="unit">金币</view>
+                </view>
+                <view class="result-btn" bindtap="handleClose">我知道了</view>
+              </view>
+            </view>
+          </block>
         </view>
-      </cax>
-    </view>
-    <view class='rain-bg rain-over' hidden='{{!isGameOver}}'>
-      <view class="bg">
-        <view class='shadeView'>
-          <view class="shadeView-top">恭喜您获得</view>
-          <view class='shadeView_scoreView'>
-            <text>{{showScore}}</text>
-            <text>金币</text>
-          </view>
-          <view class='shadeView_gameOverBtn'>
-            <view class="explain">金币已存入您的账户中</view>
-            <view class="explain">可用于下单时抵扣商品金额</view>
-            <view class="btn" bindtap="finish">我知道了</view>
-            <view class="rule" bindtap="checkrule">查看规则></view>
-          </view>
-        </view>
-      </view>
-    </view>
+      </block>
+    </block>
   </view>
 </view>

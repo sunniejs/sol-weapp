@@ -1,6 +1,4 @@
 {
   "usingComponents": {
-    "sol-red-envelope-rain": "/dist/red-envelope-rain/index"
-    
   }
 }

@@ -1,223 +1,127 @@
-.ready-time {
-    position: fixed;
+@import "../style/flex.wxss";
+.red-envelope-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+  .close-bg {
+    position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
-    background-color: #000000;
-    opacity: 0.8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    z-index: 10000;
+  }
+  .reminder-wrapper {
+    position: relative;
+    width: 750rpx;
+    height: 716rpx;
+    color: #fff;
+    box-sizing: border-box;
 
-    .top {
-        margin-top: 244rpx;
-        font-size: 60rpx;
-        color: #fffdc5;
+    .title {
+      font-size: 60rpx;
+      color: #fffdc5;
     }
 
-    .countdown {
-        margin-top: 100rpx;
-        font-size: 240rpx;
-        color: #fffdc5;
+    .time {
+      margin-top: 100rpx;
+      font-size: 240rpx;
+      color: #fffdc5;
     }
-}
 
-
-
-.rain-bg {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-
-    .cax-class {
-        display: flex;
-        position: fixed;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
-        width: 100%;
-        height: 100%;
-        background: url('https://imgs.solui.cn/weapp/redBacketBG.jpg');
+  }
+  .rain-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://imgs.solui.cn/weapp/redBacketBG.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .time-info {
+      position: absolute;
+      top: 80rpx;
+      left: 45rpx;
+      font-size: 24rpx;
+      color: #fff;
+      .progress-wrapper {
+        position: relative;
+        height: 16rpx;
+        width: 240rpx;
+        margin-left: 20rpx;
+        margin-right: 20rpx;
+        border-radius: 16rpx;
+        background: #fff;
+        overflow: hidden;
+        .progress {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 240rpx;
+          border-radius: 16rpx;
+          background: #fe2e00;
+          z-index: 1;
+        }
+      }
+      .total-score{
+        font-size:40rpx;
+      }
+    }
+    .canvas-wrapper {
+      position: relative;
+      .score-change {
+        position: absolute;
+        width: 50rpx;
+        height: 50rpx;
+        font-size: 40rpx;
+        color: #fffdc5;
+        opacity: 0;
+      }
+    }
+  }
+  .result-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+       .group-content {
+        position: relative;
+        width: 550rpx;
+        height: 700rpx;
+        background-image: url("https://imgs.solui.cn/weapp/l-rain-gold@2x.png");
         background-size: 100% 100%;
-
-        text:nth-child(1) {
-            position: absolute;
-            text-align: center;
-            font-size: 45rpx;
-            color: white;
-            padding-left: 50rpx;
-            top: 150rpx;
-            font-weight: bold;
-            left: 20rpx;
-            z-index: 1010;
+        background-repeat: no-repeat;
+        .result-title {
+          margin-top: 50rpx;
+          font-size: 40rpx;
+          color: #ffffff;
         }
-
-        .timeout-warpper {
-            position: absolute;
-            left: 50rpx;
-            top: 50rpx;
-            border: 4rpx solid #fff;
-            background: linear-gradient(to right, #6c87ee, #8a50b6);
-            width: 180rpx;
-            height: 50rpx;
-            border-radius: 50rpx;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            .timeout {
-                font-size: 28rpx;
-                color: white;
-                text-align: center;
-            }
-
-            .sec {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-
-                .numOfTime {
-                    font-size: 40rpx;
-                    font-weight: bold;
-                    color: white;
-                }
-
-                .miao {
-                    font-size: 40rpx;
-                    font-weight: bold;
-                    color: white;
-                }
-            }
+         .money-wrapper {
+          margin-top: 56rpx;
+          color: #fff;
+          .money {
+            font-size: 120rpx;
+          }
+          .unit {
+            position: relative;
+            top: 34rpx;
+            font-size: 32rpx;
+          }
         }
-
-        .rain-score {
-            position: absolute;
-            font-size: 45rpx;
-            color: white;
-            padding-left: 50rpx;
-            top: 150rpx;
-            font-weight: bold;
-            left: 20rpx;
-            z-index: 1010;
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-
-            .scoreChangeClass {
-                margin-left: 10rpx;
-                font-size: 40rpx;
-                color: #fffdc5;
-                opacity: 0;
-            }
-
+        .result-btn {
+          margin-top: 158rpx;
+          width: 300rpx;
+          height: 70rpx;
+          background-color: #fff9e8;
+          text-align: center;
+          line-height: 70rpx;
+          border-radius: 40rpx;
+          font-size: 30rpx;
+          color: #b10000;
         }
+      }
     }
 }
-
-.rain-over {
-    background: #000000;
-    position: fixed;
-
-    .bg {
-        display: flex;
-        margin: 40rpx auto;
-        text-align: center;
-        background: url("https://imgs.solui.cn/weapp/l-rain-bg@2x.png") no-repeat;
-        background-size: cover;
-        width: 750rpx;
-        height: 1000rpx;
-
-        .shadeView {
-            margin: 176rpx auto;
-            text-align: center;
-            background: url("https://imgs.solui.cn/weapp/l-rain-gold@2x.png") no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 550rpx;
-            height: 700rpx;
-            align-items: center;
-            z-index: 9999;
-
-            .shadeView-top {
-                margin-top: 30rpx;
-                font-size: 40rpx;
-                color: #ffffff;
-            }
-
-            .shadeView_scoreView {
-                width: 360rpx;
-                height: 220rpx;
-                line-height: 220rpx;
-                background-size: 100% 100%;
-                margin-top: 70rpx;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: baseline;
-
-                /* box-sizing:border-box; */
-                text:nth-child(1) {
-                    font-size: 100rpx;
-                    color: #ffffff;
-                    line-height: 76rpx;
-                }
-
-                text:nth-child(2) {
-                    font-size: 30rpx;
-                    color: #ffffff;
-                    margin-left: 12rpx;
-                }
-            }
-
-
-
-
-            .shadeView_gameOverBtn {
-                width: 550rpx;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                .explain {
-                    font-size: 30rpx;
-                    color: #ffffff;
-                }
-
-                .btn {
-                    margin-top: 58rpx;
-                    width: 300rpx;
-                    height: 70rpx;
-                    background-color: #fff9e8;
-                    text-align: center;
-                    line-height: 70rpx;
-                    border-radius: 40rpx;
-                    font-size: 30rpx;
-                    color: #b10000;
-                }
-
-                .rule {
-                    margin-top: 28rpx;
-                    font-size: 24rpx;
-                    color: #ffffff;
-                    text-decoration: underline;
-                }
-            }
-
-        }
-
-    }
-}
+  
