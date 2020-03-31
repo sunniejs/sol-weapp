@@ -26,7 +26,7 @@
 
 # 运行例子
 
-git clone https://github.com/sunnie1992/sol-weapp.git
+git clone https://github.com/sunniejs/sol-weapp.git
 
 微信开发者工具打开项目
 
