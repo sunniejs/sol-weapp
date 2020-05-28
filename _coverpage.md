@@ -15,7 +15,7 @@
 - 红包雨、大转盘等营销组件，简单易用
 - 导航栏、筛选页、高度业务化组件
 
-[GitHub](https://github.com/sunnie1992/sol-weapp)
+[GitHub](https://github.com/sunniejs/sol-weapp)
 [文档](/README)
 
 <!-- 背景色 -->

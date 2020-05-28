@@ -16,7 +16,7 @@
  红包发放模式分为两种<br />
  红包总金额有上限，比如：15 秒 100 块金额随机生成 10 个红包下落速度不可控制。<br />
  红包总金额无上限，比如：15 秒红包雨，可设置速度，设置每个红包随机金额的最大值最小值。<br />
-旧版红包雨，移步[v1.3.0packet-rain](https://github.com/sunnie1992/sol-weapp/tree/v1.3.0packet-rain)<br />
+旧版红包雨，移步[v1.3.0packet-rain](https://github.com/sunniejs/sol-weapp/tree/v1.3.0packet-rain)<br />
 
 ## 组件
 

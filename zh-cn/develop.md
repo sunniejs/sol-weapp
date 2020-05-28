@@ -4,7 +4,7 @@
 使用微信 web 开发者工具 打开 example 目录预览效果
 
 ```bash
-git clone https://github.com/sunnie1992/sol-weapp.git
+git clone https://github.com/sunniejs/sol-weapp.git
 ```
 
 ## 开发之前

@@ -10,7 +10,7 @@
 
   > [wux](https://github.com/wux-weapp/wux-weapp)(生成 canvas 图片(弹窗组件)
   
-  > [image-btn](https://sunnie1992.github.io/sol-weapp/#/zh-cn/image-btn?id=图片按钮)(将 button 改成 img 用户触发微信方法)
+  > [image-btn](https://sunniejs.github.io/sol-weapp/#/zh-cn/image-btn?id=图片按钮)(将 button 改成 img 用户触发微信方法)
 
 - 动态生成二维码功能集成在组件内部，开发者可根据自身需求修改组件。
 
@@ -51,7 +51,7 @@
 | shareData             | Object  | 分享数据                                                                                             | {}     |
 | shareData>>shareType  | String  | 海报模板类型，用户可生成不同样式的海报图                                                             | ''     |
 | shareData>>cardPoster | Boolean | 分享给好友的4：5海报图也需要合成图片                                                                               | false  |
-| shareData>>shareParams | Boolean | 生产动态二维码scene参数，需要修改组件代码，详情查看[动态二维码](https://sunnie1992.github.io/sol-weapp/#/zh-cn/share?id=动态二维码)                                                                           | false  |
+| shareData>>shareParams | Boolean | 生产动态二维码scene参数，需要修改组件代码，详情查看[动态二维码](https://sunniejs.github.io/sol-weapp/#/zh-cn/share?id=动态二维码)                                                                           | false  |
 | shareData>>shareTitle | String  | 分享给好友卡片标题title ,详情查看[onShareAppMessage](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onShareAppMessage-Object-object)                                                                                           | ''     |
 | shareData>>sharePath  | String  | 分享给好友卡片路径同path ,详情查看[onShareAppMessage](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onShareAppMessage-Object-object)                                                                                | ''     |
 | shareData>>shareImg   | String  | 分享给好友卡片图片同imageUrl , 详情查看[onShareAppMessage](https://developers.weixin.qq.com/miniprogram/dev/reference/api/Page.html#onShareAppMessage-Object-object)                                                                                            | ''     |

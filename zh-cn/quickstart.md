@@ -4,10 +4,10 @@
 
 ## 使用
 
-下载 [GitHub](https://github.com/sunnie1992/sol-weapp) Sol Weapp 的代码，然后将 example/dist/ 目录下你需要的组件拷贝到你的组件目录下
+下载 [GitHub](https://github.com/sunniejs/sol-weapp) Sol Weapp 的代码，然后将 example/dist/ 目录下你需要的组件拷贝到你的组件目录下
 
 ```bash
-git clone https://github.com/sunnie1992/sol-weapp.git
+git clone https://github.com/sunniejs/sol-weapp.git
 ```
 
 ## 引入组件
