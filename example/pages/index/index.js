@@ -54,21 +54,22 @@ Page({
                     }
                 ]
             },
-            // {
-            //     title: '页面demo',
-            //     children: [
-            //         {
-            //             id: 'filter',
-            //             url: '/pages/filter/index',
-            //             name: '筛选'
-            //         },
-            //         {
-            //             id: 'saveImgs',
-            //             url: '/pages/saveImgs/index',
-            //             name: '保存多张图片'
-            //         }
-            //     ]
-            // }
+            {
+                title: '页面demo',
+                children: [
+                    // {
+                    //     id: 'filter',
+                    //     url: '/pages/filter/index',
+                    //     name: '筛选'
+                    // },
+                    {
+                        id: 'save-imgs',
+                        url: '/pages/save-imgs/index',
+                        name: '保存多张图片',
+                        show: true
+                    }
+                ]
+            }
         ],
         icons:['home','cart']
     },

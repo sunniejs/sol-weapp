@@ -143,6 +143,12 @@
 					"pathName": "pages/demo/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/save-imgs/index",
+					"pathName": "pages/save-imgs/index",
+					"scene": null
 				}
 			]
 		}

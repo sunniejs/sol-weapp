@@ -39,3 +39,49 @@ export function wxSaveAuth() {
       })
   })
 }
+/**
+ * 多文件下载并且保存，所有文件下载成功才算返回成功
+ * @param {Array} urls 网络图片数组
+ */
+export function downloadImgs(urls) {
+  wx.showLoading({
+      title: '图片下载中',
+      mask: true
+  })
+  const imageList = []
+  // 循环数组
+  for (let i = 0; i < urls.length; i++) {
+      imageList.push(getTempPath(urls[i]))
+  }
+  const loadTask = []
+  let index = 0
+  while (index < imageList.length) {
+      loadTask.push(
+          new Promise((resolve, reject) => {
+              // 将数据分割成多个promise数组
+              Promise.all(imageList.slice(index, (index += 8)))
+                  .then(res => {
+                      resolve(res)
+                  })
+                  .catch(err => {
+                      reject(err)
+                  })
+          })
+      )
+  }
+  // Promise.all 所有图片下载完成后弹出
+  Promise.all(loadTask)
+      .then(res => {
+          wx.showToast({
+              title: '下载完成',
+              duration: 3000
+          })
+      })
+      .catch(err => {
+          wx.showToast({
+              title: `下载完成`,
+              icon: 'none',
+              duration: 3000
+          })
+      })
+}

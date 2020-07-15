@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://sunnie1992.github.io/sol-weapp/">
+    <a href="https://sunniejs.github.io/sol-weapp/">
         <img width="200" src="./static/logo.png">
     </a>
 </p>

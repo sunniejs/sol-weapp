@@ -1,0 +1,37 @@
+/* pages/save-imgs/index.wxss */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.images {
+    padding-top:50rpx;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.images image {
+    width: 200rpx;
+    height: 200rpx;
+    padding:10rpx;
+}
+
+.sol-button {
+    width: 200rpx;
+}
+
+.btn-group {
+    margin-top: 40rpx;
+    display: flex;
+    align-items: center;
+}
+
+.sol-button {
+    margin-right: 20rpx;
+}
