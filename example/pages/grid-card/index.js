@@ -5,55 +5,55 @@ Page({
             {
                 id: 1,
                 prizeName: '10金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0 //   :0 反面 , 1 正面
             },
             {
                 id: 2,
                 prizeName: '10金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 3,
                 prizeName: '100金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 4,
                 prizeName: '10金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 5,
                 prizeName: '40金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 6,
                 prizeName: '20金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 7,
                 prizeName: '50金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 8,
                 prizeName: '60金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             },
             {
                 id: 9,
                 prizeName: '10金币',
-                img: 'https://imgs.solui.cn/weapp/prize.png',
+                img: 'https://www.sunniejs.cn/static/weapp/prize.png',
                 status: 0
             }
         ],

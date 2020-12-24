@@ -1,0 +1,7 @@
+<movable-area style="height:{{areaH}}px; bottom:{{areaBottom}}px"  >
+  <movable-view   x="{{x}}" y="{{y}}"  style="height:{{height}}px;" direction="vertical">
+      <slot name="icons"></slot>
+   <!-- <view class="btns-bg sol-class">
+    </view>-->
+  </movable-view>
+</movable-area>

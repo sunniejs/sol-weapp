@@ -263,7 +263,7 @@ Component({
     handleScrollTouch: function () {},
     audioOfClick() {
       innerAudioContext.autoplay = false
-      innerAudioContext.src = 'https://imgs.solui.cn/weapp/dianji.mp3'
+      innerAudioContext.src = 'https://www.sunniejs.cn/static/weapp/dianji.mp3'
       innerAudioContext.onPlay(() => {})
       innerAudioContext.onError(res => {})
     },

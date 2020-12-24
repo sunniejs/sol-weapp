@@ -1,150 +1,164 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
-	},
-	"compileType": "miniprogram",
-	"libVersion": "1.9.97",
-	"appid": "wx9e6373cc7408241f",
-	"projectname": "sol-weapp",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 7,
-			"list": [
-				{
-					"id": -1,
-					"name": "wheel",
-					"pathName": "pages/wheel/index",
-					"query": ""
-				},
-				{
-					"id": 1,
-					"name": "红包雨",
-					"pathName": "pages/packet-rain/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "pages/grid-card/index",
-					"pathName": "pages/grid-card/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "下载图片",
-					"pathName": "pages/saveImgs/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "拖拽",
-					"pathName": "pages/touchMove/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/tabScroller/index",
-					"pathName": "pages/tabScroller/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/slot-machine/index",
-					"pathName": "pages/slot-machine/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "分享",
-					"pathName": "pages/share-sheet/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/float-icon/index",
-					"pathName": "pages/float-icon/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/demo/index",
-					"pathName": "pages/demo/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/demo/",
-					"pathName": "pages/demo/painter/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 11,
-					"name": "pages/demo/painter/index",
-					"pathName": "pages/demo/painter/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/demo/index",
-					"query": "",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "1.9.97",
+  "appid": "wx9e6373cc7408241f",
+  "projectname": "sol-weapp",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 7,
+      "list": [
+        {
+          "id": -1,
+          "name": "wheel",
+          "pathName": "pages/wheel/index",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "红包雨",
+          "pathName": "pages/packet-rain/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "pages/grid-card/index",
+          "pathName": "pages/grid-card/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "下载图片",
+          "pathName": "pages/saveImgs/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "拖拽",
+          "pathName": "pages/touchMove/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/tabScroller/index",
+          "pathName": "pages/tabScroller/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/slot-machine/index",
+          "pathName": "pages/slot-machine/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "分享",
+          "pathName": "pages/share-sheet/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/float-icon/index",
+          "pathName": "pages/float-icon/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/demo/index",
+          "pathName": "pages/demo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/demo/",
+          "pathName": "pages/demo/painter/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 11,
+          "name": "pages/demo/painter/index",
+          "pathName": "pages/demo/painter/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/demo/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

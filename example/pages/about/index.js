@@ -26,7 +26,7 @@ Page({
   },
   copy: function () {
     wx.setClipboardData({
-      data: ' https://github.com/sunnie1992/sol-weapp/',
+      data: ' https://github.com/sunniejs/sol-weapp/',
       success: function (res) {
         wx.showToast({ title: '复制成功', icon: 'none' })
       }

@@ -68,8 +68,6 @@
     height: auto;
 }
 
-
-
 .title {
     padding-left: 15px;
     margin-bottom: 10px;
@@ -98,4 +96,3 @@
     margin: 0 0 45px;
     padding-left: 15px;
 }
- 

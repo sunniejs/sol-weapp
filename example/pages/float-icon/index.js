@@ -44,7 +44,7 @@ Page({
         return {
             title: 'sol-weapp营销组件',
             path: '/pages/index/index',
-            imageUrl: 'https://imgs.solui.cn/weapp/qrcode.jpg'
+            imageUrl: 'https://www.sunniejs.cn/static/weapp/qrcode.jpg'
         }
     }
 })
