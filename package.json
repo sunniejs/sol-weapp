@@ -1,7 +1,7 @@
 {
     "name": "wux-weapp",
-    "version": "3.8.0",
-    "description": "一套组件化、可复用、易扩展的微信小程序 UI 组件库",
+    "version": "1.2.0",
+    "description": "一套简单、易用、业务化的商城营销组件库。让开发变得更简单",
     "main": "dist/index.js",
     "miniprogram": "dist",
     "dependencies": {},
@@ -30,16 +30,16 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/wux-weapp/wux-weapp.git"
+        "url": "git+https://github.com/sunniejs/sol-weapp.git"
     },
     "keywords": [
-        "wx-component",
-        "wxapp"
+        "sol-weapp",
+        "weapp"
     ],
-    "author": "skyvow",
+    "author": "Sunnie",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/wux-weapp/wux-weapp/issues"
+        "url": "https://github.com/sunniejs/sol-weapp/issues"
     },
-    "homepage": "https://github.com/wux-weapp/wux-weapp#readme"
+    "homepage": "https://github.com/sunniejs/sol-weapp#readme"
 }
