@@ -1,4 +1,10 @@
-// components/image-button/index.js
+/*
+ * components/image-button/index.js
+ * @Author: Sunnie 
+ * @Date: 2021-09-06 18:42:25 
+ * @Last Modified by: Sunnie
+ * @Last Modified time: 2021-09-06 18:43:07
+ */
 Component({
     /**
      * 组件的属性列表

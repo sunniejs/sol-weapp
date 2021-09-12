@@ -1,0 +1,8 @@
+/* pages/animate-number/index.wxss */
+.app-container{
+    padding:24rpx;
+}
+.item{
+    width: 100%;
+    padding:24rpx 0; 
+}

@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: "2019/12/22 16:00:00",
+        endDate: "2021/09/13 16:00:00",
         components: [
             {
                 title: "营销组件",
@@ -47,9 +47,20 @@ Page({
                         show: false,
                     },
                     {
-                        id: "float-icon",
+                        id: "xuanfu",
                         url: "/pages/float-icon/index",
                         name: "悬浮按钮",
+                        show: true,
+                    },
+                ],
+            },
+            {
+                title: "一些小组件",
+                children: [
+                    {
+                        id: "shuzi",
+                        url: "/pages/animate-number/index",
+                        name: "滚动数字",
                         show: true,
                     },
                 ],
@@ -88,6 +99,29 @@ Page({
                     });
                 }
             }
+        }
+        // 广告
+        this.add();
+    },
+    add() {
+        // 在页面中定义插屏广告
+        let interstitialAd = null;
+
+        // 在页面onLoad回调事件中创建插屏广告实例
+        if (wx.createInterstitialAd) {
+            interstitialAd = wx.createInterstitialAd({
+                adUnitId: "adunit-ac5a2e554ba363d2",
+            });
+            interstitialAd.onLoad(() => {});
+            interstitialAd.onError((err) => {});
+            interstitialAd.onClose(() => {});
+        }
+
+        // 在适合的场景显示插屏广告
+        if (interstitialAd) {
+            interstitialAd.show().catch((err) => {
+                console.error(err);
+            });
         }
     },
 

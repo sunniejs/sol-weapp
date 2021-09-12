@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "sol-animate-number": "/dist/animate-number/index"
+  }
+}

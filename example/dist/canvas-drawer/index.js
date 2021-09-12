@@ -1,3 +1,9 @@
+/*
+ * @Author: Sunnie 
+ * @Date: 2021-09-06 18:42:25 
+ * @Last Modified by: Sunnie
+ * @Last Modified time: 2021-09-06 18:42:46
+ */
 Component({
     properties: {
         painting: {

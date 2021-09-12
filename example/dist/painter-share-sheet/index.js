@@ -1,3 +1,9 @@
+/*
+ * @Author: Sunnie 
+ * @Date: 2021-09-06 18:42:25 
+ * @Last Modified by: Sunnie
+ * @Last Modified time: 2021-09-12 18:55:13
+ */
 import {  drawCard, drawPoster } from "../../utils/painter"
 import {  wxSaveAuth } from "../../utils/wx"
 import {equal,isEmpty} from "../../utils/util"

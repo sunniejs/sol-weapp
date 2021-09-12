@@ -47,6 +47,12 @@ textarea {
     color: #333333;
     background-color: #fff;
     border: 1rpx solid #ebedf0;
+    border-radius: 8rpx;
+}
+.sol-button--blue {
+    color: #fff;
+    font-weight: bold;
+    background-color: #0082c3;
 }
 
 .sol-button--danger {

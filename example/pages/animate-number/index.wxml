@@ -1,0 +1,13 @@
+<!--pages/animate-number/index.wxml-->
+<view class="app-container">
+    <view class="item">
+      <view class="title">默认:</view>
+      <sol-animate-number id="animate0" value="{{100}}"></sol-animate-number>
+    </view>
+    <view class="sol-button sol-button--blue" data-id="animate0" bind:tap="reset">重新加载</view>
+     <view class="item">
+        <view class="title">随机数组:</view>
+        <sol-animate-number random id="animate1"  value="{{100}}" min="{{50}}" max="{{150}}" len="{{100}}" options="{{options}}"></sol-animate-number>
+    </view>
+    <view class="sol-button sol-button--blue"  data-id="animate1" bind:tap="reset">重新加载</view>
+</view>
