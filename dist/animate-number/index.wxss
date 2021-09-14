@@ -1,0 +1,1 @@
+.count-box{width:100%;height:100%;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}.count-box .viewport{width:100%;overflow:hidden}.count-box .viewport .column-wrap{width:100%}.count-box .viewport .column-wrap .item{width:100%;text-align:center;font-size:40rpx;font-weight:700}

@@ -1,0 +1,9 @@
+<view class="count-box" style="width:{{_options.width}};">
+  <view class="viewport" style="height:{{_options.height}}px;">
+    <view class="column-wrap" animation="{{animationData}}">
+        <block wx:for="{{columns}}" wx:key="index">
+            <view class="item" style="color:{{_options.color}};height:{{_options.height}}px;line-height: {{_options.height}}px;{{_options.columnStyle}}">{{item}}</view>
+          </block>
+    </view>
+  </view>
+</view>
