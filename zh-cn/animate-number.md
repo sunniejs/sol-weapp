@@ -32,7 +32,8 @@
 | max          | Number |max 数字区间，最大值 不传默认为 value, random 为true 生效     |  -    |
 | len           | Number | len 数字区间数值个数 ，random 为true 生效        | 100     |
 
-1.在某个数字区间`顺序`滚动时候只需要设置 value 和 min （区间跨度最大500）。
+1.在某个数字区间`顺序`滚动时候只需要设置 value 和 min （区间跨度最大500）。  
+
 2.在某个数字区间`随机`滚动时候 ，设置random 为true 时，配合 min  max 和 len（默认100，最多500） 使用 。
  
 ## 效果展示
