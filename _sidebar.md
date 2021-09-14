@@ -14,6 +14,5 @@
   - [微信分享组件(转发好友/分享图)](/zh-cn/share.md#微信分享组件)
 - 简单组件
   - [图片按钮](/zh-cn/image-btn.md#图片按钮)
-  - [图片按钮](/zh-cn/animate-number.md#滚动数字)
-  
-- 组件将全面升级，开发中敬请期待。。。
+  - [滚动数字](/zh-cn/animate-number.md#滚动数字)
+
