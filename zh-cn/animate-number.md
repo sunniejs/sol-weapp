@@ -38,4 +38,4 @@
  
 ## 效果展示
 
-![logo](../_images/8.gif)
+![logo](../_images/8.gif =100x100)
