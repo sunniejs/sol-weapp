@@ -27,7 +27,7 @@ Page({
     /**
      * Lifecycle function--Called when page show
      */
-    onShow: function () {
+    onReady: function () {
         this.start("animate0");
         this.start("animate1");
     },

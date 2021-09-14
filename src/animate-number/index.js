@@ -2,7 +2,7 @@
  * @Author: Sunnie
  * @Date: 2021-09-06 18:42:25
  * @Last Modified by: Sunnie
- * @Last Modified time: 2021-09-09 09:37:41
+ * @Last Modified time: 2021-09-14 22:29:19
  */
 
 const CONFIG = {
@@ -57,8 +57,9 @@ Component({
       start() {
             let { animationData } = this.data;
             if (animationData) {
-              this.reset()
-              this.run()
+              this.reset().then(res=>{
+                this.run()
+              })
             }else{
               this.run()
             }
@@ -84,13 +85,16 @@ Component({
         },
         // 重置
         reset() {
-          let animation = wx.createAnimation({
-            duration: 0,
-          });
-          this.setData({
-              animationData: animation.translateY(0).step().export(),
-              columns: [],
-          });
+         return new Promise((resolve, reject) => {
+                let animation = wx.createAnimation({
+                    duration: 0,
+                  });
+                  this.setData({
+                      animationData: animation.translateY(0).step().export(),
+                      columns: [],
+                  });
+                  resolve()
+            })
         },
 
         // 生成打乱的数组

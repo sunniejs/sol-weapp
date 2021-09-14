@@ -55,7 +55,7 @@ Page({
                 ],
             },
             {
-                title: "一些小组件",
+                title: "简单组件",
                 children: [
                     {
                         id: "shuzi",
