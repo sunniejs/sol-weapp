@@ -37,4 +37,4 @@
  
 ## 效果展示
 
-![logo](../_images/4.gif)
+![logo](../_images/8.gif)
