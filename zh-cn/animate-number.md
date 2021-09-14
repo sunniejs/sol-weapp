@@ -38,4 +38,4 @@
  
 ## 效果展示
 
-![logo](../_images/8.gif =100x100)
+![logo](../_images/8.gif){:height="50%" width="50%"}
