@@ -1,13 +1,13 @@
 <view class="container">
 	<view class="title">
-		<image class="logo" src="https://www.sunniejs.cn/static/weapp/logo.png" />
+		<image class="logo" src="https://gitee.com/sunniejs/sol-weapp/raw/master/logo.png" />
 		<view class="title-text">Sol Weapp</view>
 	</view>
 	<view class="list">
 		<view bindtap="copy" class="item">项目地址: https://github.com/sunniejs/sol-weapp/</view>
 		<view class="item">项目作者: sunnie</view>
 		<view class="item">赞赏</view>
-    <view class="item">	<image bindtap="previewImg" data-src="https://www.sunniejs.cn/static/weapp/appreciate.jpg" mode="aspectFit" src="https://www.sunniejs.cn/static/weapp/appreciate.jpg" /> </view>
+    <view class="item">	<image bindtap="previewImg" data-src="https://gitee.com/sunniejs/sol-weapp/raw/master/appreciate.jpg" mode="aspectFit" src="https://gitee.com/sunniejs/sol-weapp/raw/master/appreciate.jpg" /> </view>
 	</view>
   <view class="adContainer">
     <ad unit-id="adunit-2da2cd4fd0716dfd"></ad>

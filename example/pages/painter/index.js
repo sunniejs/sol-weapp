@@ -17,7 +17,7 @@ Page({
     let share = {
       shareType: 'index',// 海报模板类型，用户可生成不同样式的海报图
       shareTitle:`同样九年义务教育,你怎么能这么优秀，找到我！`, //分享标题 
-      shareImg:'https://www.sunniejs.cn/static/weapp/qrcode.jpg',// 分享图片为空分享页面截图
+      shareImg:'https://gitee.com/sunniejs/sol-weapp/raw/master/qrcode.jpg',// 分享图片为空分享页面截图
       sharePath: '/pages/index/index?id=123456'
     }
     this.setData({
@@ -35,7 +35,7 @@ Page({
     // 分享信息
     let share = {
       shareTitle:`同样九年义务教育,你怎么能这么优秀，找到我！`,  
-      shareImg:'https://www.sunniejs.cn/static/weapp/qrcode.jpg', 
+      shareImg:'https://gitee.com/sunniejs/sol-weapp/raw/master/qrcode.jpg', 
       sharePath: '/pages/index/index?id=123456',  
     }
     this.setData({
@@ -55,7 +55,7 @@ Page({
     let share = {
       shareType: 'index',// 海报模板类型，用户可生成不同样式的海报图
       shareTitle:`同样九年义务教育,你怎么能这么优秀，找到我！`, 
-      shareImg:'https://www.sunniejs.cn/static/weapp/qrcode.jpg', 
+      shareImg:'https://gitee.com/sunniejs/sol-weapp/raw/master/qrcode.jpg', 
       sharePath: '/pages/index/index?id=123456',  
     }
     this.setData({
@@ -77,8 +77,8 @@ Page({
       shareType: 'goods',// 海报模板类型，用户可生成不同样式的海报图
       cardPoster : true, // 分享给好友需要合成图片
       shareTitle:`分享给好友合成海报图！`,
-      shareImg:"https://www.sunniejs.cn/static/weapp/goods.png",
-      qrcode:'https://www.sunniejs.cn/static/weapp/qrcode.jpg',
+      shareImg:"https://gitee.com/sunniejs/sol-weapp/raw/master/goods.png",
+      qrcode:'https://gitee.com/sunniejs/sol-weapp/raw/master/qrcode.jpg',
       sharePath: '/pages/index/index?id=123456'
     }
     // 需要用到的参数用户可自行设置
@@ -104,7 +104,7 @@ Page({
     let share = {
       shareType: 'index',// 海报模板类型，用户可生成不同样式的海报图
       shareTitle:`同样九年义务教育,你怎么能这么优秀，找到我！`,  
-      shareImg:'https://www.sunniejs.cn/static/weapp/qrcode.jpg', 
+      shareImg:'https://gitee.com/sunniejs/sol-weapp/raw/master/qrcode.jpg', 
       sharePath: '/pages/index/index?id=123456'
     }
    this.setData({

@@ -113,6 +113,12 @@
           "pathName": "pages/animate-number/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/grid-card/index",
+          "pathName": "pages/grid-card/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

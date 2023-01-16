@@ -191,7 +191,7 @@
 .red-envelope-popup .rain-wrapper {
   width: 100%;
   height: 100%;
-  background-image: url(https://www.sunniejs.cn/static/weapp/redBacketBG.jpg);
+  background-image: url(https://gitee.com/sunniejs/sol-weapp/raw/master/redBacketBG.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat
 }
@@ -248,7 +248,7 @@
   position: relative;
   width: 550rpx;
   height: 700rpx;
-  background-image: url(https://www.sunniejs.cn/static/weapp/l-rain-gold@2x.png);
+  background-image: url(https://gitee.com/sunniejs/sol-weapp/raw/master/l-rain-gold@2x.png);
   background-size: 100% 100%;
   background-repeat: no-repeat
 }

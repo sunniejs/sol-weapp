@@ -1,6 +1,6 @@
 Page({
     data: {
-        endDate: "2021/09/13 16:00:00",
+        endDate: "2023/01/17 14:00:00",
         components: [
             {
                 title: "营销组件",
@@ -130,7 +130,7 @@ Page({
         return {
             title: "sol-weapp营销组件",
             path: "/pages/index/index",
-            imageUrl: "https://www.sunniejs.cn/static/weapp/qrcode.jpg",
+            imageUrl: "https://gitee.com/sunniejs/sol-weapp/raw/master/qrcode.jpg",
         };
     },
 });

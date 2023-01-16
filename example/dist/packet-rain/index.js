@@ -269,7 +269,7 @@ Component({
     handleScrollTouch: function () {},
     audioOfClick() {
       innerAudioContext.autoplay = false
-      innerAudioContext.src = 'https://www.sunniejs.cn/static/weapp/dianji.mp3'
+      innerAudioContext.src = 'https://gitee.com/sunniejs/sol-weapp/raw/master/dianji.mp3'
       innerAudioContext.onPlay(() => {})
       innerAudioContext.onError(res => {})
     },

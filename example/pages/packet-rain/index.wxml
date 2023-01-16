@@ -1,6 +1,6 @@
 <!-- pages/packet-rain/index.wxml -->
 <view class="container">
-  <image mode="aspectFit" src="https://www.sunniejs.cn/static/weapp/logo.png"></image>
+  <image mode="aspectFit" src="https://gitee.com/sunniejs/sol-weapp/raw/master/logo.png"></image>
   <view class='title'>Sol Weapp</view>
   <view>红包雨</view>
 </view>

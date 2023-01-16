@@ -4,7 +4,7 @@
   z-index: 2;
   width: 550rpx;
   height: 520rpx;
-  background: transparent url(https://www.sunniejs.cn/static/weapp/main_bg_machine.png) bottom center no-repeat;
+  background: transparent url(https://gitee.com/sunniejs/sol-weapp/raw/master/main_bg_machine.png) bottom center no-repeat;
   background-size: cover
 }
 .slot-machine-container .reel-container {
@@ -19,7 +19,7 @@
   position: absolute;
   width: 120rpx;
   height: 2160rpx;
-  background: transparent url(https://www.sunniejs.cn/static/weapp/reel_strip.png) 0 0 repeat-y;
+  background: transparent url(https://gitee.com/sunniejs/sol-weapp/raw/master/reel_strip.png) 0 0 repeat-y;
   background-size: contain
 }
 .slot-machine-container .reel-container .reel0 {
@@ -38,7 +38,7 @@
   right: 0;
   bottom: 0;
   z-index: 100;
-  background: transparent url(https://www.sunniejs.cn/static/weapp/reel_overlay.png) 0 0 repeat-y;
+  background: transparent url(https://gitee.com/sunniejs/sol-weapp/raw/master/reel_overlay.png) 0 0 repeat-y;
   background-size: cover
 }
 @keyframes bounce {
