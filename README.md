@@ -27,9 +27,13 @@
 
 # 运行例子
 
+```bash
 git clone https://github.com/sunniejs/sol-weapp.git
 
-微信开发者工具打开项目
+npm install
+```
+
+微信开发者工具打开项目 example, 使用 体验 appid, 或修改 example/project.config.json 中 appid
 
 # 更新日志
 
@@ -41,17 +45,17 @@ git clone https://github.com/sunniejs/sol-weapp.git
 # 营销组件
 
 <p>
-  <img src="static/1.gif" width="250"  style="display:inline;">  
+  <img src="static/1.gif" width="250"  style="display:inline;">
   <img src="static/2.gif" width="250"  style="display:inline;">
   <img src="static/3.gif" width="250"  style="display:inline;">
 </p>
- 
+
 # 谁在使用
 
 <p>
   <img src="./static/jiemaishi.png" width="256" style="display:inline;">
 </p>
- 
+
 # 关于我
 
 获取更多技术相关文章，关注公众号”前端女塾“。
@@ -64,7 +68,7 @@ git clone https://github.com/sunniejs/sol-weapp.git
 <p>
   <img src="./static/me.png" width="256" style="display:inline;">
 </p>
- 
+
 如果对你有帮助送我一颗小星星（づ￣3￣）づ╭❤～
 
 # 赞赏
@@ -72,4 +76,4 @@ git clone https://github.com/sunniejs/sol-weapp.git
 <p>
   <img src="./static/appreciate.jpg" width="256" style="display:inline;">
 </p>
- 
+
